@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Imad Kissami / Site Title"
+title                    : "Imad Kissami webpage"
 title_separator          : "-"
 name                     : &name "Imad Kissami"
-description              : &description "personal description"
+description              : &description "Research & Education Fellow"
 url                      : https://imadkissami.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "academicpages/imadkissami.github.io"
