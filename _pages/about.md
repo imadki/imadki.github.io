@@ -124,7 +124,7 @@ I develop and maintain several open-source scientific codes:
   </li>
   <li class="highlight-item">
     <span class="highlight-date">Dec 2025</span>
-    <span class="highlight-text"><span class="highlight-tag tag-event">Event</span>Organization of the <strong>SupercomputingAfrica (SCAF)</strong> conference, Benguerir, Morocco.</span>
+    <span class="highlight-text"><span class="highlight-tag tag-event">Event</span>Organization of the <a href="https://toubkal.um6p.ma/supercomputingafrica" target="_blank"><strong>SupercomputingAfrica (SCAF)</strong></a> conference, Benguerir, Morocco.</span>
   </li>
   <li class="highlight-item">
     <span class="highlight-date">Sep 2025</span>
