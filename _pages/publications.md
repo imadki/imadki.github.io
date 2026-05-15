@@ -11,18 +11,14 @@ You can also find my articles on <u><a href="{{author.googlescholar}}">my Google
 
 {% include base_path %}
 
-## Peer-Reviewed Journals
+{% assign all_pubs = site.publications | where_exp: "item", "item.pubtype != 'preprint'" | sort: "date" | reverse %}
+{% assign pubs_by_year = all_pubs | group_by_exp: "item", "item.date | date: '%Y'" %}
 
-{% assign journals = site.publications | where: "pubtype", "journal" | sort: "date" | reverse %}
-{% for post in journals %}
+{% for year_group in pubs_by_year %}
+## {{ year_group.name }}
+
+{% for post in year_group.items %}
   {% include archive-single.html %}
 {% endfor %}
 
----
-
-## Conference Proceedings
-
-{% assign conferences = site.publications | where: "pubtype", "conference" | sort: "date" | reverse %}
-{% for post in conferences %}
-  {% include archive-single.html %}
 {% endfor %}
