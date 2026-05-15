@@ -15,4 +15,10 @@ status: "completed"
 summary: "Introduction to fundamental calculus concepts including sequences, functions of a real variable, differentiability, Taylor's formula, and integration."
 ---
 
+<div class="lang-en-block" markdown="1">
 Introduction to the fundamental concepts and techniques of calculus. Topics include the set of real numbers and complex numbers, numerical sequences, numerical functions of a real variable, differentiability, common functions and their inverses, Taylor's formula and limited development, and integration.
+</div>
+
+<div class="lang-fr-block" markdown="1">
+Introduction aux concepts et techniques fondamentaux de l'analyse. Les sujets abordés comprennent l'ensemble des nombres réels et complexes, les suites numériques, les fonctions numériques d'une variable réelle, la dérivabilité, les fonctions usuelles et leurs inverses, la formule de Taylor et les développements limités, ainsi que l'intégration.
+</div>
