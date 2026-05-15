@@ -8,115 +8,111 @@ redirect_from:
   - /about.html
 ---
 
-I am an **Assistant Professor** at the [University Mohammed VI Polytechnic (UM6P)](https://www.um6p.ma), [College of Computing](https://cc.um6p.ma/), Ben Guerir, Morocco (since September 2023).
-
 <style>
-.role-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6em;
-  margin: 0.9em 0 1.2em;
+.lang-toggle {
+  display: flex; gap: 0.35em; margin-bottom: 1.4em;
 }
+.lang-btn {
+  padding: 0.3em 0.9em; border: 1px solid #ccc; border-radius: 999px;
+  background: #fff; color: #555; font-size: 0.85em; font-weight: 600;
+  cursor: pointer; font-family: inherit; transition: all 0.15s;
+}
+.lang-btn:hover { border-color: #52adc8; color: #52adc8; }
+.lang-btn.active { background: #52adc8; border-color: #52adc8; color: #fff; }
+
+.role-badges { display: flex; flex-wrap: wrap; gap: 0.6em; margin: 0.9em 0 1.2em; }
 .role-badge {
-  display: flex;
-  align-items: center;
-  gap: 0.45em;
-  padding: 0.4em 0.85em;
-  border: 1px solid #d0e8f0;
-  border-radius: 6px;
-  background: #f4fafc;
-  font-size: 0.84em;
-  color: #2a5070;
-  line-height: 1.3;
+  display: flex; align-items: center; gap: 0.45em;
+  padding: 0.4em 0.85em; border: 1px solid #d0e8f0;
+  border-radius: 6px; background: #f4fafc;
+  font-size: 0.84em; color: #2a5070; line-height: 1.3;
 }
-.role-badge-icon {
-  font-size: 1em;
-  flex-shrink: 0;
-}
+.role-badge-icon { font-size: 1em; flex-shrink: 0; }
 .role-badge strong { color: #1a4a6b; }
-</style>
 
-<div class="role-badges">
-  <div class="role-badge">
-    <span class="role-badge-icon">🖥️</span>
-    <span><strong>Administrator</strong> — Simlab Supercomputer</span>
-  </div>
-  <div class="role-badge">
-    <span class="role-badge-icon">📋</span>
-    <span><strong>Advisory Board Member</strong> — <a href="https://toubkal.um6p.ma/" target="_blank">Toubkal Supercomputer</a></span>
-  </div>
-  <div class="role-badge">
-    <span class="role-badge-icon">🎓</span>
-    <span><strong>NVIDIA DLI Certified Instructor</strong> &amp; University Ambassador <em>(since Jan 2024)</em></span>
-  </div>
-  <div class="role-badge">
-    <span class="role-badge-icon">🚀</span>
-    <span><strong>Co-founder</strong> — <a href="https://www.linkedin.com/company/moroccohpc/" target="_blank">Morocco HPC</a></span>
-  </div>
-</div>
-
-My research lies at the intersection of **High Performance Computing (HPC)**, **Computational Fluid Dynamics (CFD)**, and **Scientific Machine Learning**, with a focus on developing scalable numerical solvers and physics-informed methods for complex physical systems.
-
-## Research Interests
-
-- High Performance Computing (HPC) and energy optimization in HPC infrastructures
-- Parallel Finite Volume Methods for unstructured meshes
-- Numerical methods for Plasma Physics, Shallow Water, and Navier-Stokes equations
-- Physics-Informed Neural Networks (PINNs) for solving PDEs
-- Scientific Machine Learning and data-driven approaches for CFD
-
-## Scientific Codes
-
-I develop and maintain several open-source scientific codes:
-
-- **[Manapy](https://github.com/imadki/manapy)** — A parallel Python library for solving PDEs using the finite volume method on unstructured meshes (MPI-based, supports Shallow Water, Navier-Stokes, MHD, and more).
-- **[Mumps4py](https://github.com/imadki/mumps4py)** — A Python interface for the MUMPS parallel sparse direct solver, officially adopted by the MUMPS project.
-- **[NeuralPDE-Solver](https://github.com/Mohammed-khlifi/NeuralPDE-Solver)** — An open-source Python framework for applying PINNs, PINOs, and FNOs to steady-state PDEs.
-
-## Highlights
-
-<style>
 .highlight-list { list-style: none; margin: 0.8em 0 0; padding: 0; }
 .highlight-item {
-  display: flex;
-  gap: 1em;
-  padding: 0.65em 0;
-  border-bottom: 1px solid #f0f0f0;
-  align-items: flex-start;
+  display: flex; gap: 1em; padding: 0.65em 0;
+  border-bottom: 1px solid #f0f0f0; align-items: flex-start;
 }
 .highlight-item:last-child { border-bottom: none; }
 .highlight-date {
-  min-width: 68px;
-  font-size: 0.78em;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: #fff;
-  background: #52adc8;
-  border-radius: 4px;
-  padding: 0.2em 0.55em;
-  text-align: center;
-  flex-shrink: 0;
-  margin-top: 0.1em;
+  min-width: 68px; font-size: 0.78em; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.05em;
+  color: #fff; background: #52adc8; border-radius: 4px;
+  padding: 0.2em 0.55em; text-align: center;
+  flex-shrink: 0; margin-top: 0.1em;
 }
 .highlight-tag {
-  display: inline-block;
-  font-size: 0.7em;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  padding: 0.12em 0.5em;
-  border-radius: 3px;
-  margin-right: 0.4em;
-  vertical-align: middle;
+  display: inline-block; font-size: 0.7em; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  padding: 0.12em 0.5em; border-radius: 3px;
+  margin-right: 0.4em; vertical-align: middle;
 }
 .tag-keynote { background: #e8f4f8; color: #2e7d9e; }
 .tag-grant   { background: #d5f5e3; color: #145a32; }
 .tag-event   { background: #f0f0f0; color: #666; }
 .tag-phd     { background: #fef9cc; color: #7a5800; }
 .highlight-text { font-size: 0.92em; color: #444; line-height: 1.55; }
+
+.career-timeline {
+  position: relative; margin: 1em 0 0.5em;
+  padding-left: 1.6em; border-left: 2px solid #52adc8;
+}
+.career-item { position: relative; margin-bottom: 1.1em; padding-left: 1em; }
+.career-item::before {
+  content: ""; position: absolute;
+  left: -1.72em; top: 0.35em;
+  width: 10px; height: 10px; border-radius: 50%;
+  background: #52adc8; border: 2px solid #fff;
+  box-shadow: 0 0 0 1.5px #52adc8;
+}
+.career-item.past::before { background: #ccc; box-shadow: 0 0 0 1.5px #ccc; }
+.career-period {
+  font-size: 0.8em; color: #999; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.1em;
+}
+.career-role { font-weight: 700; font-size: 0.95em; color: #222; }
+.career-inst { font-size: 0.88em; color: #666; margin-top: 0.05em; }
 </style>
 
+<div class="lang-toggle">
+  <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+  <button class="lang-btn" id="btn-fr" onclick="setLang('fr')">FR</button>
+</div>
+
+<!-- ==================== ENGLISH ==================== -->
+<div id="content-en">
+
+<p>I am an <strong>Assistant Professor</strong> at the <a href="https://www.um6p.ma">University Mohammed VI Polytechnic (UM6P)</a>, <a href="https://cc.um6p.ma/">College of Computing</a>, Ben Guerir, Morocco (since September 2023).</p>
+
+<div class="role-badges">
+  <div class="role-badge"><span class="role-badge-icon">🖥️</span><span><strong>Administrator</strong> — Simlab Supercomputer</span></div>
+  <div class="role-badge"><span class="role-badge-icon">📋</span><span><strong>Advisory Board Member</strong> — <a href="https://toubkal.um6p.ma/" target="_blank">Toubkal Supercomputer</a></span></div>
+  <div class="role-badge"><span class="role-badge-icon">🎓</span><span><strong>NVIDIA DLI Certified Instructor</strong> &amp; University Ambassador <em>(since Jan 2024)</em></span></div>
+  <div class="role-badge"><span class="role-badge-icon">🚀</span><span><strong>Co-founder</strong> — <a href="https://www.linkedin.com/company/moroccohpc/" target="_blank">Morocco HPC</a></span></div>
+</div>
+
+<p>My research lies at the intersection of <strong>High Performance Computing (HPC)</strong>, <strong>Computational Fluid Dynamics (CFD)</strong>, and <strong>Scientific Machine Learning</strong>, with a focus on developing scalable numerical solvers and physics-informed methods for complex physical systems.</p>
+
+<h2>Research Interests</h2>
+<ul>
+  <li>High Performance Computing (HPC) and energy optimization in HPC infrastructures</li>
+  <li>Parallel Finite Volume Methods for unstructured meshes</li>
+  <li>Numerical methods for Plasma Physics, Shallow Water, and Navier-Stokes equations</li>
+  <li>Physics-Informed Neural Networks (PINNs) for solving PDEs</li>
+  <li>Scientific Machine Learning and data-driven approaches for CFD</li>
+</ul>
+
+<h2>Scientific Codes</h2>
+<p>I develop and maintain several open-source scientific codes:</p>
+<ul>
+  <li><strong><a href="https://github.com/imadki/manapy">Manapy</a></strong> — A parallel Python library for solving PDEs using the finite volume method on unstructured meshes (MPI-based, supports Shallow Water, Navier-Stokes, MHD, and more).</li>
+  <li><strong><a href="https://github.com/imadki/mumps4py">Mumps4py</a></strong> — A Python interface for the MUMPS parallel sparse direct solver, officially adopted by the MUMPS project.</li>
+  <li><strong><a href="https://github.com/Mohammed-khlifi/NeuralPDE-Solver">NeuralPDE-Solver</a></strong> — An open-source Python framework for applying PINNs, PINOs, and FNOs to steady-state PDEs.</li>
+</ul>
+
+<h2>Highlights</h2>
 <ul class="highlight-list">
   <li class="highlight-item">
     <span class="highlight-date">Dec 2025</span>
@@ -144,86 +140,137 @@ I develop and maintain several open-source scientific codes:
   </li>
 </ul>
 
-## Career
-
-<style>
-.career-timeline {
-  position: relative;
-  margin: 1em 0 0.5em;
-  padding-left: 1.6em;
-  border-left: 2px solid #52adc8;
-}
-.career-item {
-  position: relative;
-  margin-bottom: 1.1em;
-  padding-left: 1em;
-}
-.career-item::before {
-  content: "";
-  position: absolute;
-  left: -1.72em;
-  top: 0.35em;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #52adc8;
-  border: 2px solid #fff;
-  box-shadow: 0 0 0 1.5px #52adc8;
-}
-.career-item.past::before {
-  background: #ccc;
-  box-shadow: 0 0 0 1.5px #ccc;
-}
-.career-period {
-  font-size: 0.8em;
-  color: #999;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-bottom: 0.1em;
-}
-.career-role {
-  font-weight: 700;
-  font-size: 0.95em;
-  color: #222;
-}
-.career-inst {
-  font-size: 0.88em;
-  color: #666;
-  margin-top: 0.05em;
-}
-</style>
-
+<h2>Career</h2>
 <div class="career-timeline">
-
   <div class="career-item">
     <div class="career-period">Sep 2023 – present</div>
     <div class="career-role">Assistant Professor</div>
     <div class="career-inst">University Mohammed VI Polytechnic (UM6P), Ben Guerir, Morocco</div>
   </div>
-
   <div class="career-item past">
     <div class="career-period">Apr 2019 – Sep 2023</div>
     <div class="career-role">Research &amp; Education Fellow</div>
     <div class="career-inst">University Mohammed VI Polytechnic (UM6P), Ben Guerir, Morocco</div>
   </div>
-
   <div class="career-item past">
     <div class="career-period">Apr 2017 – Mar 2019</div>
     <div class="career-role">Postdoctoral Researcher</div>
     <div class="career-inst">ASNR, Fontenay-aux-Roses, France</div>
   </div>
-
   <div class="career-item past">
     <div class="career-period">Dec 2013 – Feb 2017</div>
     <div class="career-role">PhD in Applied Mathematics &amp; Computer Science</div>
     <div class="career-inst">Université Sorbonne Paris Nord (USPN), France</div>
   </div>
-
   <div class="career-item past">
     <div class="career-period">Sep 2007 – Jul 2012</div>
     <div class="career-role">Engineering Degree in Computer Science</div>
     <div class="career-inst">ENSAO, Oujda, Morocco</div>
   </div>
-
 </div>
+
+</div><!-- end #content-en -->
+
+<!-- ==================== FRANÇAIS ==================== -->
+<div id="content-fr" style="display:none">
+
+<p>Je suis <strong>Professeur Assistant</strong> à l'<a href="https://www.um6p.ma">Université Mohammed VI Polytechnique (UM6P)</a>, <a href="https://cc.um6p.ma/">Collège d'Informatique</a>, Ben Guerir, Maroc (depuis septembre 2023).</p>
+
+<div class="role-badges">
+  <div class="role-badge"><span class="role-badge-icon">🖥️</span><span><strong>Administrateur</strong> — Supercalculateur Simlab</span></div>
+  <div class="role-badge"><span class="role-badge-icon">📋</span><span><strong>Membre du Conseil Consultatif</strong> — <a href="https://toubkal.um6p.ma/" target="_blank">Supercalculateur Toubkal</a></span></div>
+  <div class="role-badge"><span class="role-badge-icon">🎓</span><span><strong>Instructeur Certifié NVIDIA DLI</strong> &amp; Ambassadeur Universitaire <em>(depuis jan. 2024)</em></span></div>
+  <div class="role-badge"><span class="role-badge-icon">🚀</span><span><strong>Co-fondateur</strong> — <a href="https://www.linkedin.com/company/moroccohpc/" target="_blank">Morocco HPC</a></span></div>
+</div>
+
+<p>Mes recherches se situent à l'intersection du <strong>Calcul Haute Performance (HPC)</strong>, de la <strong>Mécanique des Fluides Numérique (CFD)</strong> et de l'<strong>Apprentissage Automatique Scientifique</strong>, avec un focus sur le développement de solveurs numériques scalables et de méthodes physico-informatiques pour des systèmes physiques complexes.</p>
+
+<h2>Thèmes de Recherche</h2>
+<ul>
+  <li>Calcul Haute Performance (HPC) et optimisation énergétique des infrastructures HPC</li>
+  <li>Méthodes de Volumes Finis Parallèles sur maillages non-structurés</li>
+  <li>Méthodes numériques pour la physique des plasmas, les équations de Saint-Venant et de Navier-Stokes</li>
+  <li>Réseaux de Neurones Physiquement Informés (PINNs) pour la résolution d'EDP</li>
+  <li>Apprentissage automatique scientifique et approches data-driven pour la CFD</li>
+</ul>
+
+<h2>Codes Scientifiques</h2>
+<p>Je développe et maintiens plusieurs codes scientifiques open-source :</p>
+<ul>
+  <li><strong><a href="https://github.com/imadki/manapy">Manapy</a></strong> — Une bibliothèque Python parallèle pour la résolution d'EDP par la méthode des volumes finis sur maillages non-structurés (basée sur MPI, supporte Saint-Venant, Navier-Stokes, MHD, et plus).</li>
+  <li><strong><a href="https://github.com/imadki/mumps4py">Mumps4py</a></strong> — Une interface Python pour le solveur direct creux parallèle MUMPS, officiellement adopté par le projet MUMPS.</li>
+  <li><strong><a href="https://github.com/Mohammed-khlifi/NeuralPDE-Solver">NeuralPDE-Solver</a></strong> — Un framework Python open-source pour l'application des PINNs, PINOs et FNOs aux EDP en régime stationnaire.</li>
+</ul>
+
+<h2>Actualités</h2>
+<ul class="highlight-list">
+  <li class="highlight-item">
+    <span class="highlight-date">Déc 2025</span>
+    <span class="highlight-text"><span class="highlight-tag tag-keynote">Keynote</span>19e Conférence Nationale CHPC, Le Cap, Afrique du Sud — <em>Construire l'Avenir : l'Infrastructure de Calcul Haute Performance du Maroc</em>.</span>
+  </li>
+  <li class="highlight-item">
+    <span class="highlight-date">Déc 2025</span>
+    <span class="highlight-text"><span class="highlight-tag tag-event">Événement</span>Organisation de la conférence <a href="https://toubkal.um6p.ma/supercomputingafrica" target="_blank"><strong>SupercomputingAfrica (SCAF)</strong></a>, Benguerir, Maroc.</span>
+  </li>
+  <li class="highlight-item">
+    <span class="highlight-date">Sep 2025</span>
+    <span class="highlight-text"><span class="highlight-tag tag-keynote">Keynote</span>École Avancée sur le HPC et l'IA Appliquée pour la Modélisation Climatique Régionale à Haute Résolution, UM6P.</span>
+  </li>
+  <li class="highlight-item">
+    <span class="highlight-date">Sep 2025</span>
+    <span class="highlight-text"><span class="highlight-tag tag-phd">Thèse</span>Lancement de 3 nouvelles thèses de doctorat — Imane Rhesri, Fatiha Barrade, Ayman Zahir.</span>
+  </li>
+  <li class="highlight-item">
+    <span class="highlight-date">Sep 2025</span>
+    <span class="highlight-text"><span class="highlight-tag tag-grant">Projet</span>Nouveau financement : <em>Couplage de Modèles Physiques et de Données pour le Suivi de l'Évolution des Sols</em> — 375K€, Nutricrops–OCP.</span>
+  </li>
+  <li class="highlight-item">
+    <span class="highlight-date">Oct 2022</span>
+    <span class="highlight-text"><span class="highlight-tag tag-grant">Projet</span>Co-PI de la <strong>Chaire Multiphysique et HPC</strong> — 6,3M€, OCP, projet sur 5 ans.</span>
+  </li>
+</ul>
+
+<h2>Parcours</h2>
+<div class="career-timeline">
+  <div class="career-item">
+    <div class="career-period">Sep 2023 – présent</div>
+    <div class="career-role">Professeur Assistant</div>
+    <div class="career-inst">Université Mohammed VI Polytechnique (UM6P), Ben Guerir, Maroc</div>
+  </div>
+  <div class="career-item past">
+    <div class="career-period">Avr 2019 – Sep 2023</div>
+    <div class="career-role">Chargé de Recherche &amp; d'Enseignement</div>
+    <div class="career-inst">Université Mohammed VI Polytechnique (UM6P), Ben Guerir, Maroc</div>
+  </div>
+  <div class="career-item past">
+    <div class="career-period">Avr 2017 – Mar 2019</div>
+    <div class="career-role">Chercheur Postdoctoral</div>
+    <div class="career-inst">ASNR, Fontenay-aux-Roses, France</div>
+  </div>
+  <div class="career-item past">
+    <div class="career-period">Déc 2013 – Fév 2017</div>
+    <div class="career-role">Doctorat en Mathématiques Appliquées &amp; Informatique</div>
+    <div class="career-inst">Université Sorbonne Paris Nord (USPN), France</div>
+  </div>
+  <div class="career-item past">
+    <div class="career-period">Sep 2007 – Juil 2012</div>
+    <div class="career-role">Diplôme d'Ingénieur en Informatique</div>
+    <div class="career-inst">ENSAO, Oujda, Maroc</div>
+  </div>
+</div>
+
+</div><!-- end #content-fr -->
+
+<script>
+function setLang(lang) {
+  document.getElementById('content-en').style.display = lang === 'en' ? '' : 'none';
+  document.getElementById('content-fr').style.display = lang === 'fr' ? '' : 'none';
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
+  try { localStorage.setItem('site-lang', lang); } catch(e) {}
+}
+try {
+  var saved = localStorage.getItem('site-lang');
+  if (saved === 'fr') setLang('fr');
+} catch(e) {}
+</script>
