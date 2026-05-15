@@ -236,9 +236,7 @@ author_profile: true
   }
 
   function updateGroupbyLabel() {
-    var venueBtnSpans = document.querySelectorAll('[data-groupby="venue"] span');
     var isJournal = activeType === 'journal';
-    // Update the venue button label text
     var btn = document.querySelector('[data-groupby="venue"]');
     if (btn) {
       btn.innerHTML = isJournal
