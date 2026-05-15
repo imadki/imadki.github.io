@@ -8,7 +8,48 @@ redirect_from:
   - /about.html
 ---
 
-I am an **Assistant Professor** at the [University Mohammed VI Polytechnic (UM6P)](https://www.um6p.ma), College of Computing, Ben Guerir, Morocco (since September 2023). I am also the administrator of the **Simlab Supercomputer**, a member of the **Advisory Board of the Toubkal Supercomputer**, and an **NVIDIA DLI Certified Instructor & University Ambassador** (since January 2024).
+I am an **Assistant Professor** at the [University Mohammed VI Polytechnic (UM6P)](https://www.um6p.ma), [College of Computing](https://cc.um6p.ma/), Ben Guerir, Morocco (since September 2023).
+
+<style>
+.role-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em;
+  margin: 0.9em 0 1.2em;
+}
+.role-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.45em;
+  padding: 0.4em 0.85em;
+  border: 1px solid #d0e8f0;
+  border-radius: 6px;
+  background: #f4fafc;
+  font-size: 0.84em;
+  color: #2a5070;
+  line-height: 1.3;
+}
+.role-badge-icon {
+  font-size: 1em;
+  flex-shrink: 0;
+}
+.role-badge strong { color: #1a4a6b; }
+</style>
+
+<div class="role-badges">
+  <div class="role-badge">
+    <span class="role-badge-icon">🖥️</span>
+    <span><strong>Administrator</strong> — Simlab Supercomputer</span>
+  </div>
+  <div class="role-badge">
+    <span class="role-badge-icon">📋</span>
+    <span><strong>Advisory Board Member</strong> — Toubkal Supercomputer</span>
+  </div>
+  <div class="role-badge">
+    <span class="role-badge-icon">🎓</span>
+    <span><strong>NVIDIA DLI Certified Instructor</strong> &amp; University Ambassador <em>(since Jan 2024)</em></span>
+  </div>
+</div>
 
 My research lies at the intersection of **High Performance Computing (HPC)**, **Computational Fluid Dynamics (CFD)**, and **Scientific Machine Learning**, with a focus on developing scalable numerical solvers and physics-informed methods for complex physical systems.
 
