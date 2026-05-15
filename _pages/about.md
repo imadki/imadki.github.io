@@ -43,7 +43,7 @@ I am an **Assistant Professor** at the [University Mohammed VI Polytechnic (UM6P
   </div>
   <div class="role-badge">
     <span class="role-badge-icon">📋</span>
-    <span><strong>Advisory Board Member</strong> — Toubkal Supercomputer</span>
+    <span><strong>Advisory Board Member</strong> — <a href="https://toubkal.um6p.ma/" target="_blank">Toubkal Supercomputer</a></span>
   </div>
   <div class="role-badge">
     <span class="role-badge-icon">🎓</span>
