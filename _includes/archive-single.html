@@ -31,7 +31,7 @@
         {% if post.citation %}{{ post.citation }}{% endif %}
         &ldquo;{{ title }}&rdquo;
         {% if post.venue %}Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}.{% endif %}
-        {% if post.paperurl %}DOI: {{ post.paperurl }}{% endif %}
+        {% if post.paperurl %}DOI: <a href="{{ post.paperurl }}">{{ post.paperurl }}</a>{% endif %}
       </p>
     {% else %}
       <h2 class="archive__item-title" itemprop="headline">
