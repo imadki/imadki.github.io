@@ -109,7 +109,7 @@ author_profile: true
 <h2 class="collab-heading">Middle East &amp; Gulf</h2>
 <ul class="collab-list">
   <li class="collab-row">
-    <span class="collab-name">Mostafa Zahri</span>
+    <span class="collab-name"><a href="https://www.sharjah.ac.ae/ar/Academics/Faculty-And-Staff/Mostafa-Zahri" target="_blank">Mostafa Zahri</a></span>
     <span class="collab-inst">University of Sharjah</span>
     <span class="collab-badge badge-me">UAE</span>
   </li>
@@ -119,7 +119,7 @@ author_profile: true
     <span class="collab-badge badge-me">Kuwait</span>
   </li>
   <li class="collab-row">
-    <span class="collab-name">Hatem Ltaeif</span>
+    <span class="collab-name"><a href="https://cemse.kaust.edu.sa/profiles/hatem-ltaief" target="_blank">Hatem Ltaeif</a></span>
     <span class="collab-inst">KAUST University</span>
     <span class="collab-badge badge-me">Saudi Arabia</span>
   </li>
@@ -140,7 +140,7 @@ author_profile: true
     <span class="collab-badge badge-ma">Morocco</span>
   </li>
   <li class="collab-row">
-    <span class="collab-name">Radouan Boukharfane</span>
+    <span class="collab-name"><a href="https://radouanboukharfane.github.io/" target="_blank">Radouan Boukharfane</a></span>
     <span class="collab-inst">University Mohammed VI Polytechnic (UM6P)</span>
     <span class="collab-badge badge-ma">Morocco</span>
   </li>
