@@ -106,7 +106,7 @@ redirect_from:
   <div class="role-badge"><span class="role-badge-icon">🎓</span><span><strong>NVIDIA DLI Certified Instructor</strong> &amp; University Ambassador</span></div>
   <div class="role-badge" style="flex-wrap:wrap;gap:0.5em;">
     <span class="role-badge-icon">🚀</span>
-    <span><strong>Co-founder</strong> — <a href="https://www.mhpc.ma/" target="_blank" style="color:#1a4a6b;font-weight:700;">Morocco HPC</a></span>
+    <span><strong>Co-founder</strong> — Morocco HPC</span>
     <span style="display:flex;gap:0.45em;align-items:center;margin-left:0.2em;">
       <a href="https://www.linkedin.com/company/moroccohpc/" target="_blank" title="Join us on LinkedIn" style="color:#0a66c2;font-size:0.95em;"><i class="fab fa-linkedin"></i> <span style="font-size:0.78em;font-weight:700;vertical-align:middle;">Join us</span></a>
       <a href="https://www.youtube.com/@MoroccoHPC" target="_blank" title="Webinars" style="color:#ff0000;font-size:0.95em;"><i class="fab fa-youtube"></i> <span style="font-size:0.78em;font-weight:700;vertical-align:middle;">Webinars</span></a>
