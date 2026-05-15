@@ -52,8 +52,12 @@
     <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
     {% endif %}
     
-    {% if post.paperurl %}
-      <p><a href="{{ post.paperurl }}"><u>Download paper</u></a></p>
+    {% if post.collection == 'publications' %}
+      {% if post.citation and post.paperurl %}
+        <p>{{ post.citation }} DOI: <a href="{{ post.paperurl }}">{{ post.paperurl }}</a></p>
+      {% elsif post.citation %}
+        <p>{{ post.citation }}</p>
+      {% endif %}
     {% endif %}
 
   </article>

@@ -43,8 +43,12 @@ layout: default
         {% endif %}
         
              
-        {% if page.paperurl %}
-          <p><a href="{{ page.paperurl }}"><u>Download paper</u></a></p>
+        {% if page.collection == 'publications' %}
+          {% if page.citation and page.paperurl %}
+            <p>{{ page.citation }} DOI: <a href="{{ page.paperurl }}">{{ page.paperurl }}</a></p>
+          {% elsif page.citation %}
+            <p>{{ page.citation }}</p>
+          {% endif %}
         {% endif %}
     
         </header>
