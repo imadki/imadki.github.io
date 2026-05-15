@@ -264,6 +264,10 @@ En tant qu'enseignant avec une double formation en informatique et en mathémati
 
 <script>
 (function () {
+  document.querySelectorAll('.course-modal-overlay').forEach(function (overlay) {
+    document.body.appendChild(overlay);
+  });
+
   function openModal(id) {
     var overlay = document.getElementById(id);
     if (overlay) { overlay.classList.add('open'); }

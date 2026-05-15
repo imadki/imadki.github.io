@@ -167,6 +167,10 @@ author_profile: true
 
 <script>
 (function () {
+  document.querySelectorAll('.talk-modal-overlay').forEach(function (overlay) {
+    document.body.appendChild(overlay);
+  });
+
   function openModal(id) {
     var overlay = document.getElementById(id);
     if (overlay) { overlay.classList.add('open'); }
