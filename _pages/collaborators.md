@@ -94,10 +94,10 @@ author_profile: true
     <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2021</span>
     <span class="collab-badge badge-eu">Belgium</span>
   </li>
-  <li class="collab-row" data-name="Ghidaglia" data-year="9999">
+  <li class="collab-row" data-name="Ghidaglia" data-year="2023">
     <span class="collab-name"><a href="https://centreborelli.ens-paris-saclay.fr/fr/annuaire-des-personnes/jean-michel-ghidaglia" target="_blank">Jean-Michel Ghidaglia</a></span>
     <span class="collab-inst">Centre Borelli, ENS Paris-Saclay, France</span>
-    <span class="collab-year"></span>
+    <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2023</span>
     <span class="collab-badge badge-eu">France</span>
   </li>
   <li class="collab-row" data-name="Greneche" data-year="2025">
@@ -124,10 +124,10 @@ author_profile: true
     <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2024</span>
     <span class="collab-badge badge-af">Morocco</span>
   </li>
-  <li class="collab-row" data-name="Basmadjian" data-year="9999">
+  <li class="collab-row" data-name="Basmadjian" data-year="2024">
     <span class="collab-name"><a href="https://www.robert-basmadjian.com/" target="_blank">Robert Basmadjian</a></span>
     <span class="collab-inst">University Mohammed VI Polytechnic (UM6P), Morocco</span>
-    <span class="collab-year"></span>
+    <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2024</span>
     <span class="collab-badge badge-af">Morocco</span>
   </li>
   <li class="collab-row" data-name="Bergou" data-year="2026">
@@ -160,10 +160,10 @@ author_profile: true
     <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2023</span>
     <span class="collab-badge badge-af">Morocco</span>
   </li>
-  <li class="collab-row" data-name="Kassab" data-year="9999">
+  <li class="collab-row" data-name="Kassab" data-year="2025">
     <span class="collab-name">Zineb Kassab</span>
     <span class="collab-inst">University Mohammed VI Polytechnic (UM6P), Morocco</span>
-    <span class="collab-year"></span>
+    <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2025</span>
     <span class="collab-badge badge-af">Morocco</span>
   </li>
   <li class="collab-row" data-name="Ziggaf" data-year="2019">
@@ -172,10 +172,10 @@ author_profile: true
     <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2019</span>
     <span class="collab-badge badge-af">Morocco</span>
   </li>
-  <li class="collab-row" data-name="Ziani" data-year="9999">
+  <li class="collab-row" data-name="Ziani" data-year="2026">
     <span class="collab-name">Mohammed Ziani</span>
     <span class="collab-inst">Faculty of Sciences, Mohammed V University in Rabat (UM5), Morocco</span>
-    <span class="collab-year"></span>
+    <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2026</span>
     <span class="collab-badge badge-af">Morocco</span>
   </li>
 </ul>
