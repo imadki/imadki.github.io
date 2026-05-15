@@ -7,153 +7,44 @@ author_profile: true
 
 {% include base_path %}
 
+<p>
+As a teacher with a dual background in computer science and mathematics, I favor a <strong>learning by doing</strong>
+approach: students work on real projects from the start of the semester, with theory and hands-on
+problem-solving sessions reinforcing the concepts needed. My teaching evaluations consistently
+average between <strong>4.0 and 4.8 out of 5</strong>.
+</p>
+
 {% assign teaching_sorted = site.teaching | sort: "date" | reverse %}
 {% assign active_teaching = teaching_sorted | where: "status", "active" %}
 {% assign archived_teaching = teaching_sorted | where: "status", "completed" %}
 
-<div class="teaching-overview">
-  <section class="teaching-hero">
-    <p class="teaching-eyebrow">Teaching Statement</p>
-    <p class="teaching-hero-title"><em>By learning you will teach; by teaching you will learn</em></p>
-    <p class="teaching-intro">
-      As a teacher with a dual background in computer science and mathematics, I have taught
-      subjects ranging from shell scripting and Python to C/C++ programming, algorithms and data
-      structures, object-oriented programming, high-performance computing, calculus, and numerical
-      methods. I favor a <strong>learning by doing</strong> approach: students work on real projects from
-      the start of the semester, with theory and interactive problem-solving sessions on platforms
-      such as Codeforces reinforcing the concepts needed. My teaching evaluations consistently
-      average between <strong>4.0 and 4.8 out of 5</strong>.
-    </p>
+---
 
-    <div class="teaching-stats">
-      <div class="teaching-stat">
-        <span class="teaching-stat-value">{{ teaching_sorted | size }}</span>
-        <span class="teaching-stat-label">Courses listed</span>
-      </div>
-      <div class="teaching-stat">
-        <span class="teaching-stat-value">{{ active_teaching | size }}</span>
-        <span class="teaching-stat-label">Currently active</span>
-      </div>
-      <div class="teaching-stat">
-        <span class="teaching-stat-value">2016–Present</span>
-        <span class="teaching-stat-label">Teaching span</span>
-      </div>
-    </div>
-  </section>
+## Current Courses
 
-  <section class="teaching-section">
-    <div class="teaching-section-heading">
-      <h2>Current teaching</h2>
-      <p>Ongoing courses and training activities.</p>
-    </div>
+{% for post in active_teaching %}
+  {% include archive-single.html %}
+{% endfor %}
 
-    <div class="teaching-grid">
-      {% for post in active_teaching %}
-        <article class="teaching-card">
-          <div class="teaching-card-header">
-            <p class="teaching-card-type">{{ post.type }}</p>
-            <h3><a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a></h3>
-          </div>
+---
 
-          <div class="teaching-meta">
-            <span>{{ post.venue }}</span>
-            <span>{{ post.location }}</span>
-            <span>{{ post.period }}</span>
-          </div>
+## Previous Courses
 
-          <p class="teaching-summary">{{ post.summary }}</p>
+{% for post in archived_teaching %}
+  {% include archive-single.html %}
+{% endfor %}
 
-          <dl class="teaching-facts">
-            <div>
-              <dt>Level</dt>
-              <dd>{{ post.level }}</dd>
-            </div>
-            <div>
-              <dt>Role</dt>
-              <dd>{{ post.role }}</dd>
-            </div>
-            <div>
-              <dt>Load</dt>
-              <dd>{{ post.load }}</dd>
-            </div>
-          </dl>
-        </article>
-      {% endfor %}
-    </div>
-  </section>
+---
 
-  <section class="teaching-section teaching-section-muted">
-    <div class="teaching-section-heading">
-      <h2>Selected previous teaching</h2>
-      <p>Courses taught in earlier academic periods.</p>
-    </div>
+## MOOCs
 
-    <div class="teaching-grid teaching-grid-compact">
-      {% for post in archived_teaching %}
-        <article class="teaching-card teaching-card-compact">
-          <div class="teaching-card-header">
-            <p class="teaching-card-type">{{ post.type }}</p>
-            <h3><a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a></h3>
-          </div>
+**Introduction to High Performance Computing** — 8 videos recorded at the UM6P Digital Lab, covering HPC fundamentals: parallel architectures, programming models, cluster usage, and performance optimization.
 
-          <div class="teaching-meta">
-            <span>{{ post.venue }}</span>
-            <span>{{ post.period }}</span>
-          </div>
+---
 
-          <p class="teaching-summary">{{ post.summary }}</p>
-        </article>
-      {% endfor %}
-    </div>
-  </section>
+## SimLab &amp; Toubkal Training
 
-  <section class="teaching-section">
-    <div class="teaching-section-heading">
-      <h2>MOOCs</h2>
-      <p>Recorded online courses available to the broader community.</p>
-    </div>
-    <div class="teaching-grid teaching-grid-compact">
-      <article class="teaching-card teaching-card-compact">
-        <div class="teaching-card-header">
-          <p class="teaching-card-type">Online course</p>
-          <h3>Introduction to High Performance Computing</h3>
-        </div>
-        <div class="teaching-meta">
-          <span>UM6P Digital Lab</span>
-          <span>8 videos available</span>
-        </div>
-        <p class="teaching-summary">
-          Recorded MOOC covering HPC fundamentals: parallel architectures, programming models, cluster usage,
-          and performance optimization. Scripts were prepared and validated with the UM6P pedagogical team.
-        </p>
-      </article>
-    </div>
-  </section>
+Over the last four years, as a member of the SimLab &amp; Toubkal teams, I have led training sessions on HPC and its tools for UM6P staff at all levels (undergraduate, junior, senior, graduate, postdocs). Detailed tutorials for cluster users are available on GitHub:
 
-  <section class="teaching-section teaching-section-muted">
-    <div class="teaching-section-heading">
-      <h2>SimLab &amp; Toubkal Training</h2>
-      <p>HPC training sessions and tutorials for UM6P staff at all levels.</p>
-    </div>
-    <div class="teaching-grid teaching-grid-compact">
-      <article class="teaching-card teaching-card-compact">
-        <div class="teaching-card-header">
-          <p class="teaching-card-type">Training</p>
-          <h3>HPC Cluster Training Sessions</h3>
-        </div>
-        <div class="teaching-meta">
-          <span>University Mohammed VI Polytechnic (UM6P)</span>
-          <span>2020–Present</span>
-        </div>
-        <p class="teaching-summary">
-          As a member of the SimLab &amp; Toubkal teams, I have led training sessions on HPC and its tools
-          for UM6P staff at all levels (undergraduate, junior, senior, graduate, postdocs). Detailed tutorials
-          for cluster users are available on GitHub:
-          <a href="https://github.com/imadki/HPC-Simlab" target="_blank">HPC-Simlab Tutorials</a> and
-          <a href="https://github.com/imadki/HPC-Toubkal" target="_blank">HPC-Toubkal Tutorials</a>.
-        </p>
-      </article>
-    </div>
-  </section>
-
-</div>
+- [HPC-Simlab Tutorials](https://github.com/imadki/HPC-Simlab)
+- [HPC-Toubkal Tutorials](https://github.com/imadki/HPC-Toubkal)
