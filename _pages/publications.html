@@ -186,12 +186,11 @@ author_profile: true
   var viewVenueC     = document.getElementById('view-venue-conference');
   var groupbyRow     = document.getElementById('groupby-row');
   var yearRow        = document.getElementById('year-filter-group');
-  var venuesAll      = document.getElementById('pub-venues-all');
-  var venuesSelected = document.getElementById('pub-venues-selected');
-
   function updateVenues() {
-    if (venuesAll) venuesAll.style.display = activeType === 'selected' ? 'none' : '';
-    if (venuesSelected) venuesSelected.style.display = activeType === 'selected' ? '' : 'none';
+    var va = document.getElementById('pub-venues-all');
+    var vs = document.getElementById('pub-venues-selected');
+    if (va) va.style.display = activeType === 'selected' ? 'none' : '';
+    if (vs) vs.style.display = activeType === 'selected' ? '' : 'none';
   }
 
   function applyFilters() {
