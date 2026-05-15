@@ -59,6 +59,35 @@ author_profile: true
 .badge-conference { background: #f0f0f0; color: #666; }
 
 .pub-no-results { display: none; color: #888; font-style: italic; padding: 1em 0; }
+
+.pub-chart-section {
+  margin-bottom: 1.6em;
+  padding: 0.9em 1.1em;
+  background: #f9f9f9;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+}
+.pub-chart-header {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 0.5em; margin-bottom: 0.75em;
+}
+.pub-chart-title {
+  font-size: 0.8em; font-weight: 700; color: #666;
+  text-transform: uppercase; letter-spacing: 0.07em;
+}
+.pub-chart-toggles { display: flex; gap: 0.45em; }
+.chart-toggle {
+  display: flex; align-items: center; gap: 0.35em;
+  padding: 0.18em 0.65em; border: 1px solid #ccc; border-radius: 999px;
+  background: #fff; font-size: 0.8em; cursor: pointer;
+  color: #aaa; font-family: inherit; transition: all 0.15s;
+}
+.chart-toggle.active { color: #444; border-color: #aaa; }
+.chart-toggle:hover { border-color: #52adc8; color: #52adc8; }
+.chart-dot { width: 9px; height: 9px; border-radius: 2px; flex-shrink: 0; }
+.chart-dot-j { background: #2e7d9e; }
+.chart-dot-c { background: #aaa; }
+.pub-chart-container { height: 170px; position: relative; }
 </style>
 
 <div class="pub-filters">
@@ -76,6 +105,72 @@ author_profile: true
     {% endfor %}
   </div>
 </div>
+
+{% assign pubs_by_year_chart = all_pubs | group_by_exp: "item", "item.date | date: '%Y'" | sort: "name" %}
+
+<div class="pub-chart-section">
+  <div class="pub-chart-header">
+    <span class="pub-chart-title lang-en">Publications per Year</span>
+    <span class="pub-chart-title lang-fr">Publications par Année</span>
+    <div class="pub-chart-toggles">
+      <button class="chart-toggle active" id="chart-toggle-j" onclick="toggleChartSeries(0, this)">
+        <span class="chart-dot chart-dot-j"></span>
+        <span class="lang-en">Journals</span><span class="lang-fr">Revues</span>
+      </button>
+      <button class="chart-toggle active" id="chart-toggle-c" onclick="toggleChartSeries(1, this)">
+        <span class="chart-dot chart-dot-c"></span>
+        <span class="lang-en">Conferences</span><span class="lang-fr">Conférences</span>
+      </button>
+    </div>
+  </div>
+  <div class="pub-chart-container">
+    <canvas id="pub-chart"></canvas>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<script>
+(function () {
+  var labels = [{% for yg in pubs_by_year_chart %}"{{ yg.name }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
+  var jData   = [{% for yg in pubs_by_year_chart %}{{ yg.items | where: "pubtype", "journal"    | size }}{% unless forloop.last %},{% endunless %}{% endfor %}];
+  var cData   = [{% for yg in pubs_by_year_chart %}{{ yg.items | where: "pubtype", "conference" | size }}{% unless forloop.last %},{% endunless %}{% endfor %}];
+
+  var ctx = document.getElementById('pub-chart').getContext('2d');
+  window.pubChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: labels,
+      datasets: [
+        { label: 'Journals', data: jData,
+          backgroundColor: 'rgba(46,125,158,0.72)', borderColor: '#2e7d9e',
+          borderWidth: 1.5, borderRadius: 3 },
+        { label: 'Conferences', data: cData,
+          backgroundColor: 'rgba(150,150,150,0.42)', borderColor: '#aaa',
+          borderWidth: 1.5, borderRadius: 3 }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { mode: 'index', intersect: false }
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { size: 11 } } },
+        y: { beginAtZero: true, ticks: { stepSize: 1, font: { size: 11 } },
+             grid: { color: 'rgba(0,0,0,0.05)' } }
+      }
+    }
+  });
+
+  window.toggleChartSeries = function (idx, btn) {
+    var visible = window.pubChart.isDatasetVisible(idx);
+    window.pubChart.setDatasetVisibility(idx, !visible);
+    btn.classList.toggle('active', !visible);
+    window.pubChart.update();
+  };
+})();
+</script>
 
 <p class="pub-count" id="pub-count"><span id="pub-count-num">{{ all_pubs | size }}</span> <span class="lang-en">publication(s) displayed</span><span class="lang-fr">publication(s) affichée(s)</span></p>
 <p class="pub-no-results" id="pub-no-results"><span class="lang-en">No publications match the selected filters.</span><span class="lang-fr">Aucune publication ne correspond aux filtres sélectionnés.</span></p>
