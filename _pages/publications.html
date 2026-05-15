@@ -237,3 +237,65 @@ author_profile: true
   });
 })();
 </script>
+
+{% assign journal_pubs = site.publications | where: "pubtype", "journal" %}
+{% assign conf_pubs    = site.publications | where: "pubtype", "conference" %}
+{% assign journal_venues = journal_pubs | map: "venue" | sort | uniq %}
+{% assign conf_venues    = conf_pubs    | map: "venue" | sort | uniq %}
+
+<style>
+.pub-venues-section {
+  margin-top: 2.5em;
+  padding-top: 1.5em;
+  border-top: 2px solid #e0e0e0;
+}
+.pub-venues-heading {
+  font-size: 1.15em; font-weight: 700; color: #333;
+  margin: 0 0 1.1em;
+}
+.pub-venues-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5em 2em;
+}
+@media (max-width: 600px) {
+  .pub-venues-grid { grid-template-columns: 1fr; }
+}
+.pub-venues-col h3 {
+  font-size: 0.8em; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.08em; color: #52adc8;
+  margin: 0 0 0.6em; padding-bottom: 0.3em;
+  border-bottom: 2px solid #52adc8; display: inline-block;
+}
+.pub-venues-col ul {
+  list-style: none; margin: 0; padding: 0;
+}
+.pub-venues-col li {
+  font-size: 0.88em; color: #444; padding: 0.28em 0;
+  border-bottom: 1px solid #f2f2f2; line-height: 1.4;
+}
+.pub-venues-col li:last-child { border-bottom: none; }
+</style>
+
+<div class="pub-venues-section">
+  <p class="pub-venues-heading">
+    <span class="lang-en">Publication Venues</span>
+    <span class="lang-fr">Lieux de Publication</span>
+  </p>
+  <div class="pub-venues-grid">
+    <div class="pub-venues-col">
+      <h3 class="lang-en-block">Journals</h3>
+      <h3 class="lang-fr-block">Revues</h3>
+      <ul>
+        {% for v in journal_venues %}<li>{{ v }}</li>{% endfor %}
+      </ul>
+    </div>
+    <div class="pub-venues-col">
+      <h3 class="lang-en-block">Conferences</h3>
+      <h3 class="lang-fr-block">Conférences</h3>
+      <ul>
+        {% for v in conf_venues %}<li>{{ v }}</li>{% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
