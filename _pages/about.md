@@ -28,7 +28,7 @@ I develop and maintain several open-source scientific codes:
 - **[Mumps4py](https://github.com/imadki/mumps4py)** — A Python interface for the MUMPS parallel sparse direct solver, officially adopted by the MUMPS project.
 - **[NeuralPDE-Solver](https://github.com/Mohammed-khlifi/NeuralPDE-Solver)** — An open-source Python framework for applying PINNs, PINOs, and FNOs to steady-state PDEs.
 
-## Recent News
+## Highlights
 
 - **Dec 2025** — Keynote Speaker at the 19th CHPC National Conference, Cape Town, South Africa: *Building the Future: Morocco's High-Performance Computing Infrastructure*.
 - **Dec 2025** — Organization of the **SupercomputingAfrica (SCAF)** conference, Benguerir, Morocco.
@@ -37,8 +37,12 @@ I develop and maintain several open-source scientific codes:
 - **Sep 2025** — New grant: *Coupling Physical Models and Data for Monitoring Soil Evolution* (€375K, Nutricrops–OCP).
 - **Oct 2022** — Co-PI of the **Multiphysics and HPC Chair** (€6.3M, OCP, 5-year project).
 
-## Background
+## Career
 
-Before joining UM6P as an Assistant Professor, I was a **Research & Education Fellow** at UM6P (April 2019 – September 2023) and a **PostDoc** at the *Autorité de Sûreté Nucléaire et de Radioprotection* (ASNR), Fontenay-aux-Roses, France (April 2017 – March 2019), working on a posteriori error estimation, mesh refinement, and MPI-based parallelism.
-
-I hold a **PhD in High Performance Computational Fluid Dynamics** (December 2013 – February 2017) from *Université Sorbonne Paris Nord (USPN)*, under the supervision of Prof. Christophe Cérin and Prof. Fayssal Benkhaldoun, and an **Engineering degree in Computer Science** from ENSAO, Morocco (2012).
+| Period | Position |
+|--------|----------|
+| Sep 2023 – present | Assistant Professor, UM6P, Ben Guerir, Morocco |
+| Apr 2019 – Sep 2023 | Research & Education Fellow, UM6P, Ben Guerir, Morocco |
+| Apr 2017 – Mar 2019 | PostDoc, ASNR, Fontenay-aux-Roses, France |
+| Dec 2013 – Feb 2017 | PhD, Université Sorbonne Paris Nord (USPN), France |
+| Sep 2007 – Jul 2012 | Engineering degree in Computer Science, ENSAO, Morocco |

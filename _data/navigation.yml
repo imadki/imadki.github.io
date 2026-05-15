@@ -9,6 +9,12 @@ main:
   - title: "Teaching"
     url: /teaching/
 
+  - title: "Group"
+    url: /group/
+
+  - title: "Grants"
+    url: /grants/
+
   - title: "Software"
     url: /portfolio/
 
