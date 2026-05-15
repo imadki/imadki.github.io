@@ -1,6 +1,7 @@
 ---
 title: "A highly efficient finite volume method with a diffusion control parameter for hyperbolic problems"
 collection: publications
+pubtype: journal
 permalink: /publication/2023-J8-fvm-diffusion-control
 excerpt: 'Highly efficient FVM with a diffusion control parameter applied to hyperbolic conservation laws on unstructured hybrid meshes.'
 date: 2023-01-01

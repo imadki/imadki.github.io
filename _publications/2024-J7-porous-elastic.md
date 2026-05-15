@@ -1,6 +1,7 @@
 ---
 title: "Stability results of a swelling porous-elastic system with two nonlinear variable exponent damping"
 collection: publications
+pubtype: journal
 permalink: /publication/2024-J7-porous-elastic
 excerpt: 'Stability analysis of a swelling porous-elastic system with nonlinear variable exponent damping terms.'
 date: 2024-01-03

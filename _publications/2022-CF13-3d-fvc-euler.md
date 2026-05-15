@@ -1,6 +1,7 @@
 ---
 title: "A Three-dimensional FVC scheme on non-uniform tetrahedron meshes: application to the 3D Euler equation"
 collection: publications
+pubtype: conference
 permalink: /publication/2022-CF13-3d-fvc-euler
 excerpt: '3D finite volume cell-centered scheme on non-uniform tetrahedral meshes applied to the 3D Euler equation.'
 date: 2022-06-02

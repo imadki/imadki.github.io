@@ -1,6 +1,7 @@
 ---
 title: "Predicting MPI Communication for Solving Partial Differential Equations Using Machine Learning"
 collection: publications
+pubtype: conference
 permalink: /publication/2024-CF2-predicting-mpi
 excerpt: 'Machine learning approach to predict MPI communication patterns for PDE solvers in HPC environments.'
 date: 2024-06-01

@@ -1,6 +1,7 @@
 ---
 title: "A 3D Finite-Volume Solver for Suspension Flow in Fibrous Media: Advancing Simulations of the RTM Process"
 collection: publications
+pubtype: preprint
 permalink: /publication/2025-JUR2-3d-fv-suspension
 excerpt: 'Under review. 3D finite volume solver for suspension flow in fibrous media with application to Resin Transfer Molding.'
 date: 2025-11-01

@@ -1,6 +1,7 @@
 ---
 title: "High-Performance Computing to Accelerate Large-Scale Computational Fluid Dynamics Simulations: A Comprehensive Study"
 collection: publications
+pubtype: conference
 permalink: /publication/2023-CF9-hpc-cfd-ai2sd
 excerpt: 'Comprehensive study of HPC acceleration for large-scale CFD simulations.'
 date: 2023-06-01

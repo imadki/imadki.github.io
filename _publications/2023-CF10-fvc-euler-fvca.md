@@ -1,6 +1,7 @@
 ---
 title: "A finite volume scheme with a diffusion control parameter on unstructured hybrid mesh: application to two-dimensional Euler equations"
 collection: publications
+pubtype: conference
 permalink: /publication/2023-CF10-fvc-euler-fvca
 excerpt: 'FVC scheme with diffusion control parameter on unstructured hybrid meshes applied to 2D Euler equations.'
 date: 2023-06-02

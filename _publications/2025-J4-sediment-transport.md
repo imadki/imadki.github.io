@@ -1,6 +1,7 @@
 ---
 title: "A new class of sediment transport models for dam break problems"
 collection: publications
+pubtype: journal
 permalink: /publication/2025-J4-sediment-transport
 excerpt: 'New class of sediment transport models tailored for dam break problems using finite volume methods.'
 date: 2025-01-04

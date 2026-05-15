@@ -1,6 +1,7 @@
 ---
 title: "Facts and Issues of Neural Networks for Numerical Simulation"
 collection: publications
+pubtype: conference
 permalink: /publication/2023-CF11-nn-numerical-simulation
 excerpt: 'Analysis of the facts and challenges of applying neural networks to numerical simulation problems.'
 date: 2023-06-03

@@ -1,6 +1,7 @@
 ---
 title: "Numerical Study of Viscoplastic Flows Using a Multigrid Initialization Algorithm"
 collection: publications
+pubtype: journal
 permalink: /publication/2023-J10-viscoplastic-multigrid
 excerpt: 'Numerical study of viscoplastic flows using a multigrid initialization algorithm for efficient computation.'
 date: 2023-01-03

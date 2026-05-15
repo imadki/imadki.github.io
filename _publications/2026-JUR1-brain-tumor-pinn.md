@@ -1,6 +1,7 @@
 ---
 title: "A Recurrent Copula-Based Physics-Informed Neural Network for 3D Brain Tumor Segmentation: A Unified Variational Framework"
 collection: publications
+pubtype: preprint
 permalink: /publication/2026-JUR1-brain-tumor-pinn
 excerpt: 'Under review. Physics-informed neural network approach for 3D brain tumor segmentation using a recurrent copula-based variational framework.'
 date: 2026-02-01

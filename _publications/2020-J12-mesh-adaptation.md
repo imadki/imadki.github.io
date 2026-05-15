@@ -1,6 +1,7 @@
 ---
 title: "Numerical assessment of criteria for mesh adaptation in the finite volume solution of shallow water equations"
 collection: publications
+pubtype: journal
 permalink: /publication/2020-J12-mesh-adaptation
 excerpt: 'Assessment of various mesh adaptation criteria within a finite volume framework for shallow water equations.'
 date: 2020-01-01

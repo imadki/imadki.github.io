@@ -1,6 +1,7 @@
 ---
 title: "TOUBKAL: A High-Performance Supercomputer Powering Scientific Research in Africa"
 collection: publications
+pubtype: journal
 permalink: /publication/2025-J1-toubkal
 excerpt: 'Presentation of the Toubkal supercomputer at UM6P and its role in enabling scientific research in Africa.'
 date: 2025-01-01

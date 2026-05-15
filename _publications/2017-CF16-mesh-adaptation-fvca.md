@@ -1,6 +1,7 @@
 ---
 title: "New criteria for mesh adaptation in finite volume simulation of planar ionization wavefront propagation"
 collection: publications
+pubtype: conference
 permalink: /publication/2017-CF16-mesh-adaptation-fvca
 excerpt: 'New mesh adaptation criteria within a finite volume framework for planar ionization wavefront propagation simulation.'
 date: 2017-06-01

@@ -1,6 +1,7 @@
 ---
 title: "Equilibrium Finite Element method for Steady-State Stokes equations"
 collection: publications
+pubtype: journal
 permalink: /publication/2026-J-stokes-fem
 excerpt: 'Equilibrium finite element method for the steady-state Stokes equations.'
 date: 2026-04-10

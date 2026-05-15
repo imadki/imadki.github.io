@@ -1,6 +1,7 @@
 ---
 title: "Parallelization of the ADAPT 3D Streamer Propagation Code"
 collection: publications
+pubtype: conference
 permalink: /publication/2016-CF4-adapt-streamer
 excerpt: 'MPI-based parallelization of the ADAPT 3D streamer propagation code for plasma physics simulations.'
 date: 2016-06-01

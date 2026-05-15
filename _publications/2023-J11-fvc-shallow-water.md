@@ -1,6 +1,7 @@
 ---
 title: "A well balanced FVC scheme for 2D Shallow Water flows on unstructured triangular meshes"
 collection: publications
+pubtype: journal
 permalink: /publication/2023-J11-fvc-shallow-water
 excerpt: 'Well-balanced finite volume cell-centered scheme for 2D shallow water equations on unstructured triangular meshes.'
 date: 2023-01-04

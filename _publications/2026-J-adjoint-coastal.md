@@ -1,6 +1,7 @@
 ---
 title: "Adjoint model based deep learning for efficient pointwise residence time estimation in coastal environment"
 collection: publications
+pubtype: journal
 permalink: /publication/2026-J-adjoint-coastal
 excerpt: 'Adjoint-based deep learning for efficient pointwise residence time estimation in coastal environments.'
 date: 2026-03-08

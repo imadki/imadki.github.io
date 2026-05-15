@@ -1,6 +1,7 @@
 ---
 title: "Exponential and polynomial decay results for a swelling porous elastic system with a single nonlinear variable exponent damping"
 collection: publications
+pubtype: journal
 permalink: /publication/2023-J9-porous-elastic-decay
 excerpt: 'Exponential and polynomial decay results for swelling porous elastic systems with nonlinear damping.'
 date: 2023-01-02

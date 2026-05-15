@@ -1,6 +1,7 @@
 ---
 title: "Challenges of translating HPC codes to workflows for heterogeneous and dynamic environments"
 collection: publications
+pubtype: conference
 permalink: /publication/2017-CF3-hpc-workflows
 excerpt: 'Study of challenges when translating HPC codes into workflows for heterogeneous and dynamic computing environments.'
 date: 2017-06-01

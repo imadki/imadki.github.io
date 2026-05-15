@@ -1,6 +1,7 @@
 ---
 title: "A well-balanced finite volume solver for the 2D shallow water magnetohydrodynamic equations with topography"
 collection: publications
+pubtype: journal
 permalink: /publication/2024-J5-shallow-water-mhd
 excerpt: 'Well-balanced finite volume solver for 2D shallow water magnetohydrodynamic equations including variable topography effects.'
 date: 2024-01-01

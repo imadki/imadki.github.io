@@ -1,6 +1,7 @@
 ---
 title: "Application of an unstructured finite volume method to the shallow water equations with porosity for urban flood modelling"
 collection: publications
+pubtype: conference
 permalink: /publication/2020-CF15-shallow-water-porosity
 excerpt: 'Unstructured FVM applied to shallow water equations with porosity for urban flood modelling.'
 date: 2020-06-02

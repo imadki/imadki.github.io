@@ -1,6 +1,7 @@
 ---
 title: "Parallel Finite Volume Code for Plasma with Unstructured Adaptive Mesh Refinement"
 collection: publications
+pubtype: conference
 permalink: /publication/2022-CF12-parallel-fv-plasma
 excerpt: 'Parallel finite volume code for plasma simulation with unstructured adaptive mesh refinement.'
 date: 2022-06-01

@@ -1,6 +1,7 @@
 ---
 title: "Numerical computation of the residence time related to the water renewal in the Nador Lagoon"
 collection: publications
+pubtype: conference
 permalink: /publication/2024-CF8-nador-residence-time
 excerpt: 'Numerical computation of residence time for water renewal in the Nador Lagoon using finite volume methods.'
 date: 2024-03-02

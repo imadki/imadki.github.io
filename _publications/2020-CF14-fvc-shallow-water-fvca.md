@@ -1,6 +1,7 @@
 ---
 title: "The FVC scheme on unstructured meshes for the two-dimensional shallow water equations"
 collection: publications
+pubtype: conference
 permalink: /publication/2020-CF14-fvc-shallow-water-fvca
 excerpt: 'FVC scheme on unstructured meshes applied to the 2D shallow water equations.'
 date: 2020-06-01

@@ -1,6 +1,7 @@
 ---
 title: "A robust and well-balanced finite volume solver for investigating the effects of tides on water renewal timescale in the Nador lagoon"
 collection: publications
+pubtype: journal
 permalink: /publication/2024-J6-nador-lagoon
 excerpt: 'Robust finite volume solver applied to investigate tidal effects on water renewal in the Nador lagoon, Morocco.'
 date: 2024-01-02

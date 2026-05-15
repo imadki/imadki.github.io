@@ -1,6 +1,7 @@
 ---
 title: "Advanced Numerical Methods for Simulating Suspension Flow in Fibrous Media: Application to the RTM Process"
 collection: publications
+pubtype: journal
 permalink: /publication/2025-J2-suspension-flow-fibrous
 excerpt: 'Advanced numerical methods for suspension flow simulation with application to Resin Transfer Molding (RTM).'
 date: 2025-01-02

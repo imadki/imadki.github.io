@@ -1,6 +1,7 @@
 ---
 title: "Computational investigations of a multi-class traffic flow model: Mean-field and microscopic dynamics"
 collection: publications
+pubtype: journal
 permalink: /publication/2025-J3-traffic-flow
 excerpt: 'Computational study of a multi-class traffic flow model combining mean-field and microscopic approaches.'
 date: 2025-01-03

@@ -1,6 +1,7 @@
 ---
 title: "A data-driven approach for flux selection in finite volume methods for Hyperbolic Conservation Laws"
 collection: publications
+pubtype: journal
 permalink: /publication/2026-J-flux-selection-fvm
 excerpt: 'Data-driven flux selection strategy for finite volume methods applied to hyperbolic conservation laws.'
 date: 2026-04-14

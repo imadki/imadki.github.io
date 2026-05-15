@@ -1,6 +1,7 @@
 ---
 title: "Towards parallel CFD computation for the ADAPT framework"
 collection: publications
+pubtype: conference
 permalink: /publication/2016-CF5-adapt-ica3pp
 excerpt: 'Parallel CFD computation strategy for the ADAPT framework using mesh partitioning and MPI.'
 date: 2016-06-02

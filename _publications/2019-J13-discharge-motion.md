@@ -1,6 +1,7 @@
 ---
 title: "Finite volume methods for numerical simulation of the discharge motion described by different physical models"
 collection: publications
+pubtype: journal
 permalink: /publication/2019-J13-discharge-motion
 excerpt: 'Finite volume methods applied to numerical simulation of discharge motion using various physical models.'
 date: 2019-01-01

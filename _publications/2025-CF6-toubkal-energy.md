@@ -1,6 +1,7 @@
 ---
 title: "Evaluating the Energy Efficiency of Toubkal HPC: Insights for the Green500 Rankings and Its Metric"
 collection: publications
+pubtype: conference
 permalink: /publication/2025-CF6-toubkal-energy
 excerpt: 'Energy efficiency evaluation of the Toubkal supercomputer in the context of Green500 rankings.'
 date: 2025-06-15

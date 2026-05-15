@@ -1,6 +1,7 @@
 ---
 title: "Manapy: An MPI-based Python framework for solving Poisson's equation using finite volume on unstructured grids"
 collection: publications
+pubtype: conference
 permalink: /publication/2024-CF7-manapy-icmsao
 excerpt: 'Presentation of Manapy, an MPI-based Python finite volume framework, applied to Poisson equation on unstructured grids.'
 date: 2024-03-01
