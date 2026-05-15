@@ -1,5 +1,6 @@
 ---
 title: "Parallel & Distributed Computing"
+title_fr: "Calcul Parallèle & Distribué"
 collection: teaching
 type: "Graduate course"
 permalink: /teaching/2020-teaching-hpc

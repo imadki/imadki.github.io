@@ -1,5 +1,6 @@
 ---
 title: "Python for Financial Engineers"
+title_fr: "Python pour Ingénieurs Financiers"
 collection: teaching
 type: "Graduate course"
 permalink: /teaching/2022-teaching-python-finance

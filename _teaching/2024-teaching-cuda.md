@@ -1,5 +1,6 @@
 ---
 title: "Fundamentals of Accelerated Computing with CUDA Python Certifications"
+title_fr: "Fondamentaux du Calcul Accéléré avec Certifications CUDA Python"
 collection: teaching
 type: "Specialized course"
 permalink: /teaching/2024-teaching-cuda

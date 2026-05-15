@@ -1,5 +1,6 @@
 ---
 title: "C++ Programming"
+title_fr: "Programmation C++"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2024-teaching-cpp

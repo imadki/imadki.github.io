@@ -1,5 +1,6 @@
 ---
 title: "Calculus 1"
+title_fr: "Analyse 1"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2020-teaching-calculus

@@ -1,5 +1,6 @@
 ---
 title: "Introduction to HPC"
+title_fr: "Introduction au HPC"
 collection: teaching
 type: "Specialized course"
 permalink: /teaching/2024-teaching-intro-hpc

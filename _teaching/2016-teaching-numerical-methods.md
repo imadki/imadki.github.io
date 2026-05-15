@@ -1,5 +1,6 @@
 ---
 title: "Numerical Methods"
+title_fr: "Méthodes Numériques"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2016-teaching-numerical-methods

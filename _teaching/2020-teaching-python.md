@@ -1,5 +1,6 @@
 ---
 title: "Algorithmic & Python Programming"
+title_fr: "Algorithmique & Programmation Python"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2020-teaching-python
