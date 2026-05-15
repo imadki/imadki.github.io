@@ -39,10 +39,84 @@ I develop and maintain several open-source scientific codes:
 
 ## Career
 
-| Period | Position |
-|--------|----------|
-| Sep 2023 – present | Assistant Professor, UM6P, Ben Guerir, Morocco |
-| Apr 2019 – Sep 2023 | Research & Education Fellow, UM6P, Ben Guerir, Morocco |
-| Apr 2017 – Mar 2019 | PostDoc, ASNR, Fontenay-aux-Roses, France |
-| Dec 2013 – Feb 2017 | PhD, Université Sorbonne Paris Nord (USPN), France |
-| Sep 2007 – Jul 2012 | Engineering degree in Computer Science, ENSAO, Morocco |
+<style>
+.career-timeline {
+  position: relative;
+  margin: 1em 0 0.5em;
+  padding-left: 1.6em;
+  border-left: 2px solid #52adc8;
+}
+.career-item {
+  position: relative;
+  margin-bottom: 1.1em;
+  padding-left: 1em;
+}
+.career-item::before {
+  content: "";
+  position: absolute;
+  left: -1.72em;
+  top: 0.35em;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #52adc8;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1.5px #52adc8;
+}
+.career-item.past::before {
+  background: #ccc;
+  box-shadow: 0 0 0 1.5px #ccc;
+}
+.career-period {
+  font-size: 0.8em;
+  color: #999;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.1em;
+}
+.career-role {
+  font-weight: 700;
+  font-size: 0.95em;
+  color: #222;
+}
+.career-inst {
+  font-size: 0.88em;
+  color: #666;
+  margin-top: 0.05em;
+}
+</style>
+
+<div class="career-timeline">
+
+  <div class="career-item">
+    <div class="career-period">Sep 2023 – present</div>
+    <div class="career-role">Assistant Professor</div>
+    <div class="career-inst">University Mohammed VI Polytechnic (UM6P), Ben Guerir, Morocco</div>
+  </div>
+
+  <div class="career-item past">
+    <div class="career-period">Apr 2019 – Sep 2023</div>
+    <div class="career-role">Research &amp; Education Fellow</div>
+    <div class="career-inst">University Mohammed VI Polytechnic (UM6P), Ben Guerir, Morocco</div>
+  </div>
+
+  <div class="career-item past">
+    <div class="career-period">Apr 2017 – Mar 2019</div>
+    <div class="career-role">Postdoctoral Researcher</div>
+    <div class="career-inst">ASNR, Fontenay-aux-Roses, France</div>
+  </div>
+
+  <div class="career-item past">
+    <div class="career-period">Dec 2013 – Feb 2017</div>
+    <div class="career-role">PhD in Applied Mathematics &amp; Computer Science</div>
+    <div class="career-inst">Université Sorbonne Paris Nord (USPN), France</div>
+  </div>
+
+  <div class="career-item past">
+    <div class="career-period">Sep 2007 – Jul 2012</div>
+    <div class="career-role">Engineering Degree in Computer Science</div>
+    <div class="career-inst">ENSAO, Oujda, Morocco</div>
+  </div>
+
+</div>
