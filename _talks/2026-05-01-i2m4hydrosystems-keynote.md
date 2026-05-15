@@ -10,4 +10,4 @@ location: "Hammamet, Tunisia"
 
 Invited keynote at the I2M4HydroSystems Workshop. The talk explored how neural networks can be integrated with CFD solvers to improve performance and accuracy in computational fluid dynamics simulations.
 
-[Workshop link](https://lnkd.in/dbHMyqvZ)
+[Workshop link](https://i2m4hydrosystem.sciencesconf.org/)

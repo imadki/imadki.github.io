@@ -10,4 +10,4 @@ location: "Marrakech, Morocco"
 
 Invited keynote at the first edition of LISI Days, Cadi Ayyad University. The talk presented parallel computing principles and HPC practices through the concrete case study of UM6P's Toubkal supercomputer.
 
-[Event link](https://lnkd.in/d9XVg2GV)
+[Event link](https://www.lisidays-fssm.com)
