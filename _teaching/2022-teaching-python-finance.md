@@ -9,8 +9,8 @@ location: "Ben Guerir, Morocco"
 role: "Coordinator"
 load: "48h/year"
 level: "Master (QFM — Quantitative Finance and Modeling)"
-period: "2022–Present"
-status: "active"
+period: "2022–2024"
+status: "completed"
 summary: "Python for quantitative finance covering Pandas, financial time series, Monte Carlo, finite differences, and machine learning."
 ---
 

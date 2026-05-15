@@ -3,14 +3,14 @@ title: "C Programming"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2020-teaching-c
-venue: "University Mohammed VI Polytechnic (UM6P), College of Computing"
-date: 2020-01-03
-location: "Ben Guerir, Morocco"
+venue: "Institut Supérieur d'Électronique de Paris (ISEP)"
+date: 2016-01-02
+location: "Paris, France"
 role: "Coordinator"
-load: "48h/year"
-level: "Preparatory Cycle (CS School)"
-period: "2020–Present"
-status: "active"
+load: "48h"
+level: "Preparatory Cycle"
+period: "2016–2019"
+status: "completed"
 summary: "Comprehensive introduction to C programming with emphasis on memory management, pointers, structures, and heap vs. stack performance."
 ---
 

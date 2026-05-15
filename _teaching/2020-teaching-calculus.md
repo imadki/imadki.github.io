@@ -3,14 +3,14 @@ title: "Calculus 1"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2020-teaching-calculus
-venue: "University Mohammed VI Polytechnic (UM6P), College of Computing"
-date: 2020-01-04
-location: "Ben Guerir, Morocco"
+venue: "Institut Supérieur d'Électronique de Paris (ISEP)"
+date: 2016-01-03
+location: "Paris, France"
 role: "Coordinator"
-load: "48h/year"
-level: "Preparatory Cycle (CS School)"
-period: "2020–Present"
-status: "active"
+load: "48h"
+level: "Preparatory Cycle"
+period: "2016–2019"
+status: "completed"
 summary: "Introduction to fundamental calculus concepts including sequences, functions of a real variable, differentiability, Taylor's formula, and integration."
 ---
 

@@ -9,8 +9,8 @@ location: "Ben Guerir, Morocco"
 role: "Coordinator"
 load: "48h/year"
 level: "Preparatory Cycle (CS School)"
-period: "2020–Present"
-status: "active"
+period: "2020–2023"
+status: "completed"
 summary: "Two-part course covering algorithm design and complexity theory alongside scientific Python programming for CS preparatory students."
 ---
 
