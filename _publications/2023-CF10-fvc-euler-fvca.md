@@ -5,7 +5,7 @@ pubtype: conference
 permalink: /publication/2023-CF10-fvc-euler-fvca
 excerpt: 'FVC scheme with diffusion control parameter on unstructured hybrid meshes applied to 2D Euler equations.'
 date: 2023-06-02
-venue: 'FVCA X 2023 – International Conference on Finite Volumes for Complex Applications'
+venue: 'International Conference on Finite Volumes for Complex Applications (FVCA)'
 paperurl: 'https://doi.org/10.1007/978-3-031-40860-1_1'
 citation: 'W. Aboussi, M. Ziggaf, <b>I. Kissami</b>, M. Boubekeur.'
 ---
