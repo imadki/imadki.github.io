@@ -24,6 +24,24 @@ html.lang-is-fr .lang-en { display: none !important; }
 .lang-fr-block { display: none !important; }
 html.lang-is-fr .lang-fr-block { display: block !important; }
 html.lang-is-fr .lang-en-block { display: none !important; }
+
+@media (max-width: 768px) {
+  .masthead__inner-wrap {
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+
+  .masthead__menu {
+    flex: 1 0 100%;
+    min-width: 0;
+  }
+
+  .lang-toggle-nav {
+    width: 100%;
+    justify-content: flex-end;
+    padding: 0.4em 1em 0.2em;
+  }
+}
 </style>
 
 <div class="masthead">
