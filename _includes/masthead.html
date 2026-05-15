@@ -17,6 +17,14 @@
 .lang-btn-nav.active { color: #52adc8; }
 .lang-sep { color: #ddd; font-size: 0.75em; }
 
+.theme-btn-nav {
+  background: none; border: none; cursor: pointer;
+  font-size: 1em; line-height: 1;
+  color: #aaa; padding: 0.25em 0.45em;
+  border-radius: 3px; transition: color 0.15s;
+}
+.theme-btn-nav:hover { color: #52adc8; }
+
 .search-btn-nav {
   background: none; border: none; cursor: pointer;
   color: #aaa; padding: 0.25em 0.45em; border-radius: 3px;
@@ -122,6 +130,9 @@ html.lang-is-fr .lang-en-block { display: none !important; }
       <button class="search-btn-nav" onclick="openSearch()" aria-label="Search">
         <i class="fas fa-search"></i>
       </button>
+      <button class="theme-btn-nav" id="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
       <button class="lang-btn-nav" id="nav-btn-en" onclick="setLang('en')">EN</button>
       <span class="lang-sep">|</span>
       <button class="lang-btn-nav" id="nav-btn-fr" onclick="setLang('fr')">FR</button>
@@ -149,11 +160,31 @@ function setLang(lang) {
   if (btnFr) btnFr.classList.toggle('active', lang === 'fr');
   document.documentElement.classList.toggle('lang-is-fr', lang === 'fr');
 }
+
+function setTheme(dark) {
+  document.documentElement.classList.toggle('dark-mode', dark);
+  var btn = document.getElementById('theme-toggle-btn');
+  if (btn) btn.innerHTML = dark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+  try { localStorage.setItem('site-theme', dark ? 'dark' : 'light'); } catch(e) {}
+}
+
+function toggleTheme() {
+  setTheme(!document.documentElement.classList.contains('dark-mode'));
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   try {
     var saved = localStorage.getItem('site-lang') || 'en';
     setLang(saved);
   } catch(e) { setLang('en'); }
+  try {
+    var savedTheme = localStorage.getItem('site-theme');
+    if (savedTheme === 'dark') {
+      setTheme(true);
+    } else if (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      setTheme(true);
+    }
+  } catch(e) {}
 });
 
 var searchIndex = null;

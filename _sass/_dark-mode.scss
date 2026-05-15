@@ -1,0 +1,418 @@
+/* ==========================================================================
+   DARK MODE
+   ========================================================================== */
+
+html.dark-mode {
+  color-scheme: dark;
+}
+
+html.dark-mode body {
+  background-color: #121212;
+  color: #e4e4e4;
+}
+
+/* Links */
+html.dark-mode a {
+  color: #52adc8;
+}
+html.dark-mode a:visited {
+  color: #7abfd4;
+}
+
+/* Headings */
+html.dark-mode h1,
+html.dark-mode h2,
+html.dark-mode h3,
+html.dark-mode h4,
+html.dark-mode h5,
+html.dark-mode h6 {
+  color: #f0f0f0;
+}
+
+/* Masthead / Navigation */
+html.dark-mode .masthead {
+  background: #1a1a2a;
+  border-bottom-color: #2d2d45;
+}
+html.dark-mode .greedy-nav {
+  background: #1a1a2a;
+}
+html.dark-mode .greedy-nav a {
+  color: #ccc;
+}
+html.dark-mode .greedy-nav a:hover {
+  color: #52adc8;
+}
+html.dark-mode .greedy-nav .visible-links a:before {
+  background: #52adc8;
+}
+html.dark-mode .greedy-nav .hidden-links {
+  background: #252535;
+  border-color: #2d2d45;
+}
+html.dark-mode .greedy-nav button {
+  background: #1a1a2a;
+}
+html.dark-mode .greedy-nav button .navicon,
+html.dark-mode .greedy-nav button .navicon:before,
+html.dark-mode .greedy-nav button .navicon:after {
+  background: #ccc;
+}
+
+/* Sidebar */
+html.dark-mode .sidebar {
+  background: transparent;
+}
+html.dark-mode .author__avatar img {
+  border-color: #2d2d45;
+}
+html.dark-mode .author__name {
+  color: #f0f0f0;
+}
+html.dark-mode .author__bio {
+  color: #aaa;
+}
+html.dark-mode .author__urls-wrapper .btn {
+  background: #252535;
+  border-color: #2d2d45;
+  color: #ccc;
+}
+html.dark-mode .author__urls {
+  background: #1e1e2e;
+  border-color: #2d2d45;
+}
+html.dark-mode .author__urls li a {
+  color: #bbb;
+}
+html.dark-mode .author__urls li a:hover {
+  color: #52adc8;
+}
+
+/* Page content */
+html.dark-mode .page__content {
+  color: #e4e4e4;
+}
+html.dark-mode .page__content p,
+html.dark-mode .page__content li,
+html.dark-mode .page__content td {
+  color: #d4d4d4;
+}
+html.dark-mode .page__title {
+  color: #f0f0f0;
+}
+html.dark-mode .page__meta,
+html.dark-mode .page__meta a {
+  color: #888;
+}
+
+/* Footer */
+html.dark-mode .page__footer {
+  background: #1a1a2a;
+  color: #888;
+}
+html.dark-mode .page__footer a {
+  color: #888;
+}
+html.dark-mode .page__footer-follow .social-icons a:hover {
+  color: #52adc8;
+}
+
+/* HR & borders */
+html.dark-mode hr {
+  border-top-color: #2d2d45;
+}
+
+/* Tables */
+html.dark-mode table {
+  background: #1e1e2e;
+  color: #e4e4e4;
+}
+html.dark-mode th {
+  background: #252535;
+  color: #f0f0f0;
+  border-color: #2d2d45;
+}
+html.dark-mode td {
+  border-color: #2d2d45;
+}
+html.dark-mode tr:nth-child(even) td {
+  background: #222232;
+}
+
+/* Code */
+html.dark-mode code,
+html.dark-mode pre {
+  background: #1e1e2e;
+  color: #e4e4e4;
+  border-color: #2d2d45;
+}
+
+/* ---- Custom components ---- */
+
+/* Role badges */
+html.dark-mode .role-badge {
+  background: #1e2a38;
+  border-color: #2a4a5a;
+  color: #ccc;
+}
+html.dark-mode .role-badge strong {
+  color: #88c8e0;
+}
+
+/* Focus cards */
+html.dark-mode .focus-card {
+  background: #1e2533;
+  border-color: #2a3d50;
+}
+html.dark-mode .focus-card strong {
+  color: #88c8e0;
+}
+html.dark-mode .focus-card p {
+  color: #aab4c0;
+}
+
+/* Code pills */
+html.dark-mode .code-pill {
+  background: #1e1e2e;
+  border-color: #2d2d45;
+  color: #ccc;
+}
+html.dark-mode .code-pill:hover {
+  background: #1e2a38;
+  border-color: #52adc8;
+  color: #52adc8;
+}
+
+/* Highlight list (home page news) */
+html.dark-mode .highlight-item {
+  border-bottom-color: #2d2d45;
+}
+html.dark-mode .highlight-text {
+  color: #ccc;
+}
+
+/* Career timeline */
+html.dark-mode .career-timeline {
+  border-left-color: #52adc8;
+}
+html.dark-mode .career-role {
+  color: #f0f0f0;
+}
+html.dark-mode .career-inst {
+  color: #aaa;
+}
+html.dark-mode .career-period {
+  color: #888;
+}
+
+/* Publications */
+html.dark-mode .pub-filters {
+  border-bottom-color: #2d2d45;
+}
+html.dark-mode .filter-btn {
+  background: #1e1e2e;
+  border-color: #2d2d45;
+  color: #bbb;
+}
+html.dark-mode .filter-btn:hover {
+  border-color: #52adc8;
+  color: #52adc8;
+}
+html.dark-mode .filter-btn.active {
+  background: #52adc8;
+  border-color: #52adc8;
+  color: #fff;
+}
+html.dark-mode .pub-item {
+  border-bottom-color: #2d2d45;
+}
+html.dark-mode .pub-year-heading {
+  color: #f0f0f0;
+  border-bottom-color: #52adc8;
+}
+html.dark-mode .pub-venue-heading {
+  color: #f0f0f0;
+  border-bottom-color: #52adc8;
+}
+html.dark-mode .pub-count {
+  color: #888;
+}
+html.dark-mode .badge-journal {
+  background: #1e3040;
+  color: #7abfd4;
+}
+html.dark-mode .badge-conference {
+  background: #282828;
+  color: #aaa;
+}
+html.dark-mode .pub-venues-section {
+  border-top-color: #2d2d45;
+}
+html.dark-mode .pub-venues-heading {
+  color: #f0f0f0;
+}
+html.dark-mode .pub-venues-col li {
+  color: #ccc;
+  border-bottom-color: #2d2d45;
+}
+
+/* Teaching */
+html.dark-mode .course-card {
+  background: #1e2533;
+  border-left-color: #52adc8;
+}
+html.dark-mode .course-title-text {
+  color: #f0f0f0;
+}
+html.dark-mode .course-summary {
+  color: #aaa;
+}
+html.dark-mode .course-tag {
+  background: #1e3040;
+  color: #7abfd4;
+}
+html.dark-mode .course-tag-gray {
+  background: #282828;
+  color: #aaa;
+}
+html.dark-mode .prev-course {
+  background: #1a1e28;
+  border-left-color: #2a3d50;
+}
+html.dark-mode .prev-course-title-text {
+  color: #ccc;
+}
+html.dark-mode .prev-course-period {
+  background: #252535;
+  color: #888;
+}
+html.dark-mode .prev-course-venue {
+  color: #888;
+}
+html.dark-mode .training-card {
+  background: #1e2533;
+}
+html.dark-mode .training-card p {
+  color: #ccc;
+}
+html.dark-mode .training-link-btn {
+  background: #1e3040;
+  border-color: #2a4a5a;
+  color: #7abfd4;
+}
+html.dark-mode .training-link-btn:hover {
+  background: #1e2a38;
+  color: #52adc8;
+}
+
+/* Modals */
+html.dark-mode .course-modal,
+html.dark-mode .talk-modal {
+  background: #1e1e2e;
+  color: #e4e4e4;
+}
+html.dark-mode .course-modal-header,
+html.dark-mode .talk-modal-header {
+  border-bottom-color: #2d2d45;
+}
+html.dark-mode .course-modal-title,
+html.dark-mode .talk-modal-title {
+  color: #f0f0f0;
+}
+html.dark-mode .course-modal-meta,
+html.dark-mode .talk-modal-meta {
+  color: #aaa;
+  border-bottom-color: #2d2d45;
+}
+html.dark-mode .course-modal-meta strong,
+html.dark-mode .talk-modal-meta strong {
+  color: #ccc;
+}
+html.dark-mode .course-modal-content,
+html.dark-mode .talk-modal-content {
+  color: #d4d4d4;
+}
+html.dark-mode .course-modal-close,
+html.dark-mode .talk-modal-close {
+  color: #666;
+}
+html.dark-mode .course-modal-close:hover,
+html.dark-mode .talk-modal-close:hover {
+  color: #ccc;
+  background: #252535;
+}
+html.dark-mode .course-modal-period-badge,
+html.dark-mode .talk-modal-period-badge {
+  background: #52adc8;
+}
+
+/* Portfolio / Softwares */
+html.dark-mode .page__content svg text {
+  fill: #ccc;
+}
+
+/* Talks */
+html.dark-mode .talk-card {
+  background: #1e2533;
+  border-left-color: #52adc8;
+}
+html.dark-mode .talk-title-text {
+  color: #f0f0f0;
+}
+html.dark-mode .talk-meta {
+  color: #aaa;
+}
+
+/* Collaborators */
+html.dark-mode .collab-table th {
+  background: #252535;
+  color: #f0f0f0;
+  border-color: #2d2d45;
+}
+html.dark-mode .collab-table td {
+  color: #ccc;
+  border-color: #2d2d45;
+}
+html.dark-mode .collab-table tr:hover td {
+  background: #1e2533;
+}
+html.dark-mode .collab-region-heading {
+  color: #88c8e0;
+  border-bottom-color: #2a4a5a;
+}
+
+/* Search overlay */
+html.dark-mode .search-box {
+  background: #1e1e2e;
+}
+html.dark-mode .search-input-wrap {
+  border-bottom-color: #2d2d45;
+}
+html.dark-mode .search-input {
+  background: transparent;
+  color: #e4e4e4;
+}
+html.dark-mode .search-result-item {
+  color: #ccc;
+  border-bottom-color: #2d2d45;
+}
+html.dark-mode .search-result-item:hover {
+  background: #1e2533;
+}
+html.dark-mode .search-result-title {
+  color: #f0f0f0;
+}
+html.dark-mode .search-result-excerpt {
+  color: #888;
+}
+html.dark-mode .search-empty {
+  color: #666;
+}
+
+/* Back to top button */
+html.dark-mode #back-to-top {
+  background: #52adc8;
+}
+html.dark-mode #back-to-top:hover {
+  background: #3a8fa8;
+}
