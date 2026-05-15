@@ -70,12 +70,12 @@ redirect_from:
 <!-- ==================== ENGLISH ==================== -->
 <div id="content-en" class="lang-en-block">
 
-<p>I am an <strong>Assistant Professor</strong> at the <a href="https://www.um6p.ma">University Mohammed VI Polytechnic (UM6P)</a>, <a href="https://cc.um6p.ma/">College of Computing</a>, Ben Guerir, Morocco (since September 2023).</p>
+<p>I am an <strong>Assistant Professor</strong> at the <a href="https://www.um6p.ma">University Mohammed VI Polytechnic (UM6P)</a>, <a href="https://cc.um6p.ma/">College of Computing</a>, Ben Guerir, Morocco.</p>
 
 <div class="role-badges">
   <div class="role-badge"><span class="role-badge-icon">🖥️</span><span><strong>Administrator</strong> — Simlab Supercomputer</span></div>
   <div class="role-badge"><span class="role-badge-icon">📋</span><span><strong>Advisory Board Member</strong> — <a href="https://toubkal.um6p.ma/" target="_blank">Toubkal Supercomputer</a></span></div>
-  <div class="role-badge"><span class="role-badge-icon">🎓</span><span><strong>NVIDIA DLI Certified Instructor</strong> &amp; University Ambassador <em>(since Jan 2024)</em></span></div>
+  <div class="role-badge"><span class="role-badge-icon">🎓</span><span><strong>NVIDIA DLI Certified Instructor</strong> &amp; University Ambassador</span></div>
   <div class="role-badge"><span class="role-badge-icon">🚀</span><span><strong>Co-founder</strong> — <a href="https://www.linkedin.com/company/moroccohpc/" target="_blank">Morocco HPC</a></span></div>
 </div>
 
@@ -167,12 +167,12 @@ redirect_from:
 <!-- ==================== FRANÇAIS ==================== -->
 <div id="content-fr" class="lang-fr-block">
 
-<p>Je suis <strong>Professeur Assistant</strong> à l'<a href="https://www.um6p.ma">Université Mohammed VI Polytechnique (UM6P)</a>, <a href="https://cc.um6p.ma/">Collège d'Informatique</a>, Ben Guerir, Maroc (depuis septembre 2023).</p>
+<p>Je suis <strong>Professeur Assistant</strong> à l'<a href="https://www.um6p.ma">Université Mohammed VI Polytechnique (UM6P)</a>, <a href="https://cc.um6p.ma/">Collège d'Informatique</a>, Ben Guerir, Maroc.</p>
 
 <div class="role-badges">
   <div class="role-badge"><span class="role-badge-icon">🖥️</span><span><strong>Administrateur</strong> — Supercalculateur Simlab</span></div>
   <div class="role-badge"><span class="role-badge-icon">📋</span><span><strong>Membre du Conseil Consultatif</strong> — <a href="https://toubkal.um6p.ma/" target="_blank">Supercalculateur Toubkal</a></span></div>
-  <div class="role-badge"><span class="role-badge-icon">🎓</span><span><strong>Instructeur Certifié NVIDIA DLI</strong> &amp; Ambassadeur Universitaire <em>(depuis jan. 2024)</em></span></div>
+  <div class="role-badge"><span class="role-badge-icon">🎓</span><span><strong>Instructeur Certifié NVIDIA DLI</strong> &amp; Ambassadeur Universitaire</span></div>
   <div class="role-badge"><span class="role-badge-icon">🚀</span><span><strong>Co-fondateur</strong> — <a href="https://www.linkedin.com/company/moroccohpc/" target="_blank">Morocco HPC</a></span></div>
 </div>
 
