@@ -4,7 +4,8 @@ layout: null
 [
 {% assign all = "" | split: "" %}
 {% assign all = all | concat: site.pages %}
-{% assign all = all | concat: site.publications %}
+{% assign published_pubs = site.publications | where_exp: "item", "item.pubtype != 'preprint'" %}
+{% assign all = all | concat: published_pubs %}
 {% assign all = all | concat: site.talks %}
 {% assign all = all | concat: site.teaching %}
 {% assign all = all | concat: site.portfolio %}
