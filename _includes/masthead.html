@@ -61,11 +61,6 @@ function setLang(lang) {
   if (btnEn) btnEn.classList.toggle('active', lang === 'en');
   if (btnFr) btnFr.classList.toggle('active', lang === 'fr');
   document.documentElement.classList.toggle('lang-is-fr', lang === 'fr');
-  document.body.classList.toggle('lang-is-fr', lang === 'fr');
-  var en = document.getElementById('content-en');
-  var fr = document.getElementById('content-fr');
-  if (en) en.style.display = lang === 'en' ? '' : 'none';
-  if (fr) fr.style.display = lang === 'fr' ? '' : 'none';
 }
 document.addEventListener('DOMContentLoaded', function() {
   try {

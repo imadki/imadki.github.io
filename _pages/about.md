@@ -68,7 +68,7 @@ redirect_from:
 
 
 <!-- ==================== ENGLISH ==================== -->
-<div id="content-en">
+<div id="content-en" class="lang-en-block">
 
 <p>I am an <strong>Assistant Professor</strong> at the <a href="https://www.um6p.ma">University Mohammed VI Polytechnic (UM6P)</a>, <a href="https://cc.um6p.ma/">College of Computing</a>, Ben Guerir, Morocco (since September 2023).</p>
 
@@ -165,7 +165,7 @@ redirect_from:
 </div><!-- end #content-en -->
 
 <!-- ==================== FRANÇAIS ==================== -->
-<div id="content-fr" style="display:none">
+<div id="content-fr" class="lang-fr-block">
 
 <p>Je suis <strong>Professeur Assistant</strong> à l'<a href="https://www.um6p.ma">Université Mohammed VI Polytechnique (UM6P)</a>, <a href="https://cc.um6p.ma/">Collège d'Informatique</a>, Ben Guerir, Maroc (depuis septembre 2023).</p>
 

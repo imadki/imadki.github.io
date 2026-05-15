@@ -63,7 +63,7 @@ author_profile: true
 
 <div class="pub-filters">
   <div class="filter-group">
-    <span class="filter-label">Type</span>
+    <span class="filter-label"><span class="lang-en">Type</span><span class="lang-fr">Type</span></span>
     <button class="filter-btn active" data-type="all"><span class="lang-en">All</span><span class="lang-fr">Tous</span></button>
     <button class="filter-btn" data-type="journal"><span class="lang-en">Journals</span><span class="lang-fr">Journaux</span></button>
     <button class="filter-btn" data-type="conference"><span class="lang-en">Conferences</span><span class="lang-fr">Conférences</span></button>
@@ -85,7 +85,7 @@ author_profile: true
   <div class="pub-year-heading">{{ year_group.name }}</div>
   {% for post in year_group.items %}
   <div class="pub-item" data-pubtype="{{ post.pubtype }}" data-pubyear="{{ year_group.name }}">
-    <span class="pub-type-badge {% if post.pubtype == 'journal' %}badge-journal{% else %}badge-conference{% endif %}">{% if post.pubtype == 'journal' %}Journal{% else %}Conference{% endif %}</span>{% if post.citation %}{{ post.citation }}{% endif %} &ldquo;{{ post.title }}&rdquo;{% if post.venue %} <i>{{ post.venue }}</i>, {{ year_group.name }}.{% endif %}{% if post.paperurl %} DOI: <a href="{{ post.paperurl }}">{{ post.paperurl }}</a>{% endif %}
+    <span class="pub-type-badge {% if post.pubtype == 'journal' %}badge-journal{% else %}badge-conference{% endif %}">{% if post.pubtype == 'journal' %}<span class="lang-en">Journal</span><span class="lang-fr">Revue</span>{% else %}<span class="lang-en">Conference</span><span class="lang-fr">Conférence</span>{% endif %}</span>{% if post.citation %}{{ post.citation }}{% endif %} &ldquo;{{ post.title }}&rdquo;{% if post.venue %} <i>{{ post.venue }}</i>, {{ year_group.name }}.{% endif %}{% if post.paperurl %} DOI: <a href="{{ post.paperurl }}">{{ post.paperurl }}</a>{% endif %}
   </div>
   {% endfor %}
 </div>
