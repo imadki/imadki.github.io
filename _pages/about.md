@@ -93,33 +93,7 @@ redirect_from:
 .career-role { font-weight: 700; font-size: 0.95em; color: #222; }
 .career-inst { font-size: 0.88em; color: #666; margin-top: 0.05em; }
 
-.explore-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 0.6em; margin: 1.4em 0 1.8em;
-}
-@media (max-width: 600px) { .explore-grid { grid-template-columns: repeat(2, 1fr); } }
-.explore-card {
-  display: flex; flex-direction: column; align-items: center;
-  text-align: center; padding: 0.8em 0.5em;
-  background: #f4fafc; border: 1px solid #d0e8f0;
-  border-radius: 8px; text-decoration: none;
-  transition: background 0.15s, border-color 0.15s;
-}
-.explore-card:hover { background: #e4f3f9; border-color: #52adc8; text-decoration: none; }
-.explore-card-icon { font-size: 1.4em; margin-bottom: 0.3em; }
-.explore-card-label { font-size: 0.78em; font-weight: 700; color: #1a4a6b; text-transform: uppercase; letter-spacing: 0.05em; }
-
 </style>
-
-
-<div class="explore-grid">
-  <a href="/publications/" class="explore-card"><span class="explore-card-icon">📄</span><span class="explore-card-label"><span class="lang-en">Publications</span><span class="lang-fr">Publications</span></span></a>
-  <a href="/talks/" class="explore-card"><span class="explore-card-icon">🎤</span><span class="explore-card-label"><span class="lang-en">Talks</span><span class="lang-fr">Conférences</span></span></a>
-  <a href="/teaching/" class="explore-card"><span class="explore-card-icon">🎓</span><span class="explore-card-label"><span class="lang-en">Teaching</span><span class="lang-fr">Enseignement</span></span></a>
-  <a href="/group/" class="explore-card"><span class="explore-card-icon">👥</span><span class="explore-card-label"><span class="lang-en">Group</span><span class="lang-fr">Groupe</span></span></a>
-  <a href="/grants/" class="explore-card"><span class="explore-card-icon">💰</span><span class="explore-card-label"><span class="lang-en">Grants</span><span class="lang-fr">Financements</span></span></a>
-  <a href="/portfolio/" class="explore-card"><span class="explore-card-icon">💻</span><span class="explore-card-label"><span class="lang-en">Software</span><span class="lang-fr">Logiciels</span></span></a>
-</div>
 
 <!-- ==================== ENGLISH ==================== -->
 <div id="content-en" class="lang-en-block">

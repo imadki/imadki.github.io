@@ -14,6 +14,8 @@ author_profile: true
 {% assign conf_pubs_filtered    = all_pubs | where: "pubtype", "conference" %}
 {% assign journal_pubs_by_venue = journal_pubs_filtered | group_by: "venue" | sort: "name" %}
 {% assign conf_pubs_by_venue    = conf_pubs_filtered    | group_by: "conf"  | sort: "name" %}
+{% assign selected_pubs         = all_pubs | where: "selected", true %}
+{% assign selected_by_year      = selected_pubs | group_by_exp: "item", "item.date | date: '%Y'" %}
 
 <style>
 .pub-filters {
@@ -110,10 +112,11 @@ author_profile: true
   <div class="filter-group">
     <span class="filter-label"><span class="lang-en">Type</span><span class="lang-fr">Type</span></span>
     <button class="filter-btn active" data-type="all"><span class="lang-en">All</span><span class="lang-fr">Tous</span></button>
+    <button class="filter-btn" data-type="selected">⭐ <span class="lang-en">Selected</span><span class="lang-fr">Sélection</span></button>
     <button class="filter-btn" data-type="journal"><span class="lang-en">Journals</span><span class="lang-fr">Journaux</span></button>
     <button class="filter-btn" data-type="conference"><span class="lang-en">Conferences</span><span class="lang-fr">Conférences</span></button>
   </div>
-  <div class="filter-group">
+  <div class="filter-group" id="year-filter-group">
     <span class="filter-label"><span class="lang-en">Year</span><span class="lang-fr">Année</span></span>
     <button class="filter-btn active" data-year="all"><span class="lang-en">All</span><span class="lang-fr">Tous</span></button>
     {% for year_group in pubs_by_year %}
@@ -158,6 +161,20 @@ author_profile: true
 {% endfor %}
 </div>
 
+<!-- VIEW: selected publications -->
+<div id="view-selected" style="display:none">
+{% for year_group in selected_by_year %}
+<div class="pub-year-section">
+  <div class="pub-year-heading">{{ year_group.name }}</div>
+  {% for post in year_group.items %}
+  <div class="pub-item">
+    <span class="pub-type-badge {% if post.pubtype == 'journal' %}badge-journal{% else %}badge-conference{% endif %}">{% if post.pubtype == 'journal' %}<span class="lang-en">Journal</span><span class="lang-fr">Revue</span>{% else %}<span class="lang-en">Conference</span><span class="lang-fr">Conférence</span>{% endif %}</span>{% if post.citation %}{{ post.citation }}{% endif %} &ldquo;{{ post.title }}&rdquo;{% if post.venue %} <i>{{ post.venue }}</i>, {{ post.date | date: '%Y' }}.{% endif %}{% if post.paperurl %} DOI: <a href="{{ post.paperurl }}">{{ post.paperurl }}</a>{% endif %}
+  </div>
+  {% endfor %}
+</div>
+{% endfor %}
+</div>
+
 <!-- VIEW: conferences grouped by venue -->
 <div id="view-venue-conference" style="display:none">
 {% for venue_group in conf_pubs_by_venue %}
@@ -179,14 +196,25 @@ author_profile: true
   var activeGroupBy = 'year';
 
   var viewYear     = document.getElementById('view-year');
+  var viewSelected = document.getElementById('view-selected');
   var viewVenueJ   = document.getElementById('view-venue-journal');
   var viewVenueC   = document.getElementById('view-venue-conference');
   var groupbyRow   = document.getElementById('groupby-row');
+  var yearRow      = document.getElementById('year-filter-group');
+  var selectedCount = {{ selected_pubs | size }};
 
   function applyFilters() {
     var visible = 0;
 
-    if (activeGroupBy === 'year') {
+    if (activeType === 'selected') {
+      viewSelected.style.display = '';
+      viewYear.style.display     = 'none';
+      viewVenueJ.style.display   = 'none';
+      viewVenueC.style.display   = 'none';
+      visible = selectedCount;
+
+    } else if (activeGroupBy === 'year') {
+      viewSelected.style.display = 'none';
       viewYear.style.display   = '';
       viewVenueJ.style.display = 'none';
       viewVenueC.style.display = 'none';
@@ -209,6 +237,7 @@ author_profile: true
       });
 
     } else {
+      viewSelected.style.display = 'none';
       viewYear.style.display = 'none';
       var activeView = activeType === 'journal' ? viewVenueJ : viewVenueC;
       var inactiveView = activeType === 'journal' ? viewVenueC : viewVenueJ;
@@ -253,11 +282,20 @@ author_profile: true
       btn.classList.add('active');
       activeType = btn.dataset.type;
 
-      if (activeType === 'journal' || activeType === 'conference') {
+      if (activeType === 'selected') {
+        groupbyRow.style.display = 'none';
+        if (yearRow) yearRow.style.display = 'none';
+        activeGroupBy = 'year';
+        document.querySelectorAll('[data-groupby]').forEach(function (b) {
+          b.classList.toggle('active', b.dataset.groupby === 'year');
+        });
+      } else if (activeType === 'journal' || activeType === 'conference') {
         groupbyRow.style.display = '';
+        if (yearRow) yearRow.style.display = '';
         updateGroupbyLabel();
       } else {
         groupbyRow.style.display = 'none';
+        if (yearRow) yearRow.style.display = '';
         activeGroupBy = 'year';
         document.querySelectorAll('[data-groupby]').forEach(function (b) {
           b.classList.toggle('active', b.dataset.groupby === 'year');
