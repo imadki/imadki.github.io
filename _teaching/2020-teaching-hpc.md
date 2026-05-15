@@ -1,5 +1,5 @@
 ---
-title: "Distributed Computing (HPC)"
+title: "Parallel & Distributed Computing"
 collection: teaching
 type: "Graduate course"
 permalink: /teaching/2020-teaching-hpc

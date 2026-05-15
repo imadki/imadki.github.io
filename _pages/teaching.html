@@ -18,33 +18,33 @@ average between <strong>4.0 and 4.8 out of 5</strong>.
 {% assign active_teaching = teaching_sorted | where: "status", "active" %}
 {% assign archived_teaching = teaching_sorted | where: "status", "completed" %}
 
----
-
-## Current Courses
+<h2>Current Courses</h2>
 
 {% for post in active_teaching %}
   {% include archive-single.html %}
 {% endfor %}
 
----
-
-## Previous Courses
+<h2>Previous Courses</h2>
 
 {% for post in archived_teaching %}
   {% include archive-single.html %}
 {% endfor %}
 
----
+<h2>MOOCs</h2>
 
-## MOOCs
+<p>
+  <strong>Introduction to High Performance Computing</strong> — 8 videos recorded at the UM6P Digital Lab,
+  covering HPC fundamentals: parallel architectures, programming models, cluster usage, and performance optimization.
+</p>
 
-**Introduction to High Performance Computing** — 8 videos recorded at the UM6P Digital Lab, covering HPC fundamentals: parallel architectures, programming models, cluster usage, and performance optimization.
+<h2>SimLab &amp; Toubkal Training</h2>
 
----
-
-## SimLab &amp; Toubkal Training
-
-Over the last four years, as a member of the SimLab &amp; Toubkal teams, I have led training sessions on HPC and its tools for UM6P staff at all levels (undergraduate, junior, senior, graduate, postdocs). Detailed tutorials for cluster users are available on GitHub:
-
-- [HPC-Simlab Tutorials](https://github.com/imadki/HPC-Simlab)
-- [HPC-Toubkal Tutorials](https://github.com/imadki/HPC-Toubkal)
+<p>
+  Over the last four years, as a member of the SimLab &amp; Toubkal teams, I have led training sessions on HPC
+  and its tools for UM6P staff at all levels (undergraduate, junior, senior, graduate, postdocs).
+  Detailed tutorials for cluster users are available on GitHub:
+</p>
+<ul>
+  <li><a href="https://github.com/imadki/HPC-Simlab">HPC-Simlab Tutorials</a></li>
+  <li><a href="https://github.com/imadki/HPC-Toubkal">HPC-Toubkal Tutorials</a></li>
+</ul>
