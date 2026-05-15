@@ -271,4 +271,20 @@ document.addEventListener('DOMContentLoaded', function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 })();
+
+document.addEventListener('DOMContentLoaded', function () {
+  var host = window.location.hostname;
+  document.querySelectorAll('a[href]').forEach(function (a) {
+    var href = a.getAttribute('href');
+    if (href && (href.indexOf('http://') === 0 || href.indexOf('https://') === 0)) {
+      try {
+        var url = new URL(href);
+        if (url.hostname !== host) {
+          a.setAttribute('target', '_blank');
+          a.setAttribute('rel', 'noopener noreferrer');
+        }
+      } catch (e) {}
+    }
+  });
+});
 </script>
