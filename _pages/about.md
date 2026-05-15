@@ -107,6 +107,10 @@ redirect_from:
   <div class="role-badge"><span class="role-badge-icon">🚀</span><span><strong>Co-founder</strong> — <a href="https://www.linkedin.com/company/moroccohpc/" target="_blank">Morocco HPC</a></span></div>
 </div>
 
+<p>In my research, I focus on the development, implementation and application of parallel numerical methods at the intersection of <strong>High Performance Computing (HPC)</strong>, <strong>Computational Fluid Dynamics (CFD)</strong>, and <strong>Scientific Machine Learning</strong>. I work in particular on parallel Finite Volume solvers for unstructured meshes — targeting shallow water flows, plasma physics, and Navier-Stokes equations — and on Physics-Informed Neural Networks and data-driven approaches for CFD. I support PhD students at UM6P and strongly advocate for the development of HPC and AI capacities across Africa.</p>
+
+<h2>Research Areas</h2>
+
 <div class="focus-grid">
   <div class="focus-card">
     <span class="focus-icon">⚡</span>
@@ -223,6 +227,10 @@ redirect_from:
   <div class="role-badge"><span class="role-badge-icon">🎓</span><span><strong>Instructeur Certifié NVIDIA DLI</strong> &amp; Ambassadeur Universitaire</span></div>
   <div class="role-badge"><span class="role-badge-icon">🚀</span><span><strong>Co-fondateur</strong> — <a href="https://www.linkedin.com/company/moroccohpc/" target="_blank">Morocco HPC</a></span></div>
 </div>
+
+<p>Mes recherches portent sur le développement, l'implémentation et l'application de méthodes numériques parallèles à l'intersection du <strong>Calcul Haute Performance (HPC)</strong>, de la <strong>Mécanique des Fluides Numérique (CFD)</strong> et de l'<strong>Apprentissage Automatique Scientifique</strong>. Je travaille en particulier sur des solveurs Volumes Finis parallèles pour maillages non-structurés — ciblant les écoulements à surface libre, la physique des plasmas et les équations de Navier-Stokes — ainsi que sur les réseaux de neurones physiquement informés (PINNs) et les approches data-driven pour la CFD. J'accompagne des doctorants à l'UM6P et milite activement pour le développement des capacités HPC et IA en Afrique.</p>
+
+<h2>Domaines de Recherche</h2>
 
 <div class="focus-grid">
   <div class="focus-card">
