@@ -15,3 +15,25 @@ summary: "Modern C++17 programming covering OOP, templates, STL, smart pointers,
 ---
 
 Introduction to modern C++ programming with a focus on the C++17 standard. Covers fundamental and advanced concepts including object-oriented programming, templates, the Standard Template Library (STL), smart pointers, and move semantics. Special attention is given to C++17 features such as structured bindings, if constexpr, fold expressions, and lambda function improvements. Students gain practical experience in memory management, generic programming, and building efficient, reusable code.
+
+## Curriculum Overview
+
+**Part 1**
+- Getting Started
+- Structure of a C++ Program
+- Variables and Constants
+- Containers
+- Expressions, Statements and Operators
+- Determining Control Flow
+- Strings in C++
+- Functions
+
+**Part 2**
+- Pointers and Smart Pointers
+- OOP — Classes and Objects, Operator Overloading
+- Inheritance
+- Polymorphism
+- The Standard Template Library (STL)
+- Lambda Expressions
+- I/O Streams
+- Exception Handling
