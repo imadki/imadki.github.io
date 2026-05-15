@@ -7,6 +7,10 @@ author_profile: true
 
 {% include base_path %}
 
+{% assign teaching_sorted = site.teaching | sort: "date" | reverse %}
+{% assign active_teaching = teaching_sorted | where: "status", "active" %}
+{% assign archived_teaching = teaching_sorted | where: "status", "completed" %}
+
 <p>
 As a teacher with a dual background in computer science and mathematics, I favor a <strong>learning by doing</strong>
 approach: students work on real projects from the start of the semester, with theory and hands-on
@@ -14,20 +18,73 @@ problem-solving sessions reinforcing the concepts needed. My teaching evaluation
 average between <strong>4.0 and 4.8 out of 5</strong>.
 </p>
 
-{% assign teaching_sorted = site.teaching | sort: "date" | reverse %}
-{% assign active_teaching = teaching_sorted | where: "status", "active" %}
-{% assign archived_teaching = teaching_sorted | where: "status", "completed" %}
+<style>
+.course-card {
+  border-left: 3px solid #52adc8;
+  background: #f9f9f9;
+  border-radius: 0 4px 4px 0;
+  padding: 0.9em 1.1em;
+  margin-bottom: 0.9em;
+}
+
+.course-title {
+  font-size: 1em;
+  font-weight: 700;
+  margin: 0 0 0.35em;
+}
+.course-title a { text-decoration: none; color: #222; }
+.course-title a:hover { color: #52adc8; }
+
+.course-tags {
+  display: flex; flex-wrap: wrap; gap: 0.35em; margin-bottom: 0.5em;
+}
+
+.course-tag {
+  font-size: 0.76em; font-weight: 600;
+  padding: 0.15em 0.6em; border-radius: 3px;
+  background: #e8f4f8; color: #2e7d9e;
+}
+.course-tag-gray { background: #f0f0f0; color: #666; }
+
+.course-summary { font-size: 0.9em; color: #555; margin: 0; line-height: 1.5; }
+
+.prev-course {
+  padding: 0.5em 0;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  gap: 0.8em;
+  align-items: baseline;
+  font-size: 0.92em;
+}
+.prev-course:last-child { border-bottom: none; }
+.prev-course-title { font-weight: 600; flex: 1; }
+.prev-course-title a { text-decoration: none; color: #333; }
+.prev-course-title a:hover { color: #52adc8; }
+.prev-course-meta { font-size: 0.85em; color: #888; white-space: nowrap; }
+</style>
 
 <h2>Current Courses</h2>
 
 {% for post in active_teaching %}
-  {% include archive-single.html %}
+<div class="course-card">
+  <p class="course-title"><a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a></p>
+  <div class="course-tags">
+    <span class="course-tag">{{ post.type }}</span>
+    <span class="course-tag course-tag-gray">{{ post.level }}</span>
+    <span class="course-tag course-tag-gray">{{ post.load }}</span>
+    <span class="course-tag course-tag-gray">{{ post.period }}</span>
+  </div>
+  <p class="course-summary">{{ post.summary }}</p>
+</div>
 {% endfor %}
 
 <h2>Previous Courses</h2>
 
 {% for post in archived_teaching %}
-  {% include archive-single.html %}
+<div class="prev-course">
+  <span class="prev-course-title"><a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a></span>
+  <span class="prev-course-meta">{{ post.venue }} &mdash; {{ post.period }}</span>
+</div>
 {% endfor %}
 
 <h2>MOOCs</h2>
@@ -42,9 +99,7 @@ average between <strong>4.0 and 4.8 out of 5</strong>.
 <p>
   Over the last four years, as a member of the SimLab &amp; Toubkal teams, I have led training sessions on HPC
   and its tools for UM6P staff at all levels (undergraduate, junior, senior, graduate, postdocs).
-  Detailed tutorials for cluster users are available on GitHub:
+  Tutorials available on GitHub:
+  <a href="https://github.com/imadki/HPC-Simlab">HPC-Simlab</a> and
+  <a href="https://github.com/imadki/HPC-Toubkal">HPC-Toubkal</a>.
 </p>
-<ul>
-  <li><a href="https://github.com/imadki/HPC-Simlab">HPC-Simlab Tutorials</a></li>
-  <li><a href="https://github.com/imadki/HPC-Toubkal">HPC-Toubkal Tutorials</a></li>
-</ul>

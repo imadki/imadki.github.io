@@ -1,16 +1,84 @@
 ---
 layout: archive
-title: "Talks and presentations"
+title: "Talks & Presentations"
 permalink: /talks/
 author_profile: true
 ---
 
-{% if site.talkmap_link == true %}
+{% include base_path %}
 
-<p style="text-decoration:underline;"><a href="/talkmap.html">See a map of all the places I've given a talk!</a></p>
+{% assign talks_sorted = site.talks | sort: "date" | reverse %}
+{% assign talks_by_year = talks_sorted | group_by_exp: "item", "item.date | date: '%Y'" %}
 
-{% endif %}
+<style>
+.talk-year-heading {
+  font-size: 1.2em; font-weight: 700; color: #333;
+  margin: 1.6em 0 0.6em; padding-bottom: 0.3em;
+  border-bottom: 2px solid #52adc8; display: inline-block;
+}
 
-{% for post in site.talks reversed %}
-  {% include archive-single-talk.html %}
+.talk-card {
+  display: flex;
+  gap: 1.1em;
+  padding: 0.85em 0;
+  border-bottom: 1px solid #f0f0f0;
+  align-items: flex-start;
+}
+.talk-card:last-child { border-bottom: none; }
+
+.talk-date-col {
+  min-width: 70px;
+  text-align: right;
+  font-size: 0.82em;
+  color: #888;
+  padding-top: 0.2em;
+  flex-shrink: 0;
+}
+.talk-date-day { font-weight: 700; font-size: 1.35em; color: #555; display: block; line-height: 1; }
+.talk-date-month { display: block; text-transform: uppercase; letter-spacing: 0.05em; }
+
+.talk-body { flex: 1; }
+
+.talk-title {
+  font-size: 0.97em;
+  font-weight: 700;
+  margin: 0 0 0.3em;
+  line-height: 1.4;
+}
+.talk-title a { text-decoration: none; color: #333; }
+.talk-title a:hover { color: #52adc8; }
+
+.talk-type-badge {
+  display: inline-block; font-size: 0.72em; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.07em;
+  padding: 0.12em 0.55em; border-radius: 3px;
+  margin-right: 0.5em; vertical-align: middle;
+}
+.badge-keynote { background: #e8f4f8; color: #2e7d9e; }
+.badge-invited { background: #f0f0f0; color: #666; }
+
+.talk-meta {
+  font-size: 0.85em; color: #666; margin: 0;
+}
+</style>
+
+{% for year_group in talks_by_year %}
+<div class="talk-year-section">
+  <div class="talk-year-heading">{{ year_group.name }}</div>
+  {% for post in year_group.items %}
+  <div class="talk-card">
+    <div class="talk-date-col">
+      <span class="talk-date-day">{{ post.date | date: "%d" }}</span>
+      <span class="talk-date-month">{{ post.date | date: "%b" }}</span>
+    </div>
+    <div class="talk-body">
+      <p class="talk-title">
+        <span class="talk-type-badge {% if post.type == 'Keynote' %}badge-keynote{% else %}badge-invited{% endif %}">{{ post.type }}</span>
+        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a>
+      </p>
+      <p class="talk-meta">{{ post.venue }}{% if post.location %} &mdash; {{ post.location }}{% endif %}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
 {% endfor %}
