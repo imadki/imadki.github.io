@@ -62,51 +62,53 @@ author_profile: true
 </style>
 
 <div class="collab-sort">
-  <span class="sort-label"><span class="lang-en">Sort by</span><span class="lang-fr">Trier par</span></span>
-  <button class="sort-btn active" onclick="sortCollabs('alpha')">A–Z</button>
-  <button class="sort-btn" onclick="sortCollabs('date')"><span class="lang-en">Year</span><span class="lang-fr">Année</span></button>
+  <span class="sort-label"><span class="lang-en">View by</span><span class="lang-fr">Vue par</span></span>
+  <button class="sort-btn active" onclick="sortCollabs('region', this)"><span class="lang-en">Region</span><span class="lang-fr">Région</span></button>
+  <button class="sort-btn" onclick="sortCollabs('year', this)"><span class="lang-en">Year</span><span class="lang-fr">Année</span></button>
 </div>
 
-<div class="collab-section">
+<div id="collabs-container">
+
+<div class="collab-section" data-region-section="eu">
 <h2 class="collab-heading"><span class="lang-en">Europe</span><span class="lang-fr">Europe</span></h2>
-<ul class="collab-list" id="list-eu">
-  <li class="collab-row" data-name="Benkhaldoun" data-year="2012">
+<ul class="collab-list">
+  <li class="collab-row" data-name="Benkhaldoun" data-year="2012" data-region="eu" data-region-label="Europe">
     <span class="collab-name"><a href="https://www.math.univ-paris13.fr/~fayssal/" target="_blank">Fayssal Benkhaldoun</a></span>
     <span class="collab-inst">Université Sorbonne Paris Nord (USPN), France</span>
     <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2012</span>
     <span class="collab-badge badge-eu">France</span>
   </li>
-  <li class="collab-row" data-name="Boubekeur" data-year="2020">
+  <li class="collab-row" data-name="Boubekeur" data-year="2020" data-region="eu" data-region-label="Europe">
     <span class="collab-name">Mohammed Boubekeur</span>
     <span class="collab-inst">Université Sorbonne Paris Nord (USPN), France</span>
     <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2020</span>
     <span class="collab-badge badge-eu">France</span>
   </li>
-  <li class="collab-row" data-name="Cérin" data-year="2013">
+  <li class="collab-row" data-name="Cérin" data-year="2013" data-region="eu" data-region-label="Europe">
     <span class="collab-name"><a href="https://lipn.univ-paris13.fr/~cerin/" target="_blank">Christophe Cérin</a></span>
     <span class="collab-inst">Université Sorbonne Paris Nord (USPN), France</span>
     <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2013</span>
     <span class="collab-badge badge-eu">France</span>
   </li>
-  <li class="collab-row" data-name="Deleersnijder" data-year="2021">
+  <li class="collab-row" data-name="Deleersnijder" data-year="2021" data-region="eu" data-region-label="Europe">
     <span class="collab-name"><a href="https://perso.uclouvain.be/eric.deleersnijder/cms/" target="_blank">Eric Deleersnijder</a></span>
     <span class="collab-inst">Université Catholique de Louvain (UCLouvain), Belgium</span>
     <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2021</span>
     <span class="collab-badge badge-eu">Belgium</span>
   </li>
-  <li class="collab-row" data-name="Ghidaglia" data-year="2023">
+  <li class="collab-row" data-name="Ghidaglia" data-year="2023" data-region="eu" data-region-label="Europe">
     <span class="collab-name"><a href="https://centreborelli.ens-paris-saclay.fr/fr/annuaire-des-personnes/jean-michel-ghidaglia" target="_blank">Jean-Michel Ghidaglia</a></span>
     <span class="collab-inst">Centre Borelli, ENS Paris-Saclay, France</span>
     <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2023</span>
     <span class="collab-badge badge-eu">France</span>
   </li>
-  <li class="collab-row" data-name="Greneche" data-year="2025">
+  <li class="collab-row" data-name="Greneche" data-year="2025" data-region="eu" data-region-label="Europe">
     <span class="collab-name"><a href="https://sites.google.com/view/nicolas-greneche" target="_blank">Nicolas Greneche</a></span>
     <span class="collab-inst">Université Sorbonne Paris Nord (USPN), France</span>
     <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2025</span>
     <span class="collab-badge badge-eu">France</span>
   </li>
-  <li class="collab-row" data-name="Saouab" data-year="2021">
+  <li class="collab-row" data-name="Saouab" data-year="2021" data-region="eu" data-region-label="Europe">
     <span class="collab-name"><a href="https://ed-psime.normandie-univ.fr/blog/annuaire/saouab-abdelghani-pr/" target="_blank">Abdelghani Saouab</a></span>
     <span class="collab-inst">Université Le Havre Normandie (ULHN), France</span>
     <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2021</span>
@@ -115,64 +117,64 @@ author_profile: true
 </ul>
 </div>
 
-<div class="collab-section">
+<div class="collab-section" data-region-section="af">
 <h2 class="collab-heading"><span class="lang-en">Africa</span><span class="lang-fr">Afrique</span></h2>
-<ul class="collab-list" id="list-af">
-  <li class="collab-row" data-name="Abida" data-year="2024">
+<ul class="collab-list">
+  <li class="collab-row" data-name="Abida" data-year="2024" data-region="af" data-region-label="Africa">
     <span class="collab-name">Otman Abida</span>
     <span class="collab-inst">University Mohammed VI Polytechnic (UM6P), Morocco</span>
     <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2024</span>
     <span class="collab-badge badge-af">Morocco</span>
   </li>
-  <li class="collab-row" data-name="Basmadjian" data-year="2024">
+  <li class="collab-row" data-name="Basmadjian" data-year="2024" data-region="af" data-region-label="Africa">
     <span class="collab-name"><a href="https://www.robert-basmadjian.com/" target="_blank">Robert Basmadjian</a></span>
     <span class="collab-inst">University Mohammed VI Polytechnic (UM6P), Morocco</span>
     <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2024</span>
     <span class="collab-badge badge-af">Morocco</span>
   </li>
-  <li class="collab-row" data-name="Bergou" data-year="2026">
+  <li class="collab-row" data-name="Bergou" data-year="2026" data-region="af" data-region-label="Africa">
     <span class="collab-name"><a href="https://ehbergou.github.io/" target="_blank">El Houcine Bergou</a></span>
     <span class="collab-inst">University Mohammed VI Polytechnic (UM6P), Morocco</span>
     <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2026</span>
     <span class="collab-badge badge-af">Morocco</span>
   </li>
-  <li class="collab-row" data-name="Boukharfane" data-year="2023">
+  <li class="collab-row" data-name="Boukharfane" data-year="2023" data-region="af" data-region-label="Africa">
     <span class="collab-name"><a href="https://radouanboukharfane.github.io/" target="_blank">Radouan Boukharfane</a></span>
     <span class="collab-inst">University Mohammed VI Polytechnic (UM6P), Morocco</span>
     <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2023</span>
     <span class="collab-badge badge-af">Morocco</span>
   </li>
-  <li class="collab-row" data-name="El Mahi" data-year="2012">
+  <li class="collab-row" data-name="El Mahi" data-year="2012" data-region="af" data-region-label="Africa">
     <span class="collab-name">Imad El Mahi</span>
     <span class="collab-inst">École Nationale des Sciences Appliquées d'Oujda (ENSAO), Morocco</span>
     <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2012</span>
     <span class="collab-badge badge-af">Morocco</span>
   </li>
-  <li class="collab-row" data-name="Ferradi" data-year="2025">
+  <li class="collab-row" data-name="Ferradi" data-year="2025" data-region="af" data-region-label="Africa">
     <span class="collab-name">Khalil Ferradi</span>
     <span class="collab-inst">University Mohammed VI Polytechnic (UM6P), Morocco</span>
     <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2025</span>
     <span class="collab-badge badge-af">Morocco</span>
   </li>
-  <li class="collab-row" data-name="Kalloubi" data-year="2023">
+  <li class="collab-row" data-name="Kalloubi" data-year="2023" data-region="af" data-region-label="Africa">
     <span class="collab-name">Fahd Kalloubi</span>
     <span class="collab-inst">Cadi Ayyad University, Morocco</span>
     <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2023</span>
     <span class="collab-badge badge-af">Morocco</span>
   </li>
-  <li class="collab-row" data-name="Kassab" data-year="2025">
+  <li class="collab-row" data-name="Kassab" data-year="2025" data-region="af" data-region-label="Africa">
     <span class="collab-name">Zineb Kassab</span>
     <span class="collab-inst">University Mohammed VI Polytechnic (UM6P), Morocco</span>
     <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2025</span>
     <span class="collab-badge badge-af">Morocco</span>
   </li>
-  <li class="collab-row" data-name="Ziggaf" data-year="2019">
+  <li class="collab-row" data-name="Ziggaf" data-year="2019" data-region="af" data-region-label="Africa">
     <span class="collab-name"><a href="https://sites.google.com/view/ziggaf-moussa" target="_blank">Moussa Ziggaf</a></span>
     <span class="collab-inst">Abdelmalek Essaâdi University, Morocco</span>
     <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2019</span>
     <span class="collab-badge badge-af">Morocco</span>
   </li>
-  <li class="collab-row" data-name="Ziani" data-year="2026">
+  <li class="collab-row" data-name="Ziani" data-year="2026" data-region="af" data-region-label="Africa">
     <span class="collab-name">Mohammed Ziani</span>
     <span class="collab-inst">Faculty of Sciences, Mohammed V University in Rabat (UM5), Morocco</span>
     <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2026</span>
@@ -181,22 +183,22 @@ author_profile: true
 </ul>
 </div>
 
-<div class="collab-section">
+<div class="collab-section" data-region-section="me">
 <h2 class="collab-heading"><span class="lang-en">Middle East &amp; Gulf</span><span class="lang-fr">Moyen-Orient &amp; Golfe</span></h2>
-<ul class="collab-list" id="list-me">
-  <li class="collab-row" data-name="Ltaeif" data-year="2024">
+<ul class="collab-list">
+  <li class="collab-row" data-name="Ltaeif" data-year="2024" data-region="me" data-region-label="Middle East &amp; Gulf">
     <span class="collab-name"><a href="https://cemse.kaust.edu.sa/profiles/hatem-ltaief" target="_blank">Hatem Ltaeif</a></span>
     <span class="collab-inst">KAUST University, Saudi Arabia</span>
     <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2024</span>
     <span class="collab-badge badge-me">Saudi Arabia</span>
   </li>
-  <li class="collab-row" data-name="Temimi" data-year="2024">
+  <li class="collab-row" data-name="Temimi" data-year="2024" data-region="me" data-region-label="Middle East &amp; Gulf">
     <span class="collab-name">Helmi Temimi</span>
     <span class="collab-inst">Abdullah Al-Salem University, Kuwait</span>
     <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2024</span>
     <span class="collab-badge badge-me">Kuwait</span>
   </li>
-  <li class="collab-row" data-name="Zahri" data-year="2022">
+  <li class="collab-row" data-name="Zahri" data-year="2022" data-region="me" data-region-label="Middle East &amp; Gulf">
     <span class="collab-name"><a href="https://www.sharjah.ac.ae/ar/Academics/Faculty-And-Staff/Mostafa-Zahri" target="_blank">Mostafa Zahri</a></span>
     <span class="collab-inst">University of Sharjah, UAE</span>
     <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2022</span>
@@ -205,22 +207,65 @@ author_profile: true
 </ul>
 </div>
 
-<script>
-function sortCollabs(by) {
-  document.querySelectorAll('.sort-btn').forEach(function(b){ b.classList.remove('active'); });
-  event.target.classList.add('active');
+</div><!-- #collabs-container -->
 
-  ['list-eu','list-af','list-me'].forEach(function(id) {
-    var ul = document.getElementById(id);
-    var items = Array.from(ul.querySelectorAll('.collab-row'));
-    items.sort(function(a, b) {
-      if (by === 'alpha') {
-        return a.dataset.name.localeCompare(b.dataset.name);
-      } else {
-        return parseInt(a.dataset.year) - parseInt(b.dataset.year);
-      }
+<script>
+(function () {
+  var rows = Array.from(document.querySelectorAll('.collab-row'));
+
+  var regionOrder = ['eu', 'af', 'me'];
+  var regionHTML = {
+    eu: '<span class="lang-en">Europe</span><span class="lang-fr">Europe</span>',
+    af: '<span class="lang-en">Africa</span><span class="lang-fr">Afrique</span>',
+    me: '<span class="lang-en">Middle East &amp; Gulf</span><span class="lang-fr">Moyen-Orient &amp; Golfe</span>'
+  };
+  var regionBadge = { eu: 'badge-eu', af: 'badge-af', me: 'badge-me' };
+
+  function buildContainer(sections) {
+    var c = document.getElementById('collabs-container');
+    c.innerHTML = '';
+    sections.forEach(function (s) {
+      var sec = document.createElement('div');
+      sec.className = 'collab-section';
+      var h2 = document.createElement('h2');
+      h2.className = 'collab-heading';
+      h2.innerHTML = s.label;
+      var ul = document.createElement('ul');
+      ul.className = 'collab-list';
+      s.items.forEach(function (r) { ul.appendChild(r); });
+      sec.appendChild(h2);
+      sec.appendChild(ul);
+      c.appendChild(sec);
     });
-    items.forEach(function(item){ ul.appendChild(item); });
-  });
-}
+  }
+
+  window.sortCollabs = function (by, btn) {
+    document.querySelectorAll('.sort-btn').forEach(function (b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+
+    if (by === 'region') {
+      var groups = {};
+      regionOrder.forEach(function (r) { groups[r] = []; });
+      rows.forEach(function (r) { groups[r.dataset.region].push(r); });
+      buildContainer(regionOrder.filter(function (r) { return groups[r].length; }).map(function (r) {
+        return { label: regionHTML[r], items: groups[r] };
+      }));
+
+    } else if (by === 'year') {
+      var sorted = rows.slice().sort(function (a, b) {
+        return parseInt(a.dataset.year) - parseInt(b.dataset.year);
+      });
+      var yearGroups = {};
+      var yearOrder = [];
+      sorted.forEach(function (r) {
+        var y = r.dataset.year;
+        if (!yearGroups[y]) { yearGroups[y] = []; yearOrder.push(y); }
+        yearGroups[y].push(r);
+      });
+      buildContainer(yearOrder.map(function (y) {
+        return { label: y, items: yearGroups[y] };
+      }));
+    }
+  };
+})();
 </script>
