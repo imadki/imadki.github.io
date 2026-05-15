@@ -289,7 +289,7 @@ author_profile: true
 </script>
 
 {% assign journal_venues = journal_pubs_filtered | map: "venue" | sort | uniq %}
-{% assign conf_venues    = conf_pubs_filtered    | map: "venue" | sort | uniq %}
+{% assign conf_venues    = conf_pubs_filtered    | map: "conf"  | sort | uniq %}
 
 <div class="pub-venues-section">
   <p class="pub-venues-heading">
