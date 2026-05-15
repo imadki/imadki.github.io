@@ -73,22 +73,13 @@ redirect_from:
 <p>I am an <strong>Assistant Professor</strong> at the <a href="https://www.um6p.ma">University Mohammed VI Polytechnic (UM6P)</a>, <a href="https://cc.um6p.ma/">College of Computing</a>, Ben Guerir, Morocco.</p>
 
 <div class="role-badges">
-  <div class="role-badge"><span class="role-badge-icon">🖥️</span><span><strong>Administrator</strong> — Simlab Supercomputer</span></div>
+  <div class="role-badge"><span class="role-badge-icon">🖥️</span><span><strong>Head</strong> — Simlab Supercomputer</span></div>
   <div class="role-badge"><span class="role-badge-icon">📋</span><span><strong>Advisory Board Member</strong> — <a href="https://toubkal.um6p.ma/" target="_blank">Toubkal Supercomputer</a></span></div>
   <div class="role-badge"><span class="role-badge-icon">🎓</span><span><strong>NVIDIA DLI Certified Instructor</strong> &amp; University Ambassador</span></div>
   <div class="role-badge"><span class="role-badge-icon">🚀</span><span><strong>Co-founder</strong> — <a href="https://www.linkedin.com/company/moroccohpc/" target="_blank">Morocco HPC</a></span></div>
 </div>
 
-<p>In my research, I focus on the development, implementation and application of parallel numerical methods at the intersection of <strong>High Performance Computing (HPC)</strong>, <strong>Computational Fluid Dynamics (CFD)</strong>, and <strong>Scientific Machine Learning</strong>. I work in particular on parallel Finite Volume solvers for unstructured meshes — targeting applications in shallow water flows, plasma physics, and Navier-Stokes equations — and am the lead developer of <a href="https://github.com/imadki/manapy"><strong>Manapy</strong></a>, a parallel Python library for solving PDEs on unstructured meshes, and <a href="https://github.com/imadki/mumps4py"><strong>Mumps4py</strong></a>, a Python interface to the MUMPS sparse direct solver officially adopted by the MUMPS project. Besides parallel numerical methods, I am also very much interested in Physics-Informed Neural Networks (PINNs) and data-driven approaches for CFD, and lead a research team at UM6P on Scientific Machine Learning. I support PhD students at UM6P and strongly advocate for the development of HPC and AI capacities across Africa.</p>
-
-<h2>Research Interests</h2>
-<ul>
-  <li>High Performance Computing (HPC) and energy optimization in HPC infrastructures</li>
-  <li>Parallel Finite Volume Methods for unstructured meshes</li>
-  <li>Numerical methods for Plasma Physics, Shallow Water, and Navier-Stokes equations</li>
-  <li>Physics-Informed Neural Networks (PINNs) for solving PDEs</li>
-  <li>Scientific Machine Learning and data-driven approaches for CFD</li>
-</ul>
+<p>In my research, I focus on the development, implementation and application of parallel numerical methods at the intersection of <strong>High Performance Computing (HPC)</strong>, <strong>Computational Fluid Dynamics (CFD)</strong>, and <strong>Scientific Machine Learning</strong>. I work in particular on parallel Finite Volume solvers for unstructured meshes — targeting applications in shallow water flows, plasma physics, and Navier-Stokes equations — and am the lead developer of <a href="https://github.com/imadki/manapy"><strong>Manapy</strong></a>, a parallel Python library for solving PDEs on unstructured meshes, and <a href="https://github.com/imadki/mumps4py"><strong>Mumps4py</strong></a>, a Python interface to the MUMPS sparse direct solver officially adopted by the MUMPS project. Besides parallel numerical methods, I am also very much interested in Physics-Informed Neural Networks (PINNs) and data-driven approaches for CFD. I support PhD students at UM6P and strongly advocate for the development of HPC and AI capacities across Africa.</p>
 
 <h2>Scientific Codes</h2>
 <p>I develop and maintain several open-source scientific codes:</p>
@@ -170,22 +161,13 @@ redirect_from:
 <p>Je suis <strong>Professeur Assistant</strong> à l'<a href="https://www.um6p.ma">Université Mohammed VI Polytechnique (UM6P)</a>, <a href="https://cc.um6p.ma/">Collège d'Informatique</a>, Ben Guerir, Maroc.</p>
 
 <div class="role-badges">
-  <div class="role-badge"><span class="role-badge-icon">🖥️</span><span><strong>Administrateur</strong> — Supercalculateur Simlab</span></div>
+  <div class="role-badge"><span class="role-badge-icon">🖥️</span><span><strong>Responsable</strong> — Supercalculateur Simlab</span></div>
   <div class="role-badge"><span class="role-badge-icon">📋</span><span><strong>Membre du Conseil Consultatif</strong> — <a href="https://toubkal.um6p.ma/" target="_blank">Supercalculateur Toubkal</a></span></div>
   <div class="role-badge"><span class="role-badge-icon">🎓</span><span><strong>Instructeur Certifié NVIDIA DLI</strong> &amp; Ambassadeur Universitaire</span></div>
   <div class="role-badge"><span class="role-badge-icon">🚀</span><span><strong>Co-fondateur</strong> — <a href="https://www.linkedin.com/company/moroccohpc/" target="_blank">Morocco HPC</a></span></div>
 </div>
 
-<p>Mes recherches portent sur le développement, l'implémentation et l'application de méthodes numériques parallèles à l'intersection du <strong>Calcul Haute Performance (HPC)</strong>, de la <strong>Mécanique des Fluides Numérique (CFD)</strong> et de l'<strong>Apprentissage Automatique Scientifique</strong>. Je travaille en particulier sur des solveurs Volumes Finis parallèles pour maillages non-structurés — ciblant les applications en écoulements à surface libre, physique des plasmas et équations de Navier-Stokes — et suis le développeur principal de <a href="https://github.com/imadki/manapy"><strong>Manapy</strong></a>, une bibliothèque Python parallèle pour la résolution d'EDP sur maillages non-structurés, et de <a href="https://github.com/imadki/mumps4py"><strong>Mumps4py</strong></a>, une interface Python au solveur creux MUMPS officiellement adopté par le projet MUMPS. Au-delà des méthodes numériques parallèles, je m'intéresse également aux réseaux de neurones physiquement informés (PINNs) et aux approches data-driven pour la CFD, et dirige une équipe de recherche à l'UM6P sur l'Apprentissage Automatique Scientifique. J'accompagne des doctorants à l'UM6P et milite activement pour le développement des capacités HPC et IA en Afrique.</p>
-
-<h2>Thèmes de Recherche</h2>
-<ul>
-  <li>Calcul Haute Performance (HPC) et optimisation énergétique des infrastructures HPC</li>
-  <li>Méthodes de Volumes Finis Parallèles sur maillages non-structurés</li>
-  <li>Méthodes numériques pour la physique des plasmas, les équations de Saint-Venant et de Navier-Stokes</li>
-  <li>Réseaux de Neurones Physiquement Informés (PINNs) pour la résolution d'EDP</li>
-  <li>Apprentissage automatique scientifique et approches data-driven pour la CFD</li>
-</ul>
+<p>Mes recherches portent sur le développement, l'implémentation et l'application de méthodes numériques parallèles à l'intersection du <strong>Calcul Haute Performance (HPC)</strong>, de la <strong>Mécanique des Fluides Numérique (CFD)</strong> et de l'<strong>Apprentissage Automatique Scientifique</strong>. Je travaille en particulier sur des solveurs Volumes Finis parallèles pour maillages non-structurés — ciblant les applications en écoulements à surface libre, physique des plasmas et équations de Navier-Stokes — et suis le développeur principal de <a href="https://github.com/imadki/manapy"><strong>Manapy</strong></a>, une bibliothèque Python parallèle pour la résolution d'EDP sur maillages non-structurés, et de <a href="https://github.com/imadki/mumps4py"><strong>Mumps4py</strong></a>, une interface Python au solveur creux MUMPS officiellement adopté par le projet MUMPS. Au-delà des méthodes numériques parallèles, je m'intéresse également aux réseaux de neurones physiquement informés (PINNs) et aux approches data-driven pour la CFD. J'accompagne des doctorants à l'UM6P et milite activement pour le développement des capacités HPC et IA en Afrique.</p>
 
 <h2>Codes Scientifiques</h2>
 <p>Je développe et maintiens plusieurs codes scientifiques open-source :</p>
