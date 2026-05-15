@@ -18,22 +18,13 @@ Introduction to modern C++ programming with a focus on the C++17 standard. Cover
 
 ## Curriculum Overview
 
-**Part 1**
-- Getting Started
-- Structure of a C++ Program
-- Variables and Constants
+- Pointers
 - Containers
-- Expressions, Statements and Operators
-- Determining Control Flow
-- Strings in C++
-- Functions
-
-**Part 2**
-- Pointers and Smart Pointers
-- OOP — Classes and Objects, Operator Overloading
-- Inheritance
-- Polymorphism
-- The Standard Template Library (STL)
-- Lambda Expressions
+- Lambda Functions
+- Introduction to OOP
+- OOP — Operator Overloading
+- OOP — Inheritance
+- OOP — Polymorphism
+- Smart Pointers
+- Exceptions
 - I/O Streams
-- Exception Handling
