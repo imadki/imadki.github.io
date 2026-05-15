@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Imad Kissami webpage"
+title                    : "Dr. Imad Kissami"
 title_separator          : "-"
 name                     : &name "Imad Kissami"
-description              : &description "Research & Education Fellow"
+description              : &description "Assistant Professor at UM6P | HPC & Scientific Computing"
 url                      : https://imadki.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "academicpages/imadki.github.io"
@@ -82,13 +82,13 @@ analytics:
 author:
   name             : "Imad Kissami"
   avatar           : "profile.png"
-  bio              : "Research & Education Fellow"
-  location         : "UM6P/MSDA"
-  employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  bio              : "Assistant Professor at UM6P | HPC | CFD | Scientific Machine Learning | NVIDIA DLI Instructor"
+  location         : "Ben Guerir, Morocco"
+  employer         : "University Mohammed VI Polytechnic"
+  pubmed           :
   googlescholar    : "https://scholar.google.com/citations?hl=en&user=u2jPyhgAAAAJ&view_op=list_works&sortby=pubdate"
-  email            :
-  researchgate     :  "https://www.researchgate.net/profile/Imad-Kissami"
+  email            : "imad.kissami@um6p.ma"
+  researchgate     : "https://www.researchgate.net/profile/Imad-Kissami"
   uri              :
   bitbucket        :
   codepen          :
@@ -100,16 +100,16 @@ author:
   google_plus      :
   keybase          :
   instagram        :
-  impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
+  impactstory      :
   lastfm           :
   linkedin         :
-  orcid            : "https://orcid.org/my-orcid?orcid=0000-0001-6740-1085"
+  orcid            : "https://orcid.org/0000-0001-6740-1085"
   pinterest        :
   soundcloud       :
-  stackoverflow    : # http://stackoverflow.com/users/123456/username
+  stackoverflow    :
   steam            :
   tumblr           :
-  twitter          : "replacethistwitterhandle"
+  twitter          :
   vine             :
   weibo            :
   xing             :
