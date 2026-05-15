@@ -263,7 +263,7 @@ author_profile: true
         yearGroups[y].push(r);
       });
       buildContainer(yearOrder.map(function (y) {
-        return { label: y, items: yearGroups[y] };
+        return { label: '<span class="lang-en">Since</span><span class="lang-fr">Depuis</span> ' + y, items: yearGroups[y] };
       }));
     }
   };
