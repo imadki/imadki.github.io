@@ -12,6 +12,9 @@ main:
   - title: "Group"
     url: /group/
 
+  - title: "Collaborators"
+    url: /collaborators/
+
   - title: "Grants"
     url: /grants/
 
