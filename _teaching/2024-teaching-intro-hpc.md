@@ -6,12 +6,12 @@ permalink: /teaching/2024-teaching-intro-hpc
 venue: "University Mohammed VI Polytechnic (UM6P)"
 date: 2024-01-03
 location: "Ben Guerir, Morocco"
+role: "Coordinator"
+load: "36h/year"
+level: "PhD program"
+period: "2024–Present"
+status: "active"
+summary: "Doctoral HPC course teaching parallel thinking, MPI, OpenMP, CUDA, memory hierarchies, and performance profiling for scalable scientific applications."
 ---
 
-**Role:** Coordinator | **Load:** 36h/year (lectures & assignments)
-
-**Level:** PhD program
-
-**Period:** 2024–Present
-
-**Description:** Doctoral-level course introducing PhD students to High Performance Computing. Topics include HPC architecture, parallel computing paradigms (shared memory, distributed memory, GPU), programming with MPI and OpenMP, job schedulers (SLURM), profiling and optimization, and use of the Toubkal and Simlab supercomputers at UM6P.
+This doctoral course provides a foundation in high-performance computing focused on parallel programming and scalable computation. A central theme is learning to think parallel: students decompose problems into concurrent tasks, identify data dependencies, and reason about communication and synchronization. The course covers distributed-memory and shared-memory architectures with emphasis on the trade-offs of each model. Topics include message passing (MPI), multithreading (OpenMP), GPU programming (CUDA), hybrid models, memory hierarchies, synchronization, and load balancing. The course also covers performance analysis and profiling tools to reason about efficiency, scalability, and bottlenecks in HPC applications.

@@ -6,12 +6,12 @@ permalink: /teaching/2024-teaching-cpp
 venue: "University Mohammed VI Polytechnic (UM6P), College of Computing"
 date: 2024-01-01
 location: "Ben Guerir, Morocco"
+role: "Coordinator"
+load: "64h/year"
+level: "Preparatory Cycle (CS School)"
+period: "2024–Present"
+status: "active"
+summary: "Modern C++17 programming covering OOP, templates, STL, smart pointers, move semantics, and generic programming for CS preparatory students."
 ---
 
-**Role:** Coordinator | **Load:** 64h/year (lectures & assignments)
-
-**Level:** Preparatory Cycle (CS School)
-
-**Period:** 2024–Present
-
-**Description:** Introduction to C++ programming covering object-oriented programming principles, memory management, STL, and applied numerical computing. Designed for students in the Computer Science preparatory cycle.
+Introduction to modern C++ programming with a focus on the C++17 standard. Covers fundamental and advanced concepts including object-oriented programming, templates, the Standard Template Library (STL), smart pointers, and move semantics. Special attention is given to C++17 features such as structured bindings, if constexpr, fold expressions, and lambda function improvements. Students gain practical experience in memory management, generic programming, and building efficient, reusable code.
