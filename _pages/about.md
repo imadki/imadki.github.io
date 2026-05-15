@@ -149,6 +149,12 @@ redirect_from:
     <div class="career-inst">Université Sorbonne Paris Nord (USPN), France</div>
   </div>
   <div class="career-item past">
+    <div class="career-period">Sep 2012 – Nov 2013</div>
+    <div class="career-role">Predoctoral Position — MPI-Based parallelization for Finite Volume algorithms</div>
+    <div class="career-inst">LAGA – USPN &amp; LMCS – ENSAO, Oujda, Morocco</div>
+    <div class="career-inst" style="font-size:0.82em;color:#888;margin-top:0.1em;">Supervisors: <a href="https://www.math.univ-paris13.fr/~fayssal/" target="_blank">Fayssal Benkhaldoun</a> (USPN) &amp; Imad El Mahi (ENSAO)</div>
+  </div>
+  <div class="career-item past">
     <div class="career-period">Sep 2007 – Jul 2012</div>
     <div class="career-role">Engineering Degree in Computer Science</div>
     <div class="career-inst">ENSAO, Oujda, Morocco</div>
@@ -237,6 +243,12 @@ redirect_from:
     <div class="career-period">Déc 2013 – Fév 2017</div>
     <div class="career-role">Doctorat en Mathématiques Appliquées &amp; Informatique</div>
     <div class="career-inst">Université Sorbonne Paris Nord (USPN), France</div>
+  </div>
+  <div class="career-item past">
+    <div class="career-period">Sep 2012 – Nov 2013</div>
+    <div class="career-role">Position Prédoctorale — Parallélisation MPI pour algorithmes Volumes Finis</div>
+    <div class="career-inst">LAGA – USPN &amp; LMCS – ENSAO, Oujda, Maroc</div>
+    <div class="career-inst" style="font-size:0.82em;color:#888;margin-top:0.1em;">Encadrants : <a href="https://www.math.univ-paris13.fr/~fayssal/" target="_blank">Fayssal Benkhaldoun</a> (USPN) &amp; Imad El Mahi (ENSAO)</div>
   </div>
   <div class="career-item past">
     <div class="career-period">Sep 2007 – Juil 2012</div>
