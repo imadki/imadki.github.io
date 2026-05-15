@@ -1,22 +1,29 @@
 # main links links
 main:
   - title: "Publications"
+    title_fr: "Publications"
     url: /publications/
 
   - title: "Talks"
+    title_fr: "Conférences"
     url: /talks/
 
   - title: "Teaching"
+    title_fr: "Enseignement"
     url: /teaching/
 
   - title: "Group"
+    title_fr: "Groupe"
     url: /group/
 
   - title: "Collaborators"
+    title_fr: "Collaborateurs"
     url: /collaborators/
 
   - title: "Grants"
+    title_fr: "Financements"
     url: /grants/
 
   - title: "Software"
+    title_fr: "Logiciels"
     url: /portfolio/

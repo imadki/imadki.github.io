@@ -17,13 +17,13 @@
 .lang-btn-nav.active { color: #52adc8; }
 .lang-sep { color: #ddd; font-size: 0.75em; }
 
-/* Span-based bilingual system */
+/* Span-based bilingual system — using html element so CSS applies before body renders */
 .lang-fr { display: none !important; }
-body.lang-is-fr .lang-fr { display: inline !important; }
-body.lang-is-fr .lang-en { display: none !important; }
+html.lang-is-fr .lang-fr { display: inline !important; }
+html.lang-is-fr .lang-en { display: none !important; }
 .lang-fr-block { display: none !important; }
-body.lang-is-fr .lang-fr-block { display: block !important; }
-body.lang-is-fr .lang-en-block { display: none !important; }
+html.lang-is-fr .lang-fr-block { display: block !important; }
+html.lang-is-fr .lang-en-block { display: none !important; }
 </style>
 
 <div class="masthead">
@@ -39,7 +39,7 @@ body.lang-is-fr .lang-en-block { display: none !important; }
               {% else %}
               {% assign domain = base_path %}
             {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}"><span class="lang-en">{{ link.title }}</span><span class="lang-fr">{{ link.title_fr | default: link.title }}</span></a></li>
           {% endfor %}
         </ul>
         <ul class="hidden-links hidden"></ul>
@@ -60,6 +60,7 @@ function setLang(lang) {
   var btnFr = document.getElementById('nav-btn-fr');
   if (btnEn) btnEn.classList.toggle('active', lang === 'en');
   if (btnFr) btnFr.classList.toggle('active', lang === 'fr');
+  document.documentElement.classList.toggle('lang-is-fr', lang === 'fr');
   document.body.classList.toggle('lang-is-fr', lang === 'fr');
   var en = document.getElementById('content-en');
   var fr = document.getElementById('content-fr');
