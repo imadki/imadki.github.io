@@ -10,6 +10,11 @@ author_profile: true
 {% assign all_pubs = site.publications | where_exp: "item", "item.pubtype != 'preprint'" | sort: "date" | reverse %}
 {% assign pubs_by_year = all_pubs | group_by_exp: "item", "item.date | date: '%Y'" %}
 
+{% assign journal_pubs_filtered = all_pubs | where: "pubtype", "journal" %}
+{% assign conf_pubs_filtered    = all_pubs | where: "pubtype", "conference" %}
+{% assign journal_pubs_by_venue = journal_pubs_filtered | group_by: "venue" | sort: "name" %}
+{% assign conf_pubs_by_venue    = conf_pubs_filtered    | group_by: "venue" | sort: "name" %}
+
 <style>
 .pub-filters {
   display: flex;
@@ -43,6 +48,14 @@ author_profile: true
   border-bottom: 2px solid #52adc8; display: inline-block;
 }
 
+.pub-venue-section { margin-bottom: 0.5em; }
+
+.pub-venue-heading {
+  font-size: 1em; font-weight: 700; color: #333;
+  margin: 1.4em 0 0.5em; padding-bottom: 0.3em;
+  border-bottom: 2px solid #52adc8;
+}
+
 .pub-item {
   padding: 0.65em 0; border-bottom: 1px solid #f0f0f0;
   font-size: 0.94em; line-height: 1.6;
@@ -60,190 +73,6 @@ author_profile: true
 
 .pub-no-results { display: none; color: #888; font-style: italic; padding: 1em 0; }
 
-.pub-chart-section {
-  margin-bottom: 1.6em;
-  padding: 0.9em 1.1em;
-  background: #f9f9f9;
-  border-radius: 4px;
-  border: 1px solid #e8e8e8;
-}
-.pub-chart-header {
-  display: flex; align-items: center; justify-content: space-between;
-  flex-wrap: wrap; gap: 0.5em; margin-bottom: 0.75em;
-}
-.pub-chart-title {
-  font-size: 0.8em; font-weight: 700; color: #666;
-  text-transform: uppercase; letter-spacing: 0.07em;
-}
-.pub-chart-toggles { display: flex; gap: 0.45em; }
-.chart-toggle {
-  display: flex; align-items: center; gap: 0.35em;
-  padding: 0.18em 0.65em; border: 1px solid #ccc; border-radius: 999px;
-  background: #fff; font-size: 0.8em; cursor: pointer;
-  color: #aaa; font-family: inherit; transition: all 0.15s;
-}
-.chart-toggle.active { color: #444; border-color: #aaa; }
-.chart-toggle:hover { border-color: #52adc8; color: #52adc8; }
-.chart-dot { width: 9px; height: 9px; border-radius: 2px; flex-shrink: 0; }
-.chart-dot-j { background: #2e7d9e; }
-.chart-dot-c { background: #aaa; }
-.pub-chart-container { height: 170px; position: relative; }
-</style>
-
-<div class="pub-filters">
-  <div class="filter-group">
-    <span class="filter-label"><span class="lang-en">Type</span><span class="lang-fr">Type</span></span>
-    <button class="filter-btn active" data-type="all"><span class="lang-en">All</span><span class="lang-fr">Tous</span></button>
-    <button class="filter-btn" data-type="journal"><span class="lang-en">Journals</span><span class="lang-fr">Journaux</span></button>
-    <button class="filter-btn" data-type="conference"><span class="lang-en">Conferences</span><span class="lang-fr">Conférences</span></button>
-  </div>
-  <div class="filter-group">
-    <span class="filter-label"><span class="lang-en">Year</span><span class="lang-fr">Année</span></span>
-    <button class="filter-btn active" data-year="all"><span class="lang-en">All</span><span class="lang-fr">Tous</span></button>
-    {% for year_group in pubs_by_year %}
-      <button class="filter-btn" data-year="{{ year_group.name }}">{{ year_group.name }}</button>
-    {% endfor %}
-  </div>
-</div>
-
-{% comment %}
-{% assign pubs_by_year_chart = all_pubs | group_by_exp: "item", "item.date | date: '%Y'" | sort: "name" %}
-
-<div class="pub-chart-section">
-  <div class="pub-chart-header">
-    <span class="pub-chart-title lang-en">Publications per Year</span>
-    <span class="pub-chart-title lang-fr">Publications par Année</span>
-    <div class="pub-chart-toggles">
-      <button class="chart-toggle active" id="chart-toggle-j" onclick="toggleChartSeries(0, this)">
-        <span class="chart-dot chart-dot-j"></span>
-        <span class="lang-en">Journals</span><span class="lang-fr">Revues</span>
-      </button>
-      <button class="chart-toggle active" id="chart-toggle-c" onclick="toggleChartSeries(1, this)">
-        <span class="chart-dot chart-dot-c"></span>
-        <span class="lang-en">Conferences</span><span class="lang-fr">Conférences</span>
-      </button>
-    </div>
-  </div>
-  <div class="pub-chart-container">
-    <canvas id="pub-chart"></canvas>
-  </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
-<script>
-(function () {
-  var labels = [{% for yg in pubs_by_year_chart %}"{{ yg.name }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
-  var jData   = [{% for yg in pubs_by_year_chart %}{{ yg.items | where: "pubtype", "journal"    | size }}{% unless forloop.last %},{% endunless %}{% endfor %}];
-  var cData   = [{% for yg in pubs_by_year_chart %}{{ yg.items | where: "pubtype", "conference" | size }}{% unless forloop.last %},{% endunless %}{% endfor %}];
-
-  var ctx = document.getElementById('pub-chart').getContext('2d');
-  window.pubChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: labels,
-      datasets: [
-        { label: 'Journals', data: jData,
-          backgroundColor: 'rgba(46,125,158,0.72)', borderColor: '#2e7d9e',
-          borderWidth: 1.5, borderRadius: 3 },
-        { label: 'Conferences', data: cData,
-          backgroundColor: 'rgba(150,150,150,0.42)', borderColor: '#aaa',
-          borderWidth: 1.5, borderRadius: 3 }
-      ]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      plugins: {
-        legend: { display: false },
-        tooltip: { mode: 'index', intersect: false }
-      },
-      scales: {
-        x: { grid: { display: false }, ticks: { font: { size: 11 } } },
-        y: { beginAtZero: true, ticks: { stepSize: 1, font: { size: 11 } },
-             grid: { color: 'rgba(0,0,0,0.05)' } }
-      }
-    }
-  });
-
-  window.toggleChartSeries = function (idx, btn) {
-    var visible = window.pubChart.isDatasetVisible(idx);
-    window.pubChart.setDatasetVisibility(idx, !visible);
-    btn.classList.toggle('active', !visible);
-    window.pubChart.update();
-  };
-})();
-</script>
-{% endcomment %}
-
-<p class="pub-count" id="pub-count"><span id="pub-count-num">{{ all_pubs | size }}</span> <span class="lang-en">publication(s) displayed</span><span class="lang-fr">publication(s) affichée(s)</span></p>
-<p class="pub-no-results" id="pub-no-results"><span class="lang-en">No publications match the selected filters.</span><span class="lang-fr">Aucune publication ne correspond aux filtres sélectionnés.</span></p>
-
-{% for year_group in pubs_by_year %}
-<div class="pub-year-section" data-section="{{ year_group.name }}">
-  <div class="pub-year-heading">{{ year_group.name }}</div>
-  {% for post in year_group.items %}
-  <div class="pub-item" data-pubtype="{{ post.pubtype }}" data-pubyear="{{ year_group.name }}">
-    <span class="pub-type-badge {% if post.pubtype == 'journal' %}badge-journal{% else %}badge-conference{% endif %}">{% if post.pubtype == 'journal' %}<span class="lang-en">Journal</span><span class="lang-fr">Revue</span>{% else %}<span class="lang-en">Conference</span><span class="lang-fr">Conférence</span>{% endif %}</span>{% if post.citation %}{{ post.citation }}{% endif %} &ldquo;{{ post.title }}&rdquo;{% if post.venue %} <i>{{ post.venue }}</i>, {{ year_group.name }}.{% endif %}{% if post.paperurl %} DOI: <a href="{{ post.paperurl }}">{{ post.paperurl }}</a>{% endif %}
-  </div>
-  {% endfor %}
-</div>
-{% endfor %}
-
-<script>
-(function () {
-  var activeType = 'all';
-  var activeYear = 'all';
-  var total = {{ all_pubs | size }};
-
-  function applyFilters() {
-    var visible = 0;
-    document.querySelectorAll('.pub-year-section').forEach(function (section) {
-      var sectionVisible = 0;
-      var yr = section.dataset.section;
-      var yearOk = activeYear === 'all' || yr === activeYear;
-
-      section.querySelectorAll('.pub-item').forEach(function (item) {
-        var typeOk = activeType === 'all' || item.dataset.pubtype === activeType;
-        if (typeOk && yearOk) {
-          item.style.display = '';
-          sectionVisible++;
-          visible++;
-        } else {
-          item.style.display = 'none';
-        }
-      });
-      section.style.display = sectionVisible > 0 ? '' : 'none';
-    });
-
-    document.getElementById('pub-count-num').textContent = visible;
-    document.getElementById('pub-no-results').style.display = visible === 0 ? 'block' : 'none';
-  }
-
-  document.querySelectorAll('[data-type]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      document.querySelectorAll('[data-type]').forEach(function (b) { b.classList.remove('active'); });
-      btn.classList.add('active');
-      activeType = btn.dataset.type;
-      applyFilters();
-    });
-  });
-
-  document.querySelectorAll('[data-year]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      document.querySelectorAll('[data-year]').forEach(function (b) { b.classList.remove('active'); });
-      btn.classList.add('active');
-      activeYear = btn.dataset.year;
-      applyFilters();
-    });
-  });
-})();
-</script>
-
-{% assign journal_pubs = site.publications | where: "pubtype", "journal" %}
-{% assign conf_pubs    = site.publications | where: "pubtype", "conference" %}
-{% assign journal_venues = journal_pubs | map: "venue" | sort | uniq %}
-{% assign conf_venues    = conf_pubs    | map: "venue" | sort | uniq %}
-
-<style>
 .pub-venues-section {
   margin-top: 2.5em;
   padding-top: 1.5em;
@@ -276,6 +105,193 @@ author_profile: true
 }
 .pub-venues-col li:last-child { border-bottom: none; }
 </style>
+
+<div class="pub-filters">
+  <div class="filter-group">
+    <span class="filter-label"><span class="lang-en">Type</span><span class="lang-fr">Type</span></span>
+    <button class="filter-btn active" data-type="all"><span class="lang-en">All</span><span class="lang-fr">Tous</span></button>
+    <button class="filter-btn" data-type="journal"><span class="lang-en">Journals</span><span class="lang-fr">Journaux</span></button>
+    <button class="filter-btn" data-type="conference"><span class="lang-en">Conferences</span><span class="lang-fr">Conférences</span></button>
+  </div>
+  <div class="filter-group">
+    <span class="filter-label"><span class="lang-en">Year</span><span class="lang-fr">Année</span></span>
+    <button class="filter-btn active" data-year="all"><span class="lang-en">All</span><span class="lang-fr">Tous</span></button>
+    {% for year_group in pubs_by_year %}
+      <button class="filter-btn" data-year="{{ year_group.name }}">{{ year_group.name }}</button>
+    {% endfor %}
+  </div>
+  <div class="filter-group" id="groupby-row" style="display:none">
+    <span class="filter-label"><span class="lang-en">Group by</span><span class="lang-fr">Grouper par</span></span>
+    <button class="filter-btn active" data-groupby="year"><span class="lang-en">Year</span><span class="lang-fr">Année</span></button>
+    <button class="filter-btn" data-groupby="venue"><span class="lang-en">Journal</span><span class="lang-fr">Journal</span> <span id="groupby-venue-label-en" style="display:none">/ Conf.</span><span id="groupby-venue-label-fr" style="display:none">/ Conf.</span></button>
+  </div>
+</div>
+
+<p class="pub-count" id="pub-count"><span id="pub-count-num">{{ all_pubs | size }}</span> <span class="lang-en">publication(s) displayed</span><span class="lang-fr">publication(s) affichée(s)</span></p>
+<p class="pub-no-results" id="pub-no-results"><span class="lang-en">No publications match the selected filters.</span><span class="lang-fr">Aucune publication ne correspond aux filtres sélectionnés.</span></p>
+
+<!-- VIEW: grouped by year -->
+<div id="view-year">
+{% for year_group in pubs_by_year %}
+<div class="pub-year-section" data-section="{{ year_group.name }}">
+  <div class="pub-year-heading">{{ year_group.name }}</div>
+  {% for post in year_group.items %}
+  <div class="pub-item" data-pubtype="{{ post.pubtype }}" data-pubyear="{{ year_group.name }}">
+    <span class="pub-type-badge {% if post.pubtype == 'journal' %}badge-journal{% else %}badge-conference{% endif %}">{% if post.pubtype == 'journal' %}<span class="lang-en">Journal</span><span class="lang-fr">Revue</span>{% else %}<span class="lang-en">Conference</span><span class="lang-fr">Conférence</span>{% endif %}</span>{% if post.citation %}{{ post.citation }}{% endif %} &ldquo;{{ post.title }}&rdquo;{% if post.venue %} <i>{{ post.venue }}</i>, {{ year_group.name }}.{% endif %}{% if post.paperurl %} DOI: <a href="{{ post.paperurl }}">{{ post.paperurl }}</a>{% endif %}
+  </div>
+  {% endfor %}
+</div>
+{% endfor %}
+</div>
+
+<!-- VIEW: journals grouped by venue -->
+<div id="view-venue-journal" style="display:none">
+{% for venue_group in journal_pubs_by_venue %}
+<div class="pub-venue-section" data-venue-section="{{ venue_group.name }}">
+  <div class="pub-venue-heading">{{ venue_group.name }}</div>
+  {% for post in venue_group.items %}
+  <div class="pub-item" data-pubtype="{{ post.pubtype }}" data-pubyear="{{ post.date | date: '%Y' }}">
+    <span class="pub-type-badge badge-journal"><span class="lang-en">Journal</span><span class="lang-fr">Revue</span></span>{% if post.citation %}{{ post.citation }}{% endif %} &ldquo;{{ post.title }}&rdquo; <i>{{ post.venue }}</i>, {{ post.date | date: '%Y' }}.{% if post.paperurl %} DOI: <a href="{{ post.paperurl }}">{{ post.paperurl }}</a>{% endif %}
+  </div>
+  {% endfor %}
+</div>
+{% endfor %}
+</div>
+
+<!-- VIEW: conferences grouped by venue -->
+<div id="view-venue-conference" style="display:none">
+{% for venue_group in conf_pubs_by_venue %}
+<div class="pub-venue-section" data-venue-section="{{ venue_group.name }}">
+  <div class="pub-venue-heading">{{ venue_group.name }}</div>
+  {% for post in venue_group.items %}
+  <div class="pub-item" data-pubtype="{{ post.pubtype }}" data-pubyear="{{ post.date | date: '%Y' }}">
+    <span class="pub-type-badge badge-conference"><span class="lang-en">Conference</span><span class="lang-fr">Conférence</span></span>{% if post.citation %}{{ post.citation }}{% endif %} &ldquo;{{ post.title }}&rdquo; <i>{{ post.venue }}</i>, {{ post.date | date: '%Y' }}.{% if post.paperurl %} DOI: <a href="{{ post.paperurl }}">{{ post.paperurl }}</a>{% endif %}
+  </div>
+  {% endfor %}
+</div>
+{% endfor %}
+</div>
+
+<script>
+(function () {
+  var activeType    = 'all';
+  var activeYear    = 'all';
+  var activeGroupBy = 'year';
+
+  var viewYear     = document.getElementById('view-year');
+  var viewVenueJ   = document.getElementById('view-venue-journal');
+  var viewVenueC   = document.getElementById('view-venue-conference');
+  var groupbyRow   = document.getElementById('groupby-row');
+
+  function applyFilters() {
+    var visible = 0;
+
+    if (activeGroupBy === 'year') {
+      viewYear.style.display   = '';
+      viewVenueJ.style.display = 'none';
+      viewVenueC.style.display = 'none';
+
+      document.querySelectorAll('#view-year .pub-year-section').forEach(function (section) {
+        var sectionVisible = 0;
+        var yr = section.dataset.section;
+        var yearOk = activeYear === 'all' || yr === activeYear;
+        section.querySelectorAll('.pub-item').forEach(function (item) {
+          var typeOk = activeType === 'all' || item.dataset.pubtype === activeType;
+          if (typeOk && yearOk) {
+            item.style.display = '';
+            sectionVisible++;
+            visible++;
+          } else {
+            item.style.display = 'none';
+          }
+        });
+        section.style.display = sectionVisible > 0 ? '' : 'none';
+      });
+
+    } else {
+      viewYear.style.display = 'none';
+      var activeView = activeType === 'journal' ? viewVenueJ : viewVenueC;
+      var inactiveView = activeType === 'journal' ? viewVenueC : viewVenueJ;
+      activeView.style.display   = '';
+      inactiveView.style.display = 'none';
+
+      activeView.querySelectorAll('.pub-venue-section').forEach(function (section) {
+        var sectionVisible = 0;
+        section.querySelectorAll('.pub-item').forEach(function (item) {
+          var yearOk = activeYear === 'all' || item.dataset.pubyear === activeYear;
+          if (yearOk) {
+            item.style.display = '';
+            sectionVisible++;
+            visible++;
+          } else {
+            item.style.display = 'none';
+          }
+        });
+        section.style.display = sectionVisible > 0 ? '' : 'none';
+      });
+    }
+
+    document.getElementById('pub-count-num').textContent = visible;
+    document.getElementById('pub-no-results').style.display = visible === 0 ? 'block' : 'none';
+  }
+
+  function updateGroupbyLabel() {
+    var venueBtnSpans = document.querySelectorAll('[data-groupby="venue"] span');
+    var isJournal = activeType === 'journal';
+    // Update the venue button label text
+    var btn = document.querySelector('[data-groupby="venue"]');
+    if (btn) {
+      btn.innerHTML = isJournal
+        ? '<span class="lang-en">Journal</span><span class="lang-fr">Revue</span>'
+        : '<span class="lang-en">Conference</span><span class="lang-fr">Conférence</span>';
+      if (activeGroupBy === 'venue') btn.classList.add('active');
+      else btn.classList.remove('active');
+    }
+  }
+
+  document.querySelectorAll('[data-type]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('[data-type]').forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      activeType = btn.dataset.type;
+
+      if (activeType === 'journal' || activeType === 'conference') {
+        groupbyRow.style.display = '';
+        updateGroupbyLabel();
+      } else {
+        groupbyRow.style.display = 'none';
+        activeGroupBy = 'year';
+        document.querySelectorAll('[data-groupby]').forEach(function (b) {
+          b.classList.toggle('active', b.dataset.groupby === 'year');
+        });
+      }
+
+      applyFilters();
+    });
+  });
+
+  document.querySelectorAll('[data-year]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('[data-year]').forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      activeYear = btn.dataset.year;
+      applyFilters();
+    });
+  });
+
+  document.querySelectorAll('[data-groupby]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('[data-groupby]').forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      activeGroupBy = btn.dataset.groupby;
+      applyFilters();
+    });
+  });
+})();
+</script>
+
+{% assign journal_venues = journal_pubs_filtered | map: "venue" | sort | uniq %}
+{% assign conf_venues    = conf_pubs_filtered    | map: "venue" | sort | uniq %}
 
 <div class="pub-venues-section">
   <p class="pub-venues-heading">
