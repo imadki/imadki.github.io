@@ -166,6 +166,12 @@ author_profile: true
     <span class="collab-year"></span>
     <span class="collab-badge badge-af">Morocco</span>
   </li>
+  <li class="collab-row" data-name="Ziggaf" data-year="2019">
+    <span class="collab-name"><a href="https://sites.google.com/view/ziggaf-moussa" target="_blank">Moussa Ziggaf</a></span>
+    <span class="collab-inst">Abdelmalek Essaâdi University, Morocco</span>
+    <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2019</span>
+    <span class="collab-badge badge-af">Morocco</span>
+  </li>
   <li class="collab-row" data-name="Ziani" data-year="9999">
     <span class="collab-name">Mohammed Ziani</span>
     <span class="collab-inst">Faculty of Sciences, Mohammed V University in Rabat (UM5), Morocco</span>
