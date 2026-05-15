@@ -3,13 +3,13 @@ title: "Calculus 1"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2020-teaching-calculus
-venue: "Institut Supérieur d'Électronique de Paris (ISEP)"
-date: 2016-01-03
-location: "Paris, France"
+venue: "École des Hautes Études d'Ingénierie (EHEI)"
+date: 2012-01-01
+location: "Oujda, Morocco"
 role: "Coordinator"
 load: "48h"
 level: "Preparatory Cycle"
-period: "2016–2019"
+period: "2012"
 status: "completed"
 summary: "Introduction to fundamental calculus concepts including sequences, functions of a real variable, differentiability, Taylor's formula, and integration."
 ---
