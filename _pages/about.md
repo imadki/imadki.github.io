@@ -105,7 +105,15 @@ redirect_from:
   <div class="role-badge"><span class="role-badge-icon">🖥️</span><span><strong>Head</strong> — Simlab Supercomputer</span></div>
   <div class="role-badge"><span class="role-badge-icon">📋</span><span><strong>Advisory Board Member</strong> — <a href="https://toubkal.um6p.ma/" target="_blank">Toubkal Supercomputer</a></span></div>
   <div class="role-badge"><span class="role-badge-icon">🎓</span><span><strong>NVIDIA DLI Certified Instructor</strong> &amp; University Ambassador</span></div>
-  <div class="role-badge"><span class="role-badge-icon">🚀</span><span><strong>Co-founder</strong> — <a href="https://www.youtube.com/@MoroccoHPC" target="_blank"><i class="fab fa-youtube" style="color:#ff0000;margin-right:0.3em"></i></a><a href="https://www.linkedin.com/company/moroccohpc/" target="_blank">Morocco HPC</a></span></div>
+  <div class="role-badge" style="flex-wrap:wrap;gap:0.5em;">
+    <span class="role-badge-icon">🚀</span>
+    <span><strong>Co-founder</strong> — <a href="https://www.mhpc.ma/" target="_blank" style="color:#1a4a6b;font-weight:700;">Morocco HPC</a></span>
+    <span style="display:flex;gap:0.45em;align-items:center;margin-left:0.2em;">
+      <a href="https://www.mhpc.ma/" target="_blank" title="Website" style="color:#52adc8;font-size:0.95em;"><i class="fas fa-globe"></i></a>
+      <a href="https://www.linkedin.com/company/moroccohpc/" target="_blank" title="Join us on LinkedIn" style="color:#0a66c2;font-size:0.95em;"><i class="fab fa-linkedin"></i> <span style="font-size:0.78em;font-weight:700;vertical-align:middle;">Join us</span></a>
+      <a href="https://www.youtube.com/@MoroccoHPC" target="_blank" title="YouTube" style="color:#ff0000;font-size:0.95em;"><i class="fab fa-youtube"></i></a>
+    </span>
+  </div>
 </div>
 
 <p>In my research, I focus on the development and application of parallel numerical methods, with a strong emphasis on energy-efficient HPC. I develop parallel Finite Volume solvers on hybrid meshes — for shallow water, plasma, and Navier-Stokes equations for non-Newtonian fluids — design Physics-Informed Neural Networks and data-driven methods for CFD, and investigate DVFS and power-aware strategies on production systems such as Toubkal. I supervise PhD students at UM6P and actively promote HPC and AI capacity building across Africa.</p>
