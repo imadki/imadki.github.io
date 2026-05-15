@@ -23,8 +23,10 @@ author_profile: true
   padding: 0.85em 0;
   border-bottom: 1px solid #f0f0f0;
   align-items: flex-start;
+  cursor: pointer;
 }
 .talk-card:last-child { border-bottom: none; }
+.talk-card:hover .talk-title-text { color: #52adc8; }
 
 .talk-date-col {
   min-width: 70px;
@@ -45,8 +47,7 @@ author_profile: true
   margin: 0 0 0.3em;
   line-height: 1.4;
 }
-.talk-title a { text-decoration: none; color: #333; }
-.talk-title a:hover { color: #52adc8; }
+.talk-title-text { color: #333; transition: color 0.15s; }
 
 .talk-type-badge {
   display: inline-block; font-size: 0.72em; font-weight: 700;
@@ -60,13 +61,74 @@ author_profile: true
 .talk-meta {
   font-size: 0.85em; color: #666; margin: 0;
 }
+
+/* Modal */
+.talk-modal-overlay {
+  display: none;
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5em;
+}
+.talk-modal-overlay.open { display: flex; }
+
+.talk-modal {
+  background: #fff;
+  border-radius: 8px;
+  max-width: 620px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+  position: relative;
+}
+.talk-modal-header {
+  padding: 1.4em 1.6em 1em;
+  border-bottom: 1px solid #eee;
+}
+.talk-modal-badge-row {
+  display: flex; align-items: center; gap: 0.6em;
+  margin-bottom: 0.7em; flex-wrap: wrap;
+}
+.talk-modal-date-badge {
+  font-size: 0.78em; font-weight: 700; color: #fff;
+  background: #52adc8; border-radius: 4px;
+  padding: 0.2em 0.6em;
+}
+.talk-modal-title {
+  font-size: 1.08em; font-weight: 700; color: #222;
+  margin: 0; line-height: 1.4;
+}
+.talk-modal-body {
+  padding: 1.1em 1.6em 1.4em;
+}
+.talk-modal-meta {
+  font-size: 0.88em; color: #666;
+  margin: 0 0 1em; line-height: 1.5;
+  padding-bottom: 0.9em;
+  border-bottom: 1px solid #f0f0f0;
+}
+.talk-modal-meta strong { color: #444; }
+.talk-modal-content {
+  font-size: 0.92em; color: #444; line-height: 1.65;
+}
+.talk-modal-content a { color: #52adc8; }
+.talk-modal-close {
+  position: absolute; top: 0.9em; right: 1em;
+  background: none; border: none; cursor: pointer;
+  font-size: 1.4em; color: #aaa; line-height: 1;
+  padding: 0.2em 0.4em; border-radius: 4px;
+}
+.talk-modal-close:hover { color: #555; background: #f0f0f0; }
 </style>
 
 {% for year_group in talks_by_year %}
 <div class="talk-year-section">
   <div class="talk-year-heading">{{ year_group.name }}</div>
   {% for post in year_group.items %}
-  <div class="talk-card">
+  <div class="talk-card" data-modal="modal-{{ post.date | date: '%Y%m%d' }}-{{ forloop.index }}">
     <div class="talk-date-col">
       <span class="talk-date-day">{{ post.date | date: "%d" }}</span>
       <span class="talk-date-month">{{ post.date | date: "%b" }}</span>
@@ -74,11 +136,61 @@ author_profile: true
     <div class="talk-body">
       <p class="talk-title">
         <span class="talk-type-badge {% if post.type == 'Keynote' %}badge-keynote{% else %}badge-invited{% endif %}">{% if post.type == 'Keynote' %}<span class="lang-en">Keynote</span><span class="lang-fr">Conférence invitée</span>{% else %}<span class="lang-en">Invited</span><span class="lang-fr">Invité</span>{% endif %}</span>
-        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a>
+        <span class="talk-title-text">{{ post.title }}</span>
       </p>
       <p class="talk-meta">{{ post.venue }}{% if post.location %} &mdash; {{ post.location }}{% endif %}</p>
+    </div>
+  </div>
+
+  <div class="talk-modal-overlay" id="modal-{{ post.date | date: '%Y%m%d' }}-{{ forloop.index }}">
+    <div class="talk-modal" role="dialog">
+      <button class="talk-modal-close" aria-label="Close">&times;</button>
+      <div class="talk-modal-header">
+        <div class="talk-modal-badge-row">
+          <span class="talk-type-badge {% if post.type == 'Keynote' %}badge-keynote{% else %}badge-invited{% endif %}">{% if post.type == 'Keynote' %}<span class="lang-en">Keynote</span><span class="lang-fr">Conférence invitée</span>{% else %}<span class="lang-en">Invited</span><span class="lang-fr">Invité</span>{% endif %}</span>
+          <span class="talk-modal-date-badge">{{ post.date | date: "%B %d, %Y" }}</span>
+        </div>
+        <p class="talk-modal-title">{{ post.title }}</p>
+      </div>
+      <div class="talk-modal-body">
+        <p class="talk-modal-meta">
+          <strong><span class="lang-en">Venue</span><span class="lang-fr">Lieu</span>:</strong> {{ post.venue }}<br>
+          {% if post.location %}<strong><span class="lang-en">Location</span><span class="lang-fr">Localisation</span>:</strong> {{ post.location }}{% endif %}
+        </p>
+        <div class="talk-modal-content">{{ post.content }}</div>
+      </div>
     </div>
   </div>
   {% endfor %}
 </div>
 {% endfor %}
+
+<script>
+(function () {
+  function openModal(id) {
+    var overlay = document.getElementById(id);
+    if (overlay) { overlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  }
+  function closeModal(overlay) {
+    overlay.classList.remove('open'); document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.talk-card').forEach(function (card) {
+    card.addEventListener('click', function () { openModal(card.dataset.modal); });
+  });
+
+  document.querySelectorAll('.talk-modal-overlay').forEach(function (overlay) {
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) { closeModal(overlay); }
+    });
+    var btn = overlay.querySelector('.talk-modal-close');
+    if (btn) { btn.addEventListener('click', function () { closeModal(overlay); }); }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.talk-modal-overlay.open').forEach(function (o) { closeModal(o); });
+    }
+  });
+})();
+</script>
