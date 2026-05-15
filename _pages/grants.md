@@ -45,15 +45,6 @@ author_profile: true
 
 ---
 
-**Start-up Funding**
-- **Role:** Principal Investigator
-- **Funding:** UM6P, Morocco
-- **Budget:** €200K
-- **Period:** September 2023 – 2026 (3 years)
-- **Summary:** Start-up funding provided by UM6P to support newly appointed Assistant Professors in initiating and developing their independent research activities.
-
----
-
 **Multiphysics and HPC Chair**
 - **Role:** Principal Investigator (co-PI: Prof. Abdelouahed El Fatimi, IAP)
 - **Funding:** OCP Group, Morocco
