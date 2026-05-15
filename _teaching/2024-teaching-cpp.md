@@ -14,12 +14,26 @@ status: "active"
 summary: "Modern C++17 programming covering OOP, templates, STL, smart pointers, move semantics, and generic programming for CS preparatory students."
 ---
 
+**Institution:** [UM6P College of Computing](https://cc.um6p.ma/), Ben Guerir, Morocco
+
 Introduction to modern C++ programming with a focus on the C++17 standard. Covers fundamental and advanced concepts including object-oriented programming, templates, the Standard Template Library (STL), smart pointers, and move semantics. Special attention is given to C++17 features such as structured bindings, if constexpr, fold expressions, and lambda function improvements. Students gain practical experience in memory management, generic programming, and building efficient, reusable code.
 
 ## Curriculum Overview
 
-- Pointers
+**Part I — Foundations**
+
+- Getting Started
+- Structure of a C++ Program
+- Variables and Constants
 - Containers
+- Expressions, Statements and Operators
+- Determining Control Flow
+- Strings in C++
+- Functions
+
+**Part II — Advanced C++**
+
+- Pointers
 - Lambda Functions
 - Introduction to OOP
 - OOP — Operator Overloading
