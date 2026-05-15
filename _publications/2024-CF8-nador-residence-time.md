@@ -5,7 +5,8 @@ pubtype: conference
 permalink: /publication/2024-CF8-nador-residence-time
 excerpt: 'Numerical computation of residence time for water renewal in the Nador Lagoon using finite volume methods.'
 date: 2024-03-02
-venue: 'ICMSAO'
+venue: 'ICMSAO – 9th International Conference on Modeling, Simulation and Applied Optimization'
+conf: 'ICMSAO'
 paperurl: 'https://doi.org/10.1063/5.0194765'
 citation: 'I. Oubarka, <b>I. Kissami</b>, I. Elmahi, E. Deleersnijder.'
 ---

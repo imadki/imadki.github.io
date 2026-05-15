@@ -13,7 +13,7 @@ author_profile: true
 {% assign journal_pubs_filtered = all_pubs | where: "pubtype", "journal" %}
 {% assign conf_pubs_filtered    = all_pubs | where: "pubtype", "conference" %}
 {% assign journal_pubs_by_venue = journal_pubs_filtered | group_by: "venue" | sort: "name" %}
-{% assign conf_pubs_by_venue    = conf_pubs_filtered    | group_by: "venue" | sort: "name" %}
+{% assign conf_pubs_by_venue    = conf_pubs_filtered    | group_by: "conf"  | sort: "name" %}
 
 <style>
 .pub-filters {

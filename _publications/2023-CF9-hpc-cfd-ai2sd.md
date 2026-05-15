@@ -5,7 +5,8 @@ pubtype: conference
 permalink: /publication/2023-CF9-hpc-cfd-ai2sd
 excerpt: 'Comprehensive study of HPC acceleration for large-scale CFD simulations.'
 date: 2023-06-01
-venue: 'AI2SD'
+venue: 'AI2SD – International Conference on Advanced Intelligent Systems for Sustainable Development'
+conf: 'AI2SD'
 paperurl: 'https://doi.org/10.1007/978-3-031-54318-0_31'
 citation: 'Elmisaoui S., <b>I. Kissami</b>, J.-M. Ghidaglia.'
 ---

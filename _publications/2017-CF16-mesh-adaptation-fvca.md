@@ -5,7 +5,8 @@ pubtype: conference
 permalink: /publication/2017-CF16-mesh-adaptation-fvca
 excerpt: 'New mesh adaptation criteria within a finite volume framework for planar ionization wavefront propagation simulation.'
 date: 2017-06-01
-venue: 'FVCA'
+venue: 'FVCA VIII – International Conference on Finite Volumes for Complex Applications'
+conf: 'FVCA'
 paperurl: 'https://doi.org/10.1007/978-3-319-57394-6_57'
 citation: 'Amor H., F. Benkhaldoun, T. Ghoudi, <b>I. Kissami</b>, M. Seaid.'
 ---

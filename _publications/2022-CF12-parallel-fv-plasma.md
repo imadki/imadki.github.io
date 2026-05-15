@@ -5,7 +5,8 @@ pubtype: conference
 permalink: /publication/2022-CF12-parallel-fv-plasma
 excerpt: 'Parallel finite volume code for plasma simulation with unstructured adaptive mesh refinement.'
 date: 2022-06-01
-venue: 'ECCOMAS'
+venue: 'ECCOMAS – 8th European Congress on Computational Methods in Applied Sciences and Engineering'
+conf: 'ECCOMAS'
 paperurl: 'https://doi.org/10.23967/eccomas.2022.215'
 citation: '<b>I. Kissami</b>, S. Maazioui, F. Benkhaldoun.'
 ---
