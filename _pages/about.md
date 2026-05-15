@@ -93,7 +93,6 @@ redirect_from:
 .career-role { font-weight: 700; font-size: 0.95em; color: #222; }
 .career-inst { font-size: 0.88em; color: #666; margin-top: 0.05em; }
 
-#content-en p, #content-fr p { text-align: justify; }
 </style>
 
 
