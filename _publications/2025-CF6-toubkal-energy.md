@@ -5,7 +5,7 @@ pubtype: conference
 permalink: /publication/2025-CF6-toubkal-energy
 excerpt: 'Energy efficiency evaluation of the Toubkal supercomputer in the context of Green500 rankings.'
 date: 2025-06-15
-venue: 'E-Energy 2025 – 16th ACM International Conference on Future and Sustainable Energy Systems'
+venue: 'E-Energy'
 paperurl: 'https://doi.org/10.1145/3679240.3735103'
 citation: '<b>I. Kissami</b>, R. Basmadjian, A. Zahir.'
 ---

@@ -5,7 +5,7 @@ pubtype: conference
 permalink: /publication/2020-CF14-fvc-shallow-water-fvca
 excerpt: 'FVC scheme on unstructured meshes applied to the 2D shallow water equations.'
 date: 2020-06-01
-venue: 'International Conference on Finite Volumes for Complex Applications (FVCA)'
+venue: 'FVCA'
 paperurl: 'https://doi.org/10.1007/978-3-030-43651-3_42'
 citation: 'M. Ziggaf, M. Boubekeur., <b>I. Kissami</b>, F. Benkhaldoun, I. Elmahi.'
 ---
