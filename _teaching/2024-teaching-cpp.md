@@ -76,4 +76,5 @@ Introduction à la programmation C++ moderne axée sur la norme C++17. Couvre le
 - Pointeurs Intelligents
 - Exceptions
 - Flux I/O
+
 </div>

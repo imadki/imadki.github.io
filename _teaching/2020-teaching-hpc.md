@@ -106,4 +106,5 @@ Ce cours offre un aperçu complet du calcul haute performance. En partant du mat
 - Communication unilatérale
 - Types de données dérivés
 - Communicateurs
+
 </div>
