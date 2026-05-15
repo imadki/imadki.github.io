@@ -20,6 +20,34 @@ redirect_from:
 .role-badge-icon { font-size: 1em; flex-shrink: 0; }
 .role-badge strong { color: #1a4a6b; }
 
+.focus-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.7em;
+  margin: 1.2em 0 1em;
+}
+@media (max-width: 500px) { .focus-grid { grid-template-columns: 1fr; } }
+.focus-card {
+  background: #f4fafc;
+  border: 1px solid #d0e8f0;
+  border-radius: 8px;
+  padding: 0.85em 1em;
+}
+.focus-icon { font-size: 1.25em; display: block; margin-bottom: 0.3em; }
+.focus-card strong { display: block; font-size: 0.9em; color: #1a4a6b; margin-bottom: 0.2em; }
+.focus-card p { font-size: 0.8em; color: #666; margin: 0; line-height: 1.4; }
+
+.code-pills { display: flex; flex-wrap: wrap; gap: 0.5em; margin: 0.8em 0 1.4em; }
+.code-pill {
+  display: inline-flex; align-items: center; gap: 0.4em;
+  padding: 0.32em 0.85em;
+  background: #f0f0f0; border: 1px solid #ddd;
+  border-radius: 20px; font-size: 0.83em; font-weight: 600;
+  color: #333; text-decoration: none; transition: background 0.15s, border-color 0.15s;
+}
+.code-pill:hover { background: #e8f4f8; border-color: #b0d0e0; color: #2e7d9e; text-decoration: none; }
+.code-pill svg { width: 14px; height: 14px; fill: currentColor; flex-shrink: 0; }
+
 .highlight-list { list-style: none; margin: 0.8em 0 0; padding: 0; }
 .highlight-item {
   display: flex; gap: 1em; padding: 0.65em 0;
@@ -70,7 +98,7 @@ redirect_from:
 <!-- ==================== ENGLISH ==================== -->
 <div id="content-en" class="lang-en-block">
 
-<p>I am an <strong>Assistant Professor</strong> at the <a href="https://www.um6p.ma">University Mohammed VI Polytechnic (UM6P)</a>, <a href="https://cc.um6p.ma/">College of Computing</a>, Ben Guerir, Morocco.</p>
+<p>I am an <strong>Assistant Professor</strong> at the <a href="https://www.um6p.ma">University Mohammed VI Polytechnic (UM6P)</a>, <a href="https://cc.um6p.ma/">College of Computing</a>, Ben Guerir, Morocco — working at the intersection of High Performance Computing, Computational Fluid Dynamics, and Scientific Machine Learning.</p>
 
 <div class="role-badges">
   <div class="role-badge"><span class="role-badge-icon">🖥️</span><span><strong>Head</strong> — Simlab Supercomputer</span></div>
@@ -79,15 +107,44 @@ redirect_from:
   <div class="role-badge"><span class="role-badge-icon">🚀</span><span><strong>Co-founder</strong> — <a href="https://www.linkedin.com/company/moroccohpc/" target="_blank">Morocco HPC</a></span></div>
 </div>
 
-<p>In my research, I focus on the development, implementation and application of parallel numerical methods at the intersection of <strong>High Performance Computing (HPC)</strong>, <strong>Computational Fluid Dynamics (CFD)</strong>, and <strong>Scientific Machine Learning</strong>. I work in particular on parallel Finite Volume solvers for unstructured meshes — targeting applications in shallow water flows, plasma physics, and Navier-Stokes equations — and am the lead developer of <a href="https://github.com/imadki/manapy"><strong>Manapy</strong></a>, a parallel Python library for solving PDEs on unstructured meshes, and <a href="https://github.com/imadki/mumps4py"><strong>Mumps4py</strong></a>, a Python interface to the MUMPS sparse direct solver officially adopted by the MUMPS project. Besides parallel numerical methods, I am also very much interested in Physics-Informed Neural Networks (PINNs), data-driven approaches for CFD, and energy optimization in HPC infrastructures. I support PhD students at UM6P and strongly advocate for the development of HPC and AI capacities across Africa.</p>
+<div class="focus-grid">
+  <div class="focus-card">
+    <span class="focus-icon">⚡</span>
+    <strong>HPC &amp; Parallel Computing</strong>
+    <p>MPI-based parallel algorithms, cluster architectures, performance optimization at scale</p>
+  </div>
+  <div class="focus-card">
+    <span class="focus-icon">🌊</span>
+    <strong>Computational Fluid Dynamics</strong>
+    <p>Finite Volume solvers on unstructured meshes — shallow water flows, plasma physics, Navier-Stokes</p>
+  </div>
+  <div class="focus-card">
+    <span class="focus-icon">🧠</span>
+    <strong>Scientific Machine Learning</strong>
+    <p>Physics-Informed Neural Networks (PINNs), PINOs, data-driven approaches for CFD</p>
+  </div>
+  <div class="focus-card">
+    <span class="focus-icon">🌱</span>
+    <strong>Energy-Aware HPC</strong>
+    <p>Energy optimization in HPC infrastructures &amp; development of HPC/AI capacities across Africa</p>
+  </div>
+</div>
 
-<h2>Scientific Codes</h2>
-<p>I develop and maintain several open-source scientific codes:</p>
-<ul>
-  <li><strong><a href="https://github.com/imadki/manapy">Manapy</a></strong> — A parallel Python library for solving PDEs using the finite volume method on unstructured meshes (MPI-based, supports Shallow Water, Navier-Stokes, MHD, and more).</li>
-  <li><strong><a href="https://github.com/imadki/mumps4py">Mumps4py</a></strong> — A Python interface for the MUMPS parallel sparse direct solver, officially adopted by the MUMPS project.</li>
-  <li><strong><a href="https://github.com/Mohammed-khlifi/NeuralPDE-Solver">NeuralPDE-Solver</a></strong> — An open-source Python framework for applying PINNs, PINOs, and FNOs to steady-state PDEs.</li>
-</ul>
+<h2>Open-Source Codes</h2>
+<div class="code-pills">
+  <a href="https://github.com/imadki/manapy" class="code-pill" target="_blank">
+    <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+    Manapy
+  </a>
+  <a href="https://github.com/imadki/mumps4py" class="code-pill" target="_blank">
+    <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+    Mumps4py
+  </a>
+  <a href="https://github.com/Mohammed-khlifi/NeuralPDE-Solver" class="code-pill" target="_blank">
+    <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+    NeuralPDE-Solver
+  </a>
+</div>
 
 <h2>Highlights</h2>
 <ul class="highlight-list">
@@ -158,7 +215,7 @@ redirect_from:
 <!-- ==================== FRANÇAIS ==================== -->
 <div id="content-fr" class="lang-fr-block">
 
-<p>Je suis <strong>Professeur Assistant</strong> à l'<a href="https://www.um6p.ma">Université Mohammed VI Polytechnique (UM6P)</a>, <a href="https://cc.um6p.ma/">Collège d'Informatique</a>, Ben Guerir, Maroc.</p>
+<p>Je suis <strong>Professeur Assistant</strong> à l'<a href="https://www.um6p.ma">Université Mohammed VI Polytechnique (UM6P)</a>, <a href="https://cc.um6p.ma/">Collège d'Informatique</a>, Ben Guerir, Maroc — à l'intersection du Calcul Haute Performance, de la Mécanique des Fluides Numérique et de l'Apprentissage Automatique Scientifique.</p>
 
 <div class="role-badges">
   <div class="role-badge"><span class="role-badge-icon">🖥️</span><span><strong>Responsable</strong> — Supercalculateur Simlab</span></div>
@@ -167,15 +224,44 @@ redirect_from:
   <div class="role-badge"><span class="role-badge-icon">🚀</span><span><strong>Co-fondateur</strong> — <a href="https://www.linkedin.com/company/moroccohpc/" target="_blank">Morocco HPC</a></span></div>
 </div>
 
-<p>Mes recherches portent sur le développement, l'implémentation et l'application de méthodes numériques parallèles à l'intersection du <strong>Calcul Haute Performance (HPC)</strong>, de la <strong>Mécanique des Fluides Numérique (CFD)</strong> et de l'<strong>Apprentissage Automatique Scientifique</strong>. Je travaille en particulier sur des solveurs Volumes Finis parallèles pour maillages non-structurés — ciblant les applications en écoulements à surface libre, physique des plasmas et équations de Navier-Stokes — et suis le développeur principal de <a href="https://github.com/imadki/manapy"><strong>Manapy</strong></a>, une bibliothèque Python parallèle pour la résolution d'EDP sur maillages non-structurés, et de <a href="https://github.com/imadki/mumps4py"><strong>Mumps4py</strong></a>, une interface Python au solveur creux MUMPS officiellement adopté par le projet MUMPS. Au-delà des méthodes numériques parallèles, je m'intéresse également aux réseaux de neurones physiquement informés (PINNs), aux approches data-driven pour la CFD, et à l'optimisation énergétique des infrastructures HPC. J'accompagne des doctorants à l'UM6P et milite activement pour le développement des capacités HPC et IA en Afrique.</p>
+<div class="focus-grid">
+  <div class="focus-card">
+    <span class="focus-icon">⚡</span>
+    <strong>HPC &amp; Calcul Parallèle</strong>
+    <p>Algorithmes parallèles MPI, architectures cluster, optimisation des performances à grande échelle</p>
+  </div>
+  <div class="focus-card">
+    <span class="focus-icon">🌊</span>
+    <strong>Mécanique des Fluides Numérique</strong>
+    <p>Solveurs Volumes Finis sur maillages non-structurés — écoulements, plasmas, Navier-Stokes</p>
+  </div>
+  <div class="focus-card">
+    <span class="focus-icon">🧠</span>
+    <strong>Apprentissage Automatique Scientifique</strong>
+    <p>Réseaux de neurones physiquement informés (PINNs), PINOs, approches data-driven pour la CFD</p>
+  </div>
+  <div class="focus-card">
+    <span class="focus-icon">🌱</span>
+    <strong>HPC Éco-responsable</strong>
+    <p>Optimisation énergétique des infrastructures HPC &amp; développement des capacités HPC/IA en Afrique</p>
+  </div>
+</div>
 
-<h2>Codes Scientifiques</h2>
-<p>Je développe et maintiens plusieurs codes scientifiques open-source :</p>
-<ul>
-  <li><strong><a href="https://github.com/imadki/manapy">Manapy</a></strong> — Une bibliothèque Python parallèle pour la résolution d'EDP par la méthode des volumes finis sur maillages non-structurés (basée sur MPI, supporte Saint-Venant, Navier-Stokes, MHD, et plus).</li>
-  <li><strong><a href="https://github.com/imadki/mumps4py">Mumps4py</a></strong> — Une interface Python pour le solveur direct creux parallèle MUMPS, officiellement adopté par le projet MUMPS.</li>
-  <li><strong><a href="https://github.com/Mohammed-khlifi/NeuralPDE-Solver">NeuralPDE-Solver</a></strong> — Un framework Python open-source pour l'application des PINNs, PINOs et FNOs aux EDP en régime stationnaire.</li>
-</ul>
+<h2>Codes Open-Source</h2>
+<div class="code-pills">
+  <a href="https://github.com/imadki/manapy" class="code-pill" target="_blank">
+    <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+    Manapy
+  </a>
+  <a href="https://github.com/imadki/mumps4py" class="code-pill" target="_blank">
+    <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+    Mumps4py
+  </a>
+  <a href="https://github.com/Mohammed-khlifi/NeuralPDE-Solver" class="code-pill" target="_blank">
+    <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+    NeuralPDE-Solver
+  </a>
+</div>
 
 <h2>Actualités</h2>
 <ul class="highlight-list">
@@ -242,4 +328,3 @@ redirect_from:
 </div>
 
 </div><!-- end #content-fr -->
-
