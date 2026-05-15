@@ -1,5 +1,23 @@
 {% include base_path %}
 
+<style>
+.masthead__inner-wrap { display: flex; align-items: center; }
+.masthead__menu { flex: 1; }
+.lang-toggle-nav {
+  display: flex; align-items: center; gap: 0.15em;
+  padding: 0 1em 0 0.5em; flex-shrink: 0;
+}
+.lang-btn-nav {
+  background: none; border: none; cursor: pointer;
+  font-size: 0.78em; font-weight: 700; letter-spacing: 0.04em;
+  color: #aaa; padding: 0.25em 0.45em; font-family: inherit;
+  border-radius: 3px; transition: color 0.15s;
+}
+.lang-btn-nav:hover { color: #52adc8; }
+.lang-btn-nav.active { color: #52adc8; }
+.lang-sep { color: #ddd; font-size: 0.75em; }
+</style>
+
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
@@ -19,5 +37,30 @@
         <ul class="hidden-links hidden"></ul>
       </nav>
     </div>
+    <div class="lang-toggle-nav">
+      <button class="lang-btn-nav" id="nav-btn-en" onclick="setLang('en')">EN</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn-nav" id="nav-btn-fr" onclick="setLang('fr')">FR</button>
+    </div>
   </div>
 </div>
+
+<script>
+function setLang(lang) {
+  try { localStorage.setItem('site-lang', lang); } catch(e) {}
+  var btnEn = document.getElementById('nav-btn-en');
+  var btnFr = document.getElementById('nav-btn-fr');
+  if (btnEn) btnEn.classList.toggle('active', lang === 'en');
+  if (btnFr) btnFr.classList.toggle('active', lang === 'fr');
+  var en = document.getElementById('content-en');
+  var fr = document.getElementById('content-fr');
+  if (en) en.style.display = lang === 'en' ? '' : 'none';
+  if (fr) fr.style.display = lang === 'fr' ? '' : 'none';
+}
+document.addEventListener('DOMContentLoaded', function() {
+  try {
+    var saved = localStorage.getItem('site-lang') || 'en';
+    setLang(saved);
+  } catch(e) { setLang('en'); }
+});
+</script>

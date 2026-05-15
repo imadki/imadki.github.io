@@ -9,16 +9,6 @@ redirect_from:
 ---
 
 <style>
-.lang-toggle {
-  display: flex; gap: 0.35em; margin-bottom: 1.4em;
-}
-.lang-btn {
-  padding: 0.3em 0.9em; border: 1px solid #ccc; border-radius: 999px;
-  background: #fff; color: #555; font-size: 0.85em; font-weight: 600;
-  cursor: pointer; font-family: inherit; transition: all 0.15s;
-}
-.lang-btn:hover { border-color: #52adc8; color: #52adc8; }
-.lang-btn.active { background: #52adc8; border-color: #52adc8; color: #fff; }
 
 .role-badges { display: flex; flex-wrap: wrap; gap: 0.6em; margin: 0.9em 0 1.2em; }
 .role-badge {
@@ -76,10 +66,6 @@ redirect_from:
 .career-inst { font-size: 0.88em; color: #666; margin-top: 0.05em; }
 </style>
 
-<div class="lang-toggle">
-  <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
-  <button class="lang-btn" id="btn-fr" onclick="setLang('fr')">FR</button>
-</div>
 
 <!-- ==================== ENGLISH ==================== -->
 <div id="content-en">
@@ -261,16 +247,3 @@ redirect_from:
 
 </div><!-- end #content-fr -->
 
-<script>
-function setLang(lang) {
-  document.getElementById('content-en').style.display = lang === 'en' ? '' : 'none';
-  document.getElementById('content-fr').style.display = lang === 'fr' ? '' : 'none';
-  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-  document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
-  try { localStorage.setItem('site-lang', lang); } catch(e) {}
-}
-try {
-  var saved = localStorage.getItem('site-lang');
-  if (saved === 'fr') setLang('fr');
-} catch(e) {}
-</script>
