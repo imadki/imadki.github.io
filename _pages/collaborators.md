@@ -87,7 +87,7 @@ author_profile: true
     <span class="collab-badge badge-fr">France</span>
   </li>
   <li class="collab-row">
-    <span class="collab-name">Jean-Michel Ghidaglia</span>
+    <span class="collab-name"><a href="https://centreborelli.ens-paris-saclay.fr/fr/annuaire-des-personnes/jean-michel-ghidaglia" target="_blank">Jean-Michel Ghidaglia</a></span>
     <span class="collab-inst">Centre Borelli, ENS Paris-Saclay</span>
     <span class="collab-badge badge-fr">France</span>
   </li>
