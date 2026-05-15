@@ -16,6 +16,14 @@
 .lang-btn-nav:hover { color: #52adc8; }
 .lang-btn-nav.active { color: #52adc8; }
 .lang-sep { color: #ddd; font-size: 0.75em; }
+
+/* Span-based bilingual system */
+.lang-fr { display: none !important; }
+body.lang-is-fr .lang-fr { display: inline !important; }
+body.lang-is-fr .lang-en { display: none !important; }
+.lang-fr-block { display: none !important; }
+body.lang-is-fr .lang-fr-block { display: block !important; }
+body.lang-is-fr .lang-en-block { display: none !important; }
 </style>
 
 <div class="masthead">
@@ -52,6 +60,7 @@ function setLang(lang) {
   var btnFr = document.getElementById('nav-btn-fr');
   if (btnEn) btnEn.classList.toggle('active', lang === 'en');
   if (btnFr) btnFr.classList.toggle('active', lang === 'fr');
+  document.body.classList.toggle('lang-is-fr', lang === 'fr');
   var en = document.getElementById('content-en');
   var fr = document.getElementById('content-fr');
   if (en) en.style.display = lang === 'en' ? '' : 'none';

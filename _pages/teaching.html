@@ -11,10 +11,13 @@ author_profile: true
 {% assign active_teaching = teaching_sorted | where: "status", "active" %}
 {% assign archived_teaching = teaching_sorted | where: "status", "completed" %}
 
-<p>
+<p class="lang-en-block">
 As a teacher with a dual background in computer science and mathematics, I favor a <strong>learning by doing</strong>
 approach: students work on real projects from the start of the semester, with theory and hands-on
 problem-solving sessions reinforcing the concepts needed.
+</p>
+<p class="lang-fr-block">
+En tant qu'enseignant avec une double formation en informatique et en mathématiques, je favorise une approche <strong>d'apprentissage par la pratique</strong> : les étudiants travaillent sur des projets réels dès le début du semestre, avec des séances théoriques et pratiques renforçant les concepts nécessaires.
 </p>
 
 <style>
@@ -62,7 +65,8 @@ problem-solving sessions reinforcing the concepts needed.
 .prev-course-meta { font-size: 0.85em; color: #888; white-space: nowrap; }
 </style>
 
-<h2>Current Courses</h2>
+<h2 class="lang-en-block">Current Courses</h2>
+<h2 class="lang-fr-block">Cours Actuels</h2>
 
 {% for post in active_teaching %}
 <div class="course-card">
@@ -77,7 +81,8 @@ problem-solving sessions reinforcing the concepts needed.
 </div>
 {% endfor %}
 
-<h2>Previous Courses</h2>
+<h2 class="lang-en-block">Previous Courses</h2>
+<h2 class="lang-fr-block">Cours Précédents</h2>
 
 {% for post in archived_teaching %}
 <div class="prev-course">
@@ -88,17 +93,24 @@ problem-solving sessions reinforcing the concepts needed.
 
 <h2>MOOCs</h2>
 
-<p>
+<p class="lang-en-block">
   <strong>Introduction to High Performance Computing</strong> — 8 videos recorded at the UM6P Digital Lab,
   covering HPC fundamentals: parallel architectures, programming models, cluster usage, and performance optimization.
 </p>
+<p class="lang-fr-block">
+  <strong>Introduction au Calcul Haute Performance</strong> — 8 vidéos enregistrées au UM6P Digital Lab, couvrant les fondamentaux du HPC : architectures parallèles, modèles de programmation, utilisation des clusters et optimisation des performances.
+</p>
 
-<h2>SimLab &amp; Toubkal Training</h2>
+<h2 class="lang-en-block">SimLab &amp; Toubkal Training</h2>
+<h2 class="lang-fr-block">Formation SimLab &amp; Toubkal</h2>
 
-<p>
+<p class="lang-en-block">
   Over the last four years, as a member of the SimLab &amp; Toubkal teams, I have led training sessions on HPC
   and its tools for UM6P staff at all levels (undergraduate, junior, senior, graduate, postdocs).
   Tutorials available on GitHub:
   <a href="https://github.com/imadki/HPC-Simlab">HPC-Simlab</a> and
   <a href="https://github.com/imadki/HPC-Toubkal">HPC-Toubkal</a>.
+</p>
+<p class="lang-fr-block">
+  Au cours des quatre dernières années, en tant que membre des équipes SimLab &amp; Toubkal, j'ai animé des sessions de formation sur le HPC et ses outils pour le personnel de l'UM6P à tous les niveaux (licence, master, doctorat, postdoc). Tutoriels disponibles sur GitHub : <a href="https://github.com/imadki/HPC-Simlab">HPC-Simlab</a> et <a href="https://github.com/imadki/HPC-Toubkal">HPC-Toubkal</a>.
 </p>

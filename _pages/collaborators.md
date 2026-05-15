@@ -62,36 +62,36 @@ author_profile: true
 </style>
 
 <div class="collab-sort">
-  <span class="sort-label">Sort by</span>
+  <span class="sort-label"><span class="lang-en">Sort by</span><span class="lang-fr">Trier par</span></span>
   <button class="sort-btn active" onclick="sortCollabs('alpha')">A–Z</button>
-  <button class="sort-btn" onclick="sortCollabs('date')">Year</button>
+  <button class="sort-btn" onclick="sortCollabs('date')"><span class="lang-en">Year</span><span class="lang-fr">Année</span></button>
 </div>
 
 <div class="collab-section">
-<h2 class="collab-heading">Europe</h2>
+<h2 class="collab-heading"><span class="lang-en">Europe</span><span class="lang-fr">Europe</span></h2>
 <ul class="collab-list" id="list-eu">
   <li class="collab-row" data-name="Benkhaldoun" data-year="2012">
     <span class="collab-name"><a href="https://www.math.univ-paris13.fr/~fayssal/" target="_blank">Fayssal Benkhaldoun</a></span>
     <span class="collab-inst">Université Sorbonne Paris Nord (USPN), France</span>
-    <span class="collab-year">since 2012</span>
+    <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2012</span>
     <span class="collab-badge badge-eu">France</span>
   </li>
   <li class="collab-row" data-name="Boubekeur" data-year="2020">
     <span class="collab-name">Mohammed Boubekeur</span>
     <span class="collab-inst">Université Sorbonne Paris Nord (USPN), France</span>
-    <span class="collab-year">since 2020</span>
+    <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2020</span>
     <span class="collab-badge badge-eu">France</span>
   </li>
   <li class="collab-row" data-name="Cérin" data-year="2013">
     <span class="collab-name"><a href="https://lipn.univ-paris13.fr/~cerin/" target="_blank">Christophe Cérin</a></span>
     <span class="collab-inst">Université Sorbonne Paris Nord (USPN), France</span>
-    <span class="collab-year">since 2013</span>
+    <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2013</span>
     <span class="collab-badge badge-eu">France</span>
   </li>
   <li class="collab-row" data-name="Deleersnijder" data-year="2021">
     <span class="collab-name"><a href="https://perso.uclouvain.be/eric.deleersnijder/cms/" target="_blank">Eric Deleersnijder</a></span>
     <span class="collab-inst">Université Catholique de Louvain (UCLouvain), Belgium</span>
-    <span class="collab-year">since 2021</span>
+    <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2021</span>
     <span class="collab-badge badge-eu">Belgium</span>
   </li>
   <li class="collab-row" data-name="Ghidaglia" data-year="9999">
@@ -103,25 +103,25 @@ author_profile: true
   <li class="collab-row" data-name="Greneche" data-year="2025">
     <span class="collab-name"><a href="https://sites.google.com/view/nicolas-greneche" target="_blank">Nicolas Greneche</a></span>
     <span class="collab-inst">Université Sorbonne Paris Nord (USPN), France</span>
-    <span class="collab-year">since 2025</span>
+    <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2025</span>
     <span class="collab-badge badge-eu">France</span>
   </li>
   <li class="collab-row" data-name="Saouab" data-year="2021">
     <span class="collab-name"><a href="https://ed-psime.normandie-univ.fr/blog/annuaire/saouab-abdelghani-pr/" target="_blank">Abdelghani Saouab</a></span>
     <span class="collab-inst">Université Le Havre Normandie (ULHN), France</span>
-    <span class="collab-year">since 2021</span>
+    <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2021</span>
     <span class="collab-badge badge-eu">France</span>
   </li>
 </ul>
 </div>
 
 <div class="collab-section">
-<h2 class="collab-heading">Africa</h2>
+<h2 class="collab-heading"><span class="lang-en">Africa</span><span class="lang-fr">Afrique</span></h2>
 <ul class="collab-list" id="list-af">
   <li class="collab-row" data-name="Abida" data-year="2024">
     <span class="collab-name">Otman Abida</span>
     <span class="collab-inst">University Mohammed VI Polytechnic (UM6P), Morocco</span>
-    <span class="collab-year">since 2024</span>
+    <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2024</span>
     <span class="collab-badge badge-af">Morocco</span>
   </li>
   <li class="collab-row" data-name="Basmadjian" data-year="9999">
@@ -133,25 +133,25 @@ author_profile: true
   <li class="collab-row" data-name="Boukharfane" data-year="2023">
     <span class="collab-name"><a href="https://radouanboukharfane.github.io/" target="_blank">Radouan Boukharfane</a></span>
     <span class="collab-inst">University Mohammed VI Polytechnic (UM6P), Morocco</span>
-    <span class="collab-year">since 2023</span>
+    <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2023</span>
     <span class="collab-badge badge-af">Morocco</span>
   </li>
   <li class="collab-row" data-name="El Mahi" data-year="2012">
     <span class="collab-name">Imad El Mahi</span>
     <span class="collab-inst">École Nationale des Sciences Appliquées d'Oujda (ENSAO), Morocco</span>
-    <span class="collab-year">since 2012</span>
+    <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2012</span>
     <span class="collab-badge badge-af">Morocco</span>
   </li>
   <li class="collab-row" data-name="Ferradi" data-year="2025">
     <span class="collab-name">Khalil Ferradi</span>
     <span class="collab-inst">University Mohammed VI Polytechnic (UM6P), Morocco</span>
-    <span class="collab-year">since 2025</span>
+    <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2025</span>
     <span class="collab-badge badge-af">Morocco</span>
   </li>
   <li class="collab-row" data-name="Kalloubi" data-year="2023">
     <span class="collab-name">Fahd Kalloubi</span>
     <span class="collab-inst">Cadi Ayyad University, Morocco</span>
-    <span class="collab-year">since 2023</span>
+    <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2023</span>
     <span class="collab-badge badge-af">Morocco</span>
   </li>
   <li class="collab-row" data-name="Kassab" data-year="9999">
@@ -170,24 +170,24 @@ author_profile: true
 </div>
 
 <div class="collab-section">
-<h2 class="collab-heading">Middle East &amp; Gulf</h2>
+<h2 class="collab-heading"><span class="lang-en">Middle East &amp; Gulf</span><span class="lang-fr">Moyen-Orient &amp; Golfe</span></h2>
 <ul class="collab-list" id="list-me">
   <li class="collab-row" data-name="Ltaeif" data-year="2024">
     <span class="collab-name"><a href="https://cemse.kaust.edu.sa/profiles/hatem-ltaief" target="_blank">Hatem Ltaeif</a></span>
     <span class="collab-inst">KAUST University, Saudi Arabia</span>
-    <span class="collab-year">since 2024</span>
+    <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2024</span>
     <span class="collab-badge badge-me">Saudi Arabia</span>
   </li>
   <li class="collab-row" data-name="Temimi" data-year="2024">
     <span class="collab-name">Helmi Temimi</span>
     <span class="collab-inst">Abdullah Al-Salem University, Kuwait</span>
-    <span class="collab-year">since 2024</span>
+    <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2024</span>
     <span class="collab-badge badge-me">Kuwait</span>
   </li>
   <li class="collab-row" data-name="Zahri" data-year="2022">
     <span class="collab-name"><a href="https://www.sharjah.ac.ae/ar/Academics/Faculty-And-Staff/Mostafa-Zahri" target="_blank">Mostafa Zahri</a></span>
     <span class="collab-inst">University of Sharjah, UAE</span>
-    <span class="collab-year">since 2022</span>
+    <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2022</span>
     <span class="collab-badge badge-me">UAE</span>
   </li>
 </ul>

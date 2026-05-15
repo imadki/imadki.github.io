@@ -73,7 +73,7 @@ author_profile: true
     </div>
     <div class="talk-body">
       <p class="talk-title">
-        <span class="talk-type-badge {% if post.type == 'Keynote' %}badge-keynote{% else %}badge-invited{% endif %}">{{ post.type }}</span>
+        <span class="talk-type-badge {% if post.type == 'Keynote' %}badge-keynote{% else %}badge-invited{% endif %}">{% if post.type == 'Invited' %}<span class="lang-en">Invited</span><span class="lang-fr">Invité</span>{% else %}{{ post.type }}{% endif %}</span>
         <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a>
       </p>
       <p class="talk-meta">{{ post.venue }}{% if post.location %} &mdash; {{ post.location }}{% endif %}</p>

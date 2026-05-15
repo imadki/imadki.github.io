@@ -64,21 +64,21 @@ author_profile: true
 <div class="pub-filters">
   <div class="filter-group">
     <span class="filter-label">Type</span>
-    <button class="filter-btn active" data-type="all">All</button>
-    <button class="filter-btn" data-type="journal">Journals</button>
-    <button class="filter-btn" data-type="conference">Conferences</button>
+    <button class="filter-btn active" data-type="all"><span class="lang-en">All</span><span class="lang-fr">Tous</span></button>
+    <button class="filter-btn" data-type="journal"><span class="lang-en">Journals</span><span class="lang-fr">Journaux</span></button>
+    <button class="filter-btn" data-type="conference"><span class="lang-en">Conferences</span><span class="lang-fr">Conférences</span></button>
   </div>
   <div class="filter-group">
-    <span class="filter-label">Year</span>
-    <button class="filter-btn active" data-year="all">All</button>
+    <span class="filter-label"><span class="lang-en">Year</span><span class="lang-fr">Année</span></span>
+    <button class="filter-btn active" data-year="all"><span class="lang-en">All</span><span class="lang-fr">Tous</span></button>
     {% for year_group in pubs_by_year %}
       <button class="filter-btn" data-year="{{ year_group.name }}">{{ year_group.name }}</button>
     {% endfor %}
   </div>
 </div>
 
-<p class="pub-count" id="pub-count">{{ all_pubs | size }} publication(s) displayed</p>
-<p class="pub-no-results" id="pub-no-results">No publications match the selected filters.</p>
+<p class="pub-count" id="pub-count"><span id="pub-count-num">{{ all_pubs | size }}</span> <span class="lang-en">publication(s) displayed</span><span class="lang-fr">publication(s) affichée(s)</span></p>
+<p class="pub-no-results" id="pub-no-results"><span class="lang-en">No publications match the selected filters.</span><span class="lang-fr">Aucune publication ne correspond aux filtres sélectionnés.</span></p>
 
 {% for year_group in pubs_by_year %}
 <div class="pub-year-section" data-section="{{ year_group.name }}">
@@ -117,7 +117,7 @@ author_profile: true
       section.style.display = sectionVisible > 0 ? '' : 'none';
     });
 
-    document.getElementById('pub-count').textContent = visible + ' publication(s) displayed';
+    document.getElementById('pub-count-num').textContent = visible;
     document.getElementById('pub-no-results').style.display = visible === 0 ? 'block' : 'none';
   }
 
