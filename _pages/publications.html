@@ -14,7 +14,7 @@ author_profile: true
 {% assign conf_pubs_filtered    = all_pubs | where: "pubtype", "conference" %}
 {% assign journal_pubs_by_venue = journal_pubs_filtered | group_by: "venue" | sort: "name" %}
 {% assign conf_pubs_by_venue    = conf_pubs_filtered    | group_by: "conf"  | sort: "name" %}
-{% assign selected_pubs         = all_pubs | where: "selected", true %}
+{% assign selected_pubs         = all_pubs | where_exp: "item", "item.selected == true" %}
 {% assign selected_by_year      = selected_pubs | group_by_exp: "item", "item.date | date: '%Y'" %}
 
 <style>
