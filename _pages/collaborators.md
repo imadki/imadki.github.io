@@ -146,6 +146,11 @@ author_profile: true
     <span class="collab-inst">Cadi Ayyad University, Morocco</span>
     <span class="collab-badge badge-af">Morocco</span>
   </li>
+  <li class="collab-row">
+    <span class="collab-name">Mohammed Ziani</span>
+    <span class="collab-inst">Faculty of Sciences, Mohammed V University in Rabat (UM5), Morocco</span>
+    <span class="collab-badge badge-af">Morocco</span>
+  </li>
 </ul>
 </div>
 
