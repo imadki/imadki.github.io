@@ -209,6 +209,7 @@ redirect_from:
     <div class="career-role">PhD in Applied Mathematics &amp; Computer Science</div>
     <div class="career-inst">Université Sorbonne Paris Nord (USPN), France</div>
     <div class="career-inst" style="font-size:0.82em;color:#888;margin-top:0.1em;">Supervisors: <a href="https://lipn.univ-paris13.fr/~cerin/" target="_blank">Christophe Cérin</a> (LIPN) &amp; <a href="https://www.math.univ-paris13.fr/~fayssal/" target="_blank">Fayssal Benkhaldoun</a> (LAGA)</div>
+    <div class="career-inst" style="font-size:0.82em;margin-top:0.3em;"><a href="https://theses.fr/230317146" target="_blank" style="color:#52adc8;"><i class="fas fa-file-alt" style="margin-right:0.3em"></i>Thesis — theses.fr</a></div>
   </div>
   <div class="career-item past">
     <div class="career-period">Sep 2012 – Nov 2013</div>
@@ -330,6 +331,7 @@ redirect_from:
     <div class="career-role">Doctorat en Mathématiques Appliquées &amp; Informatique</div>
     <div class="career-inst">Université Sorbonne Paris Nord (USPN), France</div>
     <div class="career-inst" style="font-size:0.82em;color:#888;margin-top:0.1em;">Directeurs : <a href="https://lipn.univ-paris13.fr/~cerin/" target="_blank">Christophe Cérin</a> (LIPN) &amp; <a href="https://www.math.univ-paris13.fr/~fayssal/" target="_blank">Fayssal Benkhaldoun</a> (LAGA)</div>
+    <div class="career-inst" style="font-size:0.82em;margin-top:0.3em;"><a href="https://theses.fr/230317146" target="_blank" style="color:#52adc8;"><i class="fas fa-file-alt" style="margin-right:0.3em"></i>Thèse — theses.fr</a></div>
   </div>
   <div class="career-item past">
     <div class="career-period">Sep 2012 – Nov 2013</div>
