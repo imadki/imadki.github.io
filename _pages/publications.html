@@ -8,6 +8,7 @@ author_profile: true
 {% include base_path %}
 
 {% assign all_pubs = site.publications | where_exp: "item", "item.pubtype != 'preprint'" | sort: "date" | reverse %}
+{% assign pubs_by_year = all_pubs | group_by_exp: "item", "item.date | date: '%Y'" %}
 
 <style>
 .pub-filters {
@@ -33,6 +34,8 @@ author_profile: true
 .filter-btn.active { background: #52adc8; border-color: #52adc8; color: #fff; font-weight: 600; }
 
 .pub-count { font-size: 0.85em; color: #888; margin-bottom: 1em; }
+
+.pub-year-section { margin-bottom: 0.5em; }
 
 .pub-year-heading {
   font-size: 1.2em; font-weight: 700; color: #333;
@@ -68,63 +71,50 @@ author_profile: true
   <div class="filter-group">
     <span class="filter-label">Year</span>
     <button class="filter-btn active" data-year="all">All</button>
-    {% assign seen = "" %}
-    {% for post in all_pubs %}
-      {% assign yr = post.date | date: "%Y" %}
-      {% unless seen contains yr %}
-        <button class="filter-btn" data-year="{{ yr }}">{{ yr }}</button>
-        {% assign seen = seen | append: yr | append: "," %}
-      {% endunless %}
+    {% for year_group in pubs_by_year %}
+      <button class="filter-btn" data-year="{{ year_group.name }}">{{ year_group.name }}</button>
     {% endfor %}
   </div>
 </div>
 
-<p class="pub-count" id="pub-count"></p>
+<p class="pub-count" id="pub-count">{{ all_pubs | size }} publication(s) displayed</p>
 <p class="pub-no-results" id="pub-no-results">No publications match the selected filters.</p>
 
-<div id="pub-container">
-{% for post in all_pubs %}
-  {% assign yr = post.date | date: "%Y" %}
-  <div class="pub-item"
-       data-pubtype="{{ post.pubtype }}"
-       data-pubyear="{{ yr }}">
-    <span class="pub-type-badge {% if post.pubtype == 'journal' %}badge-journal{% else %}badge-conference{% endif %}">{% if post.pubtype == 'journal' %}Journal{% else %}Conference{% endif %}</span>{% if post.citation %}{{ post.citation }}{% endif %} &ldquo;{{ post.title }}&rdquo;{% if post.venue %} <i>{{ post.venue }}</i>, {{ yr }}.{% endif %}{% if post.paperurl %} DOI: <a href="{{ post.paperurl }}">{{ post.paperurl }}</a>{% endif %}
+{% for year_group in pubs_by_year %}
+<div class="pub-year-section" data-section="{{ year_group.name }}">
+  <div class="pub-year-heading">{{ year_group.name }}</div>
+  {% for post in year_group.items %}
+  <div class="pub-item" data-pubtype="{{ post.pubtype }}" data-pubyear="{{ year_group.name }}">
+    <span class="pub-type-badge {% if post.pubtype == 'journal' %}badge-journal{% else %}badge-conference{% endif %}">{% if post.pubtype == 'journal' %}Journal{% else %}Conference{% endif %}</span>{% if post.citation %}{{ post.citation }}{% endif %} &ldquo;{{ post.title }}&rdquo;{% if post.venue %} <i>{{ post.venue }}</i>, {{ year_group.name }}.{% endif %}{% if post.paperurl %} DOI: <a href="{{ post.paperurl }}">{{ post.paperurl }}</a>{% endif %}
   </div>
-{% endfor %}
+  {% endfor %}
 </div>
+{% endfor %}
 
 <script>
 (function () {
   var activeType = 'all';
   var activeYear = 'all';
+  var total = {{ all_pubs | size }};
 
   function applyFilters() {
-    var container = document.getElementById('pub-container');
-    // remove old year headings
-    container.querySelectorAll('.pub-year-heading').forEach(function (h) { h.remove(); });
-
-    var items = container.querySelectorAll('.pub-item');
     var visible = 0;
-    var lastYear = null;
+    document.querySelectorAll('.pub-year-section').forEach(function (section) {
+      var sectionVisible = 0;
+      var yr = section.dataset.section;
+      var yearOk = activeYear === 'all' || yr === activeYear;
 
-    items.forEach(function (item) {
-      var typeOk = activeType === 'all' || item.dataset.pubtype === activeType;
-      var yearOk = activeYear === 'all' || item.dataset.pubyear === activeYear;
-      if (typeOk && yearOk) {
-        item.style.display = '';
-        // insert year heading when year changes
-        var yr = item.dataset.pubyear;
-        if (yr !== lastYear) {
-          var h = document.createElement('div');
-          h.className = 'pub-year-heading';
-          h.textContent = yr;
-          container.insertBefore(h, item);
-          lastYear = yr;
+      section.querySelectorAll('.pub-item').forEach(function (item) {
+        var typeOk = activeType === 'all' || item.dataset.pubtype === activeType;
+        if (typeOk && yearOk) {
+          item.style.display = '';
+          sectionVisible++;
+          visible++;
+        } else {
+          item.style.display = 'none';
         }
-        visible++;
-      } else {
-        item.style.display = 'none';
-      }
+      });
+      section.style.display = sectionVisible > 0 ? '' : 'none';
     });
 
     document.getElementById('pub-count').textContent = visible + ' publication(s) displayed';
@@ -148,7 +138,5 @@ author_profile: true
       applyFilters();
     });
   });
-
-  applyFilters();
 })();
 </script>
