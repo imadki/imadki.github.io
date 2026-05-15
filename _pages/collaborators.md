@@ -130,6 +130,12 @@ author_profile: true
     <span class="collab-year"></span>
     <span class="collab-badge badge-af">Morocco</span>
   </li>
+  <li class="collab-row" data-name="Bergou" data-year="2026">
+    <span class="collab-name"><a href="https://ehbergou.github.io/" target="_blank">El Houcine Bergou</a></span>
+    <span class="collab-inst">University Mohammed VI Polytechnic (UM6P), Morocco</span>
+    <span class="collab-year"><span class="lang-en">since</span><span class="lang-fr">depuis</span> 2026</span>
+    <span class="collab-badge badge-af">Morocco</span>
+  </li>
   <li class="collab-row" data-name="Boukharfane" data-year="2023">
     <span class="collab-name"><a href="https://radouanboukharfane.github.io/" target="_blank">Radouan Boukharfane</a></span>
     <span class="collab-inst">University Mohammed VI Polytechnic (UM6P), Morocco</span>
