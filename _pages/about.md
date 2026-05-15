@@ -75,12 +75,74 @@ I develop and maintain several open-source scientific codes:
 
 ## Highlights
 
-- **Dec 2025** — Keynote Speaker at the 19th CHPC National Conference, Cape Town, South Africa: *Building the Future: Morocco's High-Performance Computing Infrastructure*.
-- **Dec 2025** — Organization of the **SupercomputingAfrica (SCAF)** conference, Benguerir, Morocco.
-- **Sep 2025** — Keynote Speaker at the Advanced School on HPC and Applied AI for High-Resolution Regional Climate Modeling, UM6P.
-- **Sep 2025** — Launch of 3 new PhD theses (Imane Rhesri, Fatiha Barrade, Ayman Zahir).
-- **Sep 2025** — New grant: *Coupling Physical Models and Data for Monitoring Soil Evolution* (€375K, Nutricrops–OCP).
-- **Oct 2022** — Co-PI of the **Multiphysics and HPC Chair** (€6.3M, OCP, 5-year project).
+<style>
+.highlight-list { list-style: none; margin: 0.8em 0 0; padding: 0; }
+.highlight-item {
+  display: flex;
+  gap: 1em;
+  padding: 0.65em 0;
+  border-bottom: 1px solid #f0f0f0;
+  align-items: flex-start;
+}
+.highlight-item:last-child { border-bottom: none; }
+.highlight-date {
+  min-width: 68px;
+  font-size: 0.78em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #fff;
+  background: #52adc8;
+  border-radius: 4px;
+  padding: 0.2em 0.55em;
+  text-align: center;
+  flex-shrink: 0;
+  margin-top: 0.1em;
+}
+.highlight-tag {
+  display: inline-block;
+  font-size: 0.7em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.12em 0.5em;
+  border-radius: 3px;
+  margin-right: 0.4em;
+  vertical-align: middle;
+}
+.tag-keynote { background: #e8f4f8; color: #2e7d9e; }
+.tag-grant   { background: #d5f5e3; color: #145a32; }
+.tag-event   { background: #f0f0f0; color: #666; }
+.tag-phd     { background: #fef9cc; color: #7a5800; }
+.highlight-text { font-size: 0.92em; color: #444; line-height: 1.55; }
+</style>
+
+<ul class="highlight-list">
+  <li class="highlight-item">
+    <span class="highlight-date">Dec 2025</span>
+    <span class="highlight-text"><span class="highlight-tag tag-keynote">Keynote</span>19th CHPC National Conference, Cape Town, South Africa — <em>Building the Future: Morocco's High-Performance Computing Infrastructure</em>.</span>
+  </li>
+  <li class="highlight-item">
+    <span class="highlight-date">Dec 2025</span>
+    <span class="highlight-text"><span class="highlight-tag tag-event">Event</span>Organization of the <strong>SupercomputingAfrica (SCAF)</strong> conference, Benguerir, Morocco.</span>
+  </li>
+  <li class="highlight-item">
+    <span class="highlight-date">Sep 2025</span>
+    <span class="highlight-text"><span class="highlight-tag tag-keynote">Keynote</span>Advanced School on HPC and Applied AI for High-Resolution Regional Climate Modeling, UM6P.</span>
+  </li>
+  <li class="highlight-item">
+    <span class="highlight-date">Sep 2025</span>
+    <span class="highlight-text"><span class="highlight-tag tag-phd">PhD</span>Launch of 3 new PhD theses — Imane Rhesri, Fatiha Barrade, Ayman Zahir.</span>
+  </li>
+  <li class="highlight-item">
+    <span class="highlight-date">Sep 2025</span>
+    <span class="highlight-text"><span class="highlight-tag tag-grant">Grant</span>New grant: <em>Coupling Physical Models and Data for Monitoring Soil Evolution</em> — €375K, Nutricrops–OCP.</span>
+  </li>
+  <li class="highlight-item">
+    <span class="highlight-date">Oct 2022</span>
+    <span class="highlight-text"><span class="highlight-tag tag-grant">Grant</span>Co-PI of the <strong>Multiphysics and HPC Chair</strong> — €6.3M, OCP, 5-year project.</span>
+  </li>
+</ul>
 
 ## Career
 
