@@ -106,6 +106,7 @@ author_profile: true
   </div>
 </div>
 
+{% comment %}
 {% assign pubs_by_year_chart = all_pubs | group_by_exp: "item", "item.date | date: '%Y'" | sort: "name" %}
 
 <div class="pub-chart-section">
@@ -171,6 +172,7 @@ author_profile: true
   };
 })();
 </script>
+{% endcomment %}
 
 <p class="pub-count" id="pub-count"><span id="pub-count-num">{{ all_pubs | size }}</span> <span class="lang-en">publication(s) displayed</span><span class="lang-fr">publication(s) affichée(s)</span></p>
 <p class="pub-no-results" id="pub-no-results"><span class="lang-en">No publications match the selected filters.</span><span class="lang-fr">Aucune publication ne correspond aux filtres sélectionnés.</span></p>
