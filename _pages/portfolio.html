@@ -1,14 +1,44 @@
 ---
 layout: archive
-title: "Portfolio"
+title: "Software"
 permalink: /portfolio/
 author_profile: true
 ---
 
-{% include base_path %}
+<p>My research is strongly supported by the development of scientific codes, which constitute a core component of my academic activities. These codes provide a concrete framework for implementing, validating, and transferring numerical methods.</p>
 
+<hr>
 
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
-{% endfor %}
+<h2>Manapy — Parallel Finite Volume Solver</h2>
 
+<p><strong>GitHub:</strong> <a href="https://github.com/imadki/manapy">https://github.com/imadki/manapy</a></p>
+
+<p><strong>Role:</strong> Initiator and main developer</p>
+
+<p>Manapy is an open-source Python library for parallel resolution of partial differential equations (PDEs) using the finite volume method on unstructured meshes. It supports a wide range of physical models including Shallow Water equations, Navier-Stokes equations, Magnetohydrodynamics (MHD), viscoplastic flows, and flow in fibrous media. The library is built on top of MPI4py for distributed memory parallelism, allowing simulations on clusters and supercomputers.</p>
+
+<p><strong>Current Users:</strong> Master's and PhD students, as well as researchers and faculty from UM6P, USPN, ULHN, Groupe de Recherche en Génie Electrique de Paris, and CentraleSupélec.</p>
+
+<hr>
+
+<h2>Mumps4py — Python Interface for the MUMPS Parallel Solver</h2>
+
+<p><strong>GitHub:</strong> <a href="https://github.com/imadki/mumps4py">https://github.com/imadki/mumps4py</a></p>
+
+<p><strong>Role:</strong> Designer and main maintainer</p>
+
+<p>Mumps4py is an open-source Python interface for the parallel sparse direct solver MUMPS (MUltifrontal Massively Parallel Solver). It has been <strong>officially adopted by the MUMPS project</strong> and integrated into distributed HPC workflows. The library allows Python users to directly leverage the power of MUMPS for solving large sparse linear systems in parallel, making it accessible for scientific computing applications in CFD, structural mechanics, and more.</p>
+
+<p><strong>Official MUMPS page:</strong> <a href="https://mumps-solver.org/index.php?page=links">https://mumps-solver.org/index.php?page=links</a></p>
+
+<p><strong>Current Users:</strong> Master's and PhD students, researchers and faculty from UM6P, USPN, ULHN, as well as the industrial group Safran.</p>
+
+<hr>
+
+<h2>NeuralPDE-Solver — Physics-Informed Neural Networks Framework</h2>
+
+<p><strong>GitHub:</strong> <a href="https://github.com/Mohammed-khlifi/NeuralPDE-Solver">https://github.com/Mohammed-khlifi/NeuralPDE-Solver</a></p>
+
+<p><strong>Role:</strong> Initiator and main developer (initial design and architecture)</p>
+
+<p>NeuralPDE-Solver is an open-source Python framework designed to apply deep learning techniques to the resolution of steady-state partial differential equations (PDEs). It supports Physics-Informed Neural Networks (PINNs), Physics-Informed Neural Operators (PINOs), and Fourier Neural Operators (FNOs). The framework provides a modular design that allows researchers to easily develop and integrate new PINN architectures, loss functions, or governing equations for customized PDE problems. Development was initiated by Imad Kissami and later continued as part of a supervised Master's thesis project.</p>
