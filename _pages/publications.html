@@ -176,7 +176,7 @@ author_profile: true
 <script>
 (function () {
   var activeType    = 'all';
-  var activeYear    = 'all';
+  var activeYears   = new Set();
   var activeGroupBy = 'year';
 
   var viewYear     = document.getElementById('view-year');
@@ -215,7 +215,7 @@ author_profile: true
       document.querySelectorAll('#view-year .pub-year-section').forEach(function (section) {
         var sectionVisible = 0;
         var yr = section.dataset.section;
-        var yearOk = activeYear === 'all' || yr === activeYear;
+        var yearOk = activeYears.size === 0 || activeYears.has(yr);
         section.querySelectorAll('.pub-item').forEach(function (item) {
           var typeOk = activeType === 'all' || item.dataset.pubtype === activeType;
           if (typeOk && yearOk) {
@@ -239,7 +239,7 @@ author_profile: true
       activeView.querySelectorAll('.pub-venue-section').forEach(function (section) {
         var sectionVisible = 0;
         section.querySelectorAll('.pub-item').forEach(function (item) {
-          var yearOk = activeYear === 'all' || item.dataset.pubyear === activeYear;
+          var yearOk = activeYears.size === 0 || activeYears.has(item.dataset.pubyear);
           if (yearOk) {
             item.style.display = '';
             sectionVisible++;
@@ -300,9 +300,26 @@ author_profile: true
 
   document.querySelectorAll('[data-year]').forEach(function (btn) {
     btn.addEventListener('click', function () {
-      document.querySelectorAll('[data-year]').forEach(function (b) { b.classList.remove('active'); });
-      btn.classList.add('active');
-      activeYear = btn.dataset.year;
+      var yr = btn.dataset.year;
+      if (yr === 'all') {
+        activeYears.clear();
+        document.querySelectorAll('[data-year]').forEach(function (b) {
+          b.classList.toggle('active', b.dataset.year === 'all');
+        });
+      } else {
+        if (activeYears.has(yr)) {
+          activeYears.delete(yr);
+        } else {
+          activeYears.add(yr);
+        }
+        var allBtn = document.querySelector('[data-year="all"]');
+        if (activeYears.size === 0) {
+          if (allBtn) allBtn.classList.add('active');
+        } else {
+          if (allBtn) allBtn.classList.remove('active');
+        }
+        btn.classList.toggle('active', activeYears.has(yr));
+      }
       applyFilters();
     });
   });
