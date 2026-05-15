@@ -69,6 +69,7 @@ En tant qu'enseignant avec une double formation en informatique et en mathémati
 .prev-course-title { font-weight: 600; flex: 1; font-size: 0.92em; min-width: 140px; }
 .prev-course-title a { text-decoration: none; color: #333; }
 .prev-course-title a:hover { color: #52adc8; }
+.prev-course-venue { display: block; font-size: 0.8em; font-weight: 400; color: #999; margin-top: 0.1em; }
 
 .mooc-card {
   border-left: 3px solid #52adc8;
@@ -123,7 +124,10 @@ En tant qu'enseignant avec une double formation en informatique et en mathémati
 {% for post in archived_teaching %}
 <div class="prev-course">
   <span class="prev-course-period">{{ post.period }}</span>
-  <span class="prev-course-title"><a href="{{ base_path }}{{ post.url }}" rel="permalink"><span class="lang-en">{{ post.title }}</span><span class="lang-fr">{{ post.title_fr | default: post.title }}</span></a></span>
+  <span class="prev-course-title">
+    <a href="{{ base_path }}{{ post.url }}" rel="permalink"><span class="lang-en">{{ post.title }}</span><span class="lang-fr">{{ post.title_fr | default: post.title }}</span></a>
+    <span class="prev-course-venue">{{ post.venue }}</span>
+  </span>
   <span class="course-tag course-tag-gray">{{ post.type }}</span>
 </div>
 {% endfor %}
