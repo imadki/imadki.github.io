@@ -49,6 +49,10 @@ I am an **Assistant Professor** at the [University Mohammed VI Polytechnic (UM6P
     <span class="role-badge-icon">🎓</span>
     <span><strong>NVIDIA DLI Certified Instructor</strong> &amp; University Ambassador <em>(since Jan 2024)</em></span>
   </div>
+  <div class="role-badge">
+    <span class="role-badge-icon">🚀</span>
+    <span><strong>Co-founder</strong> — <a href="https://www.linkedin.com/company/moroccohpc/" target="_blank">Morocco HPC</a></span>
+  </div>
 </div>
 
 My research lies at the intersection of **High Performance Computing (HPC)**, **Computational Fluid Dynamics (CFD)**, and **Scientific Machine Learning**, with a focus on developing scalable numerical solvers and physics-informed methods for complex physical systems.
