@@ -181,11 +181,18 @@ author_profile: true
   var activeYears   = new Set();
   var activeGroupBy = 'year';
 
-  var viewYear     = document.getElementById('view-year');
-  var viewVenueJ   = document.getElementById('view-venue-journal');
-  var viewVenueC   = document.getElementById('view-venue-conference');
-  var groupbyRow   = document.getElementById('groupby-row');
-  var yearRow      = document.getElementById('year-filter-group');
+  var viewYear       = document.getElementById('view-year');
+  var viewVenueJ     = document.getElementById('view-venue-journal');
+  var viewVenueC     = document.getElementById('view-venue-conference');
+  var groupbyRow     = document.getElementById('groupby-row');
+  var yearRow        = document.getElementById('year-filter-group');
+  var venuesAll      = document.getElementById('pub-venues-all');
+  var venuesSelected = document.getElementById('pub-venues-selected');
+
+  function updateVenues() {
+    if (venuesAll) venuesAll.style.display = activeType === 'selected' ? 'none' : '';
+    if (venuesSelected) venuesSelected.style.display = activeType === 'selected' ? '' : 'none';
+  }
 
   function applyFilters() {
     var visible = 0;
@@ -256,6 +263,7 @@ author_profile: true
 
     document.getElementById('pub-count-num').textContent = visible;
     document.getElementById('pub-no-results').style.display = visible === 0 ? 'block' : 'none';
+    updateVenues();
   }
 
   function updateGroupbyLabel() {
@@ -340,7 +348,7 @@ author_profile: true
 {% assign journal_venues = journal_pubs_filtered | map: "venue" | sort | uniq %}
 {% assign conf_venues    = conf_pubs_filtered    | map: "conf"  | sort | uniq %}
 
-<div class="pub-venues-section">
+<div class="pub-venues-section" id="pub-venues-all">
   <p class="pub-venues-heading">
     <span class="lang-en">Publication Venues</span>
     <span class="lang-fr">Lieux de Publication</span>
@@ -358,6 +366,35 @@ author_profile: true
       <h3 class="lang-fr-block">Conférences</h3>
       <ul>
         {% for v in conf_venues %}<li>{{ v }}</li>{% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="pub-venues-section" id="pub-venues-selected" style="display:none">
+  <p class="pub-venues-heading">
+    <span class="lang-en">Publication Venues — Selected</span>
+    <span class="lang-fr">Lieux de Publication — Sélection</span>
+  </p>
+  <div class="pub-venues-grid">
+    <div class="pub-venues-col">
+      <h3 class="lang-en-block">Journals</h3>
+      <h3 class="lang-fr-block">Revues</h3>
+      <ul>
+        <li>Advances in Applied Mathematics and Mechanics</li>
+        <li>Computer Physics Communications</li>
+        <li>Journal of Supercomputing</li>
+        <li>Mathematics and Computers in Simulation</li>
+      </ul>
+    </div>
+    <div class="pub-venues-col">
+      <h3 class="lang-en-block">Conferences</h3>
+      <h3 class="lang-fr-block">Conférences</h3>
+      <ul>
+        <li>E-Energy</li>
+        <li>HPCS</li>
+        <li>ICMSAO</li>
+        <li>PDCAT</li>
       </ul>
     </div>
   </div>
