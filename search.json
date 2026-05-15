@@ -12,7 +12,7 @@ layout: null
   {
     "title": {{ item.title | jsonify }},
     "url": {{ item.url | prepend: site.baseurl | jsonify }},
-    "excerpt": {{ item.content | strip_html | normalize_whitespace | truncatewords: 40 | jsonify }},
+    "excerpt": {{ item.content | strip_html | normalize_whitespace | truncatewords: 500 | jsonify }},
     "collection": {{ item.collection | default: "page" | jsonify }}
   }{% unless forloop.last %},{% endunless %}
 {% endif %}{% endfor %}
