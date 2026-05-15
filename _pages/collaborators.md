@@ -66,8 +66,23 @@ author_profile: true
     <span class="collab-badge badge-eu">France</span>
   </li>
   <li class="collab-row">
+    <span class="collab-name">Mohammed Boubekeur</span>
+    <span class="collab-inst">Université Sorbonne Paris Nord (USPN), France</span>
+    <span class="collab-badge badge-eu">France</span>
+  </li>
+  <li class="collab-row">
     <span class="collab-name"><a href="https://lipn.univ-paris13.fr/~cerin/" target="_blank">Christophe Cérin</a></span>
     <span class="collab-inst">Université Sorbonne Paris Nord (USPN), France</span>
+    <span class="collab-badge badge-eu">France</span>
+  </li>
+  <li class="collab-row">
+    <span class="collab-name"><a href="https://perso.uclouvain.be/eric.deleersnijder/cms/" target="_blank">Eric Deleersnijder</a></span>
+    <span class="collab-inst">Université Catholique de Louvain (UCLouvain), Belgium</span>
+    <span class="collab-badge badge-eu">Belgium</span>
+  </li>
+  <li class="collab-row">
+    <span class="collab-name"><a href="https://centreborelli.ens-paris-saclay.fr/fr/annuaire-des-personnes/jean-michel-ghidaglia" target="_blank">Jean-Michel Ghidaglia</a></span>
+    <span class="collab-inst">Centre Borelli, ENS Paris-Saclay, France</span>
     <span class="collab-badge badge-eu">France</span>
   </li>
   <li class="collab-row">
@@ -76,24 +91,9 @@ author_profile: true
     <span class="collab-badge badge-eu">France</span>
   </li>
   <li class="collab-row">
-    <span class="collab-name">Mohammed Boubekeur</span>
-    <span class="collab-inst">Université Sorbonne Paris Nord (USPN), France</span>
-    <span class="collab-badge badge-eu">France</span>
-  </li>
-  <li class="collab-row">
     <span class="collab-name"><a href="https://ed-psime.normandie-univ.fr/blog/annuaire/saouab-abdelghani-pr/" target="_blank">Abdelghani Saouab</a></span>
     <span class="collab-inst">Université Le Havre Normandie (ULHN), France</span>
     <span class="collab-badge badge-eu">France</span>
-  </li>
-  <li class="collab-row">
-    <span class="collab-name"><a href="https://centreborelli.ens-paris-saclay.fr/fr/annuaire-des-personnes/jean-michel-ghidaglia" target="_blank">Jean-Michel Ghidaglia</a></span>
-    <span class="collab-inst">Centre Borelli, ENS Paris-Saclay, France</span>
-    <span class="collab-badge badge-eu">France</span>
-  </li>
-  <li class="collab-row">
-    <span class="collab-name"><a href="https://perso.uclouvain.be/eric.deleersnijder/cms/" target="_blank">Eric Deleersnijder</a></span>
-    <span class="collab-inst">Université Catholique de Louvain (UCLouvain), Belgium</span>
-    <span class="collab-badge badge-eu">Belgium</span>
   </li>
 </ul>
 </div>
@@ -102,17 +102,7 @@ author_profile: true
 <h2 class="collab-heading">Africa</h2>
 <ul class="collab-list">
   <li class="collab-row">
-    <span class="collab-name"><a href="https://www.robert-basmadjian.com/" target="_blank">Robert Basmadjian</a></span>
-    <span class="collab-inst">University Mohammed VI Polytechnic (UM6P), Morocco</span>
-    <span class="collab-badge badge-af">Morocco</span>
-  </li>
-  <li class="collab-row">
-    <span class="collab-name">Khalil Ferradi</span>
-    <span class="collab-inst">University Mohammed VI Polytechnic (UM6P), Morocco</span>
-    <span class="collab-badge badge-af">Morocco</span>
-  </li>
-  <li class="collab-row">
-    <span class="collab-name"><a href="https://radouanboukharfane.github.io/" target="_blank">Radouan Boukharfane</a></span>
+    <span class="collab-name">Otman Abida</span>
     <span class="collab-inst">University Mohammed VI Polytechnic (UM6P), Morocco</span>
     <span class="collab-badge badge-af">Morocco</span>
   </li>
@@ -122,17 +112,17 @@ author_profile: true
     <span class="collab-badge badge-af">Morocco</span>
   </li>
   <li class="collab-row">
+    <span class="collab-name"><a href="https://www.robert-basmadjian.com/" target="_blank">Robert Basmadjian</a></span>
+    <span class="collab-inst">University Mohammed VI Polytechnic (UM6P), Morocco</span>
+    <span class="collab-badge badge-af">Morocco</span>
+  </li>
+  <li class="collab-row">
     <span class="collab-name">Ismail Berrada</span>
     <span class="collab-inst">University Mohammed VI Polytechnic (UM6P), Morocco</span>
     <span class="collab-badge badge-af">Morocco</span>
   </li>
   <li class="collab-row">
-    <span class="collab-name">Zineb Kassab</span>
-    <span class="collab-inst">University Mohammed VI Polytechnic (UM6P), Morocco</span>
-    <span class="collab-badge badge-af">Morocco</span>
-  </li>
-  <li class="collab-row">
-    <span class="collab-name">Otman Abida</span>
+    <span class="collab-name"><a href="https://radouanboukharfane.github.io/" target="_blank">Radouan Boukharfane</a></span>
     <span class="collab-inst">University Mohammed VI Polytechnic (UM6P), Morocco</span>
     <span class="collab-badge badge-af">Morocco</span>
   </li>
@@ -142,8 +132,18 @@ author_profile: true
     <span class="collab-badge badge-af">Morocco</span>
   </li>
   <li class="collab-row">
+    <span class="collab-name">Khalil Ferradi</span>
+    <span class="collab-inst">University Mohammed VI Polytechnic (UM6P), Morocco</span>
+    <span class="collab-badge badge-af">Morocco</span>
+  </li>
+  <li class="collab-row">
     <span class="collab-name">Fahd Kalloubi</span>
     <span class="collab-inst">Cadi Ayyad University, Morocco</span>
+    <span class="collab-badge badge-af">Morocco</span>
+  </li>
+  <li class="collab-row">
+    <span class="collab-name">Zineb Kassab</span>
+    <span class="collab-inst">University Mohammed VI Polytechnic (UM6P), Morocco</span>
     <span class="collab-badge badge-af">Morocco</span>
   </li>
   <li class="collab-row">
@@ -158,9 +158,9 @@ author_profile: true
 <h2 class="collab-heading">Middle East &amp; Gulf</h2>
 <ul class="collab-list">
   <li class="collab-row">
-    <span class="collab-name"><a href="https://www.sharjah.ac.ae/ar/Academics/Faculty-And-Staff/Mostafa-Zahri" target="_blank">Mostafa Zahri</a></span>
-    <span class="collab-inst">University of Sharjah, UAE</span>
-    <span class="collab-badge badge-me">UAE</span>
+    <span class="collab-name"><a href="https://cemse.kaust.edu.sa/profiles/hatem-ltaief" target="_blank">Hatem Ltaeif</a></span>
+    <span class="collab-inst">KAUST University, Saudi Arabia</span>
+    <span class="collab-badge badge-me">Saudi Arabia</span>
   </li>
   <li class="collab-row">
     <span class="collab-name">Helmi Temimi</span>
@@ -168,9 +168,9 @@ author_profile: true
     <span class="collab-badge badge-me">Kuwait</span>
   </li>
   <li class="collab-row">
-    <span class="collab-name"><a href="https://cemse.kaust.edu.sa/profiles/hatem-ltaief" target="_blank">Hatem Ltaeif</a></span>
-    <span class="collab-inst">KAUST University, Saudi Arabia</span>
-    <span class="collab-badge badge-me">Saudi Arabia</span>
+    <span class="collab-name"><a href="https://www.sharjah.ac.ae/ar/Academics/Faculty-And-Staff/Mostafa-Zahri" target="_blank">Mostafa Zahri</a></span>
+    <span class="collab-inst">University of Sharjah, UAE</span>
+    <span class="collab-badge badge-me">UAE</span>
   </li>
 </ul>
 </div>
