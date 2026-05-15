@@ -12,6 +12,7 @@ level: "Preparatory Cycle (CS School)"
 period: "2024–Present"
 status: "active"
 summary: "Modern C++17 programming covering OOP, templates, STL, smart pointers, move semantics, and generic programming for CS preparatory students."
+summary_fr: "Programmation C++17 moderne couvrant la POO, les templates, la STL, les pointeurs intelligents, la sémantique de déplacement et la programmation générique pour les étudiants en cycle préparatoire."
 ---
 
 **Institution:** [UM6P College of Computing](https://cc.um6p.ma/), Ben Guerir, Morocco

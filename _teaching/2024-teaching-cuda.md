@@ -12,6 +12,7 @@ level: "Multi-level (Bachelor, Master, PhD)"
 period: "2024–Present"
 status: "active"
 summary: "NVIDIA DLI-certified training in GPU computing with CUDA Python for researchers, engineers, and students."
+summary_fr: "Formation certifiée NVIDIA DLI en calcul GPU avec CUDA Python pour chercheurs, ingénieurs et étudiants."
 ---
 
 NVIDIA DLI certified course on GPU-accelerated computing using CUDA Python. Offered free of charge to UM6P researchers, engineers, and students as part of the NVIDIA DLI University Ambassador program. Topics include GPU architecture, the CUDA programming model, memory management, and acceleration of scientific computing applications.

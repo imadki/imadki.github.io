@@ -77,7 +77,7 @@ En tant qu'enseignant avec une double formation en informatique et en mathémati
     <span class="course-tag course-tag-gray">{{ post.load }}</span>
     <span class="course-tag course-tag-gray">{{ post.period }}</span>
   </div>
-  <p class="course-summary">{{ post.summary }}</p>
+  <p class="course-summary"><span class="lang-en">{{ post.summary }}</span>{% if post.summary_fr %}<span class="lang-fr">{{ post.summary_fr }}</span>{% endif %}</p>
 </div>
 {% endfor %}
 
