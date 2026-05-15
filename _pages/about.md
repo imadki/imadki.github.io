@@ -109,7 +109,7 @@ redirect_from:
   <div class="role-badge"><span class="role-badge-icon">🚀</span><span><strong>Co-founder</strong> — <a href="https://www.linkedin.com/company/moroccohpc/" target="_blank">Morocco HPC</a></span></div>
 </div>
 
-<p>My research sits at the intersection of <strong>High Performance Computing (HPC)</strong>, <strong>Computational Fluid Dynamics (CFD)</strong>, and <strong>Scientific Machine Learning</strong>, with a strong emphasis on energy-efficient HPC. I develop parallel Finite Volume solvers on hybrid meshes — for shallow water, plasma, and Navier-Stokes equations for non-Newtonian fluids — design Physics-Informed Neural Networks and data-driven methods for CFD, and investigate DVFS and power-aware strategies on production systems such as Toubkal. I supervise PhD students at UM6P and actively promote HPC and AI capacity building across Africa.</p>
+<p>In my research, I focus on the development and application of parallel numerical methods, with a strong emphasis on energy-efficient HPC. I develop parallel Finite Volume solvers on hybrid meshes — for shallow water, plasma, and Navier-Stokes equations for non-Newtonian fluids — design Physics-Informed Neural Networks and data-driven methods for CFD, and investigate DVFS and power-aware strategies on production systems such as Toubkal. I supervise PhD students at UM6P and actively promote HPC and AI capacity building across Africa.</p>
 
 <h2>Research Areas</h2>
 
@@ -230,7 +230,7 @@ redirect_from:
   <div class="role-badge"><span class="role-badge-icon">🚀</span><span><strong>Co-fondateur</strong> — <a href="https://www.linkedin.com/company/moroccohpc/" target="_blank">Morocco HPC</a></span></div>
 </div>
 
-<p>Mes recherches se situent à l'intersection du <strong>Calcul Haute Performance (HPC)</strong>, de la <strong>Mécanique des Fluides Numérique (CFD)</strong> et de l'<strong>Apprentissage Automatique Scientifique</strong>, avec un fort accent sur l'efficacité énergétique en HPC. Je développe des solveurs Volumes Finis parallèles sur maillages hybrides — pour les équations des eaux peu profondes, de la physique des plasmas et de Navier-Stokes pour fluides non-newtoniens — conçois des réseaux de neurones physiquement informés (PINNs) et des méthodes data-driven pour la CFD, et étudie les stratégies DVFS et de gestion de la puissance sur des systèmes de production tels que Toubkal. J'encadre des doctorants à l'UM6P et milite activement pour le développement des capacités HPC et IA en Afrique.</p>
+<p>Dans mes recherches, je me concentre sur le développement et l'application de méthodes numériques parallèles, avec un fort accent sur l'efficacité énergétique en HPC. Je développe des solveurs Volumes Finis parallèles sur maillages hybrides — pour les équations des eaux peu profondes, de la physique des plasmas et de Navier-Stokes pour fluides non-newtoniens — conçois des réseaux de neurones physiquement informés (PINNs) et des méthodes data-driven pour la CFD, et étudie les stratégies DVFS et de gestion de la puissance sur des systèmes de production tels que Toubkal. J'encadre des doctorants à l'UM6P et milite activement pour le développement des capacités HPC et IA en Afrique.</p>
 
 <h2>Domaines de Recherche</h2>
 
