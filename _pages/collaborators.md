@@ -98,7 +98,7 @@ author_profile: true
 <h2 class="collab-heading">Belgium</h2>
 <ul class="collab-list">
   <li class="collab-row">
-    <span class="collab-name">Eric Deleersnijder</span>
+    <span class="collab-name"><a href="https://perso.uclouvain.be/eric.deleersnijder/cms/" target="_blank">Eric Deleersnijder</a></span>
     <span class="collab-inst">Université Catholique de Louvain (UCLouvain)</span>
     <span class="collab-badge badge-be">Belgium</span>
   </li>
