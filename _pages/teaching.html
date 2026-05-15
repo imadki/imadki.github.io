@@ -266,10 +266,10 @@ En tant qu'enseignant avec une double formation en informatique et en mathémati
 (function () {
   function openModal(id) {
     var overlay = document.getElementById(id);
-    if (overlay) { overlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    if (overlay) { overlay.classList.add('open'); }
   }
   function closeModal(overlay) {
-    overlay.classList.remove('open'); document.body.style.overflow = '';
+    overlay.classList.remove('open');
   }
 
   document.querySelectorAll('.course-card, .prev-course').forEach(function (card) {
