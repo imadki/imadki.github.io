@@ -106,6 +106,9 @@ author_profile: true
   border-bottom: 1px solid #f2f2f2; line-height: 1.4;
 }
 .pub-venues-col li:last-child { border-bottom: none; }
+#pub-venues-selected { display: none; }
+body.pubs-filter-selected #pub-venues-all { display: none; }
+body.pubs-filter-selected #pub-venues-selected { display: block; }
 </style>
 
 <div class="pub-filters">
@@ -187,10 +190,7 @@ author_profile: true
   var groupbyRow     = document.getElementById('groupby-row');
   var yearRow        = document.getElementById('year-filter-group');
   function updateVenues() {
-    var va = document.getElementById('pub-venues-all');
-    var vs = document.getElementById('pub-venues-selected');
-    if (va) va.style.display = activeType === 'selected' ? 'none' : '';
-    if (vs) vs.style.display = activeType === 'selected' ? '' : 'none';
+    document.body.classList.toggle('pubs-filter-selected', activeType === 'selected');
   }
 
   function applyFilters() {
