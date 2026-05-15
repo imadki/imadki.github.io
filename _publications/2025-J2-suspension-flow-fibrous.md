@@ -7,7 +7,7 @@ excerpt: 'Advanced numerical methods for suspension flow simulation with applica
 date: 2025-01-02
 venue: 'Computer Physics Communications'
 paperurl: 'https://doi.org/10.1016/j.cpc.2025.109783'
-citation: 'H. Boullouz, <b>I. Kissami</b>, I. Elmahi, A. El Moumen, A. Saouab. (2025). &quot;Advanced Numerical Methods for Simulating Suspension Flow in Fibrous Media: Application to the RTM Process.&quot; <i>Computer Physics Communications</i>.'
+citation: 'H. Boullouz, <b>I. Kissami</b>, I. Elmahi, A. El Moumen, A. Saouab.'
 ---
 
 H. Boullouz, **I. Kissami**, I. Elmahi, A. El Moumen, A. Saouab.

@@ -7,7 +7,7 @@ excerpt: 'Machine learning approach to predict MPI communication patterns for PD
 date: 2024-06-01
 venue: 'PDCAT 2024 – 25th International Conference on Parallel and Distributed Computing: Applications and Technologies'
 paperurl: 'https://doi.org/10.1007/978-981-96-4207-6_53'
-citation: '<b>I. Kissami</b>, F. Kalloubi, M. Kiddi. (2024). &quot;Predicting MPI Communication for Solving Partial Differential Equations Using Machine Learning.&quot; <i>PDCAT 2024</i>. DOI: 10.1007/978-981-96-4207-6_53.'
+citation: '<b>I. Kissami</b>, F. Kalloubi, M. Kiddi.'
 ---
 
 **I. Kissami**, F. Kalloubi, M. Kiddi.

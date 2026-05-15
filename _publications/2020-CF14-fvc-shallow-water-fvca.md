@@ -7,7 +7,7 @@ excerpt: 'FVC scheme on unstructured meshes applied to the 2D shallow water equa
 date: 2020-06-01
 venue: 'FVCA IX 2020 – International Conference on Finite Volumes for Complex Applications'
 paperurl: 'https://doi.org/10.1007/978-3-030-43651-3_42'
-citation: 'M. Ziggaf, M. Boubekeur., <b>I. Kissami</b>, F. Benkhaldoun, I. Elmahi. (2020). &quot;The FVC scheme on unstructured meshes for the two-dimensional shallow water equations.&quot; <i>FVCA IX 2020</i>. DOI: 10.1007/978-3-030-43651-3_42.'
+citation: 'M. Ziggaf, M. Boubekeur., <b>I. Kissami</b>, F. Benkhaldoun, I. Elmahi.'
 ---
 
 M. Ziggaf, M. Boubekeur., **I. Kissami**, F. Benkhaldoun, I. Elmahi.

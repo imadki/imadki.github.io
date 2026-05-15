@@ -7,7 +7,7 @@ excerpt: 'Parallel finite volume code for plasma simulation with unstructured ad
 date: 2022-06-01
 venue: 'ECCOMAS 2022 – 8th European Congress on Computational Methods in Applied Sciences and Engineering'
 paperurl: 'https://doi.org/10.23967/eccomas.2022.215'
-citation: '<b>I. Kissami</b>, S. Maazioui, F. Benkhaldoun. (2022). &quot;Parallel Finite Volume Code for Plasma with Unstructured Adaptive Mesh Refinement.&quot; <i>ECCOMAS 2022</i>. DOI: 10.23967/eccomas.2022.215.'
+citation: '<b>I. Kissami</b>, S. Maazioui, F. Benkhaldoun.'
 ---
 
 **I. Kissami**, S. Maazioui, F. Benkhaldoun.

@@ -7,7 +7,7 @@ excerpt: 'FVC scheme with diffusion control parameter on unstructured hybrid mes
 date: 2023-06-02
 venue: 'FVCA X 2023 – International Conference on Finite Volumes for Complex Applications'
 paperurl: 'https://doi.org/10.1007/978-3-031-40860-1_1'
-citation: 'W. Aboussi, M. Ziggaf, <b>I. Kissami</b>, M. Boubekeur. (2023). &quot;A finite volume scheme with a diffusion control parameter on unstructured hybrid mesh: application to two-dimensional Euler equations.&quot; <i>FVCA X 2023</i>. DOI: 10.1007/978-3-031-40860-1_1.'
+citation: 'W. Aboussi, M. Ziggaf, <b>I. Kissami</b>, M. Boubekeur.'
 ---
 
 W. Aboussi, M. Ziggaf, **I. Kissami**, M. Boubekeur.

@@ -7,7 +7,7 @@ excerpt: 'Exponential and polynomial decay results for swelling porous elastic s
 date: 2023-01-02
 venue: 'Zeitschrift für Angewandte Mathematik und Physik'
 paperurl: 'https://doi.org/10.1007/s00033-023-01962-6'
-citation: 'A. Soufyane, Adel M. A., Mohammed M. A., <b>I. Kissami</b>, M. Zahri. (2023). &quot;Exponential and polynomial decay results for a swelling porous elastic system with a single nonlinear variable exponent damping.&quot; <i>Zeitschrift für Angewandte Mathematik und Physik</i>.'
+citation: 'A. Soufyane, Adel M. A., Mohammed M. A., <b>I. Kissami</b>, M. Zahri.'
 ---
 
 A. Soufyane, Adel M. A., Mohammed M. A., **I. Kissami**, M. Zahri.

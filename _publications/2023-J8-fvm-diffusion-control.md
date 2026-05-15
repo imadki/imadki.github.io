@@ -7,7 +7,7 @@ excerpt: 'Highly efficient FVM with a diffusion control parameter applied to hyp
 date: 2023-01-01
 venue: 'Mathematics and Computers in Simulation'
 paperurl: 'https://doi.org/10.1016/j.matcom.2023.05.023'
-citation: 'W. Aboussi, M. Ziggaf, <b>I. Kissami</b>, M. Boubekeur. (2023). &quot;A highly efficient finite volume method with a diffusion control parameter for hyperbolic problems.&quot; <i>Mathematics and Computers in Simulation</i>.'
+citation: 'W. Aboussi, M. Ziggaf, <b>I. Kissami</b>, M. Boubekeur.'
 ---
 
 W. Aboussi, M. Ziggaf, **I. Kissami**, M. Boubekeur.

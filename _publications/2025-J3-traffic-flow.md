@@ -7,7 +7,7 @@ excerpt: 'Computational study of a multi-class traffic flow model combining mean
 date: 2025-01-03
 venue: 'Transportation Research Part B: Methodological'
 paperurl: 'https://doi.org/10.1016/j.trb.2025.103196'
-citation: 'A. Machtalay, A. Habbal, A. Ratnani, <b>I. Kissami</b>. (2025). &quot;Computational investigations of a multi-class traffic flow model: Mean-field and microscopic dynamics.&quot; <i>Transportation Research Part B: Methodological</i>.'
+citation: 'A. Machtalay, A. Habbal, A. Ratnani, <b>I. Kissami</b>.'
 ---
 
 A. Machtalay, A. Habbal, A. Ratnani, **I. Kissami**.

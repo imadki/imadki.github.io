@@ -7,7 +7,7 @@ excerpt: 'Well-balanced finite volume solver for 2D shallow water magnetohydrody
 date: 2024-01-01
 venue: 'Computer Physics Communications'
 paperurl: 'https://doi.org/10.1016/j.cpc.2024.109328'
-citation: 'A. Cissé, I. Elmahi, <b>I. Kissami</b>, A. Ratnani. (2024). &quot;A well-balanced finite volume solver for the 2D shallow water magnetohydrodynamic equations with topography.&quot; <i>Computer Physics Communications</i>.'
+citation: 'A. Cissé, I. Elmahi, <b>I. Kissami</b>, A. Ratnani.'
 ---
 
 A. Cissé, I. Elmahi, **I. Kissami**, A. Ratnani.

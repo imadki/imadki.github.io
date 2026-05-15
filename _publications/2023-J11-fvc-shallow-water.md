@@ -7,7 +7,7 @@ excerpt: 'Well-balanced finite volume cell-centered scheme for 2D shallow water 
 date: 2023-01-04
 venue: 'Advances in Applied Mathematics and Mechanics'
 paperurl: 'https://doi.org/10.4208/aamm.OA-2022-0113'
-citation: 'M. Ziggaf, <b>I. Kissami</b>, M. Boubekeur. (2023). &quot;A well balanced FVC scheme for 2D Shallow Water flows on unstructured triangular meshes.&quot; <i>Advances in Applied Mathematics and Mechanics</i>.'
+citation: 'M. Ziggaf, <b>I. Kissami</b>, M. Boubekeur.'
 ---
 
 M. Ziggaf, **I. Kissami**, M. Boubekeur.

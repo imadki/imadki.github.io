@@ -7,7 +7,7 @@ excerpt: 'Robust finite volume solver applied to investigate tidal effects on wa
 date: 2024-01-02
 venue: 'Mathematics and Computers in Simulation'
 paperurl: 'https://doi.org/10.1016/j.matcom.2024.07.005'
-citation: 'I. Oubarka, <b>I. Kissami</b>, I. Elmahi, E. Deleersnijder. (2024). &quot;A robust and well-balanced finite volume solver for investigating the effects of tides on water renewal timescale in the Nador lagoon.&quot; <i>Mathematics and Computers in Simulation</i>.'
+citation: 'I. Oubarka, <b>I. Kissami</b>, I. Elmahi, E. Deleersnijder.'
 ---
 
 I. Oubarka, **I. Kissami**, I. Elmahi, E. Deleersnijder.
