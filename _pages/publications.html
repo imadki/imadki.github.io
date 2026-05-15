@@ -106,9 +106,6 @@ author_profile: true
   border-bottom: 1px solid #f2f2f2; line-height: 1.4;
 }
 .pub-venues-col li:last-child { border-bottom: none; }
-#pub-venues-selected { display: none; }
-body.pubs-filter-selected #pub-venues-all { display: none; }
-body.pubs-filter-selected #pub-venues-selected { display: block; }
 </style>
 
 <div class="pub-filters">
@@ -142,7 +139,7 @@ body.pubs-filter-selected #pub-venues-selected { display: block; }
 <div class="pub-year-section" data-section="{{ year_group.name }}">
   <div class="pub-year-heading">{{ year_group.name }}</div>
   {% for post in year_group.items %}
-  <div class="pub-item" data-pubtype="{{ post.pubtype }}" data-pubyear="{{ year_group.name }}"{% if selected_permalinks contains post.permalink %} data-selected="true"{% endif %}>
+  <div class="pub-item" data-pubtype="{{ post.pubtype }}" data-pubyear="{{ year_group.name }}" data-venue="{{ post.venue }}" data-conf="{{ post.conf }}"{% if selected_permalinks contains post.permalink %} data-selected="true"{% endif %}>
     <span class="pub-type-badge {% if post.pubtype == 'journal' %}badge-journal{% else %}badge-conference{% endif %}">{% if post.pubtype == 'journal' %}<span class="lang-en">Journal</span><span class="lang-fr">Revue</span>{% else %}<span class="lang-en">Conference</span><span class="lang-fr">Conférence</span>{% endif %}</span>{% if post.citation %}{{ post.citation }}{% endif %} &ldquo;{{ post.title }}&rdquo;{% if post.venue %} <i>{{ post.venue }}</i>, {{ year_group.name }}.{% endif %}{% if post.paperurl %} DOI: <a href="{{ post.paperurl }}">{{ post.paperurl }}</a>{% endif %}
   </div>
   {% endfor %}
@@ -190,7 +187,26 @@ body.pubs-filter-selected #pub-venues-selected { display: block; }
   var groupbyRow     = document.getElementById('groupby-row');
   var yearRow        = document.getElementById('year-filter-group');
   function updateVenues() {
-    document.body.classList.toggle('pubs-filter-selected', activeType === 'selected');
+    var journals = {}, confs = {};
+    if (activeGroupBy === 'venue' && (activeType === 'journal' || activeType === 'conference')) {
+      var vv = activeType === 'journal' ? viewVenueJ : viewVenueC;
+      vv.querySelectorAll('.pub-venue-section').forEach(function (s) {
+        if (s.style.display !== 'none') {
+          var n = s.dataset.venueSection;
+          if (n) { if (activeType === 'journal') journals[n] = 1; else confs[n] = 1; }
+        }
+      });
+    } else {
+      document.querySelectorAll('#view-year .pub-item').forEach(function (item) {
+        if (item.style.display === 'none') return;
+        if (item.dataset.pubtype === 'journal') { var v = item.dataset.venue; if (v) journals[v] = 1; }
+        else { var c = item.dataset.conf; if (c) confs[c] = 1; }
+      });
+    }
+    var jList = document.getElementById('venues-journal-list');
+    var cList = document.getElementById('venues-conf-list');
+    if (jList) jList.innerHTML = Object.keys(journals).sort().map(function (v) { return '<li>' + v + '</li>'; }).join('');
+    if (cList) cList.innerHTML = Object.keys(confs).sort().map(function (v) { return '<li>' + v + '</li>'; }).join('');
   }
 
   function applyFilters() {
@@ -344,10 +360,7 @@ body.pubs-filter-selected #pub-venues-selected { display: block; }
 })();
 </script>
 
-{% assign journal_venues = journal_pubs_filtered | map: "venue" | sort | uniq %}
-{% assign conf_venues    = conf_pubs_filtered    | map: "conf"  | sort | uniq %}
-
-<div class="pub-venues-section" id="pub-venues-all">
+<div class="pub-venues-section">
   <p class="pub-venues-heading">
     <span class="lang-en">Publication Venues</span>
     <span class="lang-fr">Lieux de Publication</span>
@@ -356,44 +369,17 @@ body.pubs-filter-selected #pub-venues-selected { display: block; }
     <div class="pub-venues-col">
       <h3 class="lang-en-block">Journals</h3>
       <h3 class="lang-fr-block">Revues</h3>
-      <ul>
+      <ul id="venues-journal-list">
+        {% assign journal_venues = journal_pubs_filtered | map: "venue" | sort | uniq %}
         {% for v in journal_venues %}<li>{{ v }}</li>{% endfor %}
       </ul>
     </div>
     <div class="pub-venues-col">
       <h3 class="lang-en-block">Conferences</h3>
       <h3 class="lang-fr-block">Conférences</h3>
-      <ul>
+      <ul id="venues-conf-list">
+        {% assign conf_venues = conf_pubs_filtered | map: "conf" | sort | uniq %}
         {% for v in conf_venues %}<li>{{ v }}</li>{% endfor %}
-      </ul>
-    </div>
-  </div>
-</div>
-
-<div class="pub-venues-section" id="pub-venues-selected" style="display:none">
-  <p class="pub-venues-heading">
-    <span class="lang-en">Publication Venues — Selected</span>
-    <span class="lang-fr">Lieux de Publication — Sélection</span>
-  </p>
-  <div class="pub-venues-grid">
-    <div class="pub-venues-col">
-      <h3 class="lang-en-block">Journals</h3>
-      <h3 class="lang-fr-block">Revues</h3>
-      <ul>
-        <li>Advances in Applied Mathematics and Mechanics</li>
-        <li>Computer Physics Communications</li>
-        <li>Journal of Supercomputing</li>
-        <li>Mathematics and Computers in Simulation</li>
-      </ul>
-    </div>
-    <div class="pub-venues-col">
-      <h3 class="lang-en-block">Conferences</h3>
-      <h3 class="lang-fr-block">Conférences</h3>
-      <ul>
-        <li>E-Energy</li>
-        <li>HPCS</li>
-        <li>ICMSAO</li>
-        <li>PDCAT</li>
       </ul>
     </div>
   </div>
