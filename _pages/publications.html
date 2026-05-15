@@ -1,0 +1,230 @@
+---
+layout: archive
+title: "Publications"
+permalink: /publications/
+author_profile: true
+---
+
+{% include base_path %}
+
+{% assign all_pubs = site.publications | where_exp: "item", "item.pubtype != 'preprint'" | sort: "date" | reverse %}
+{% assign years = all_pubs | map: "date" | map: "size" %}
+
+<style>
+.pub-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 1.5em;
+  margin-bottom: 1.8em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #e0e0e0;
+  align-items: center;
+}
+
+.filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  align-items: center;
+}
+
+.filter-label {
+  font-size: 0.8em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #888;
+  margin-right: 0.3em;
+}
+
+.filter-btn {
+  padding: 0.3em 0.85em;
+  border: 1px solid #ccc;
+  border-radius: 999px;
+  background: #fff;
+  color: #444;
+  font-size: 0.85em;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: inherit;
+}
+
+.filter-btn:hover {
+  border-color: #52adc8;
+  color: #52adc8;
+}
+
+.filter-btn.active {
+  background: #52adc8;
+  border-color: #52adc8;
+  color: #fff;
+  font-weight: 600;
+}
+
+.pub-count {
+  font-size: 0.85em;
+  color: #888;
+  margin-bottom: 1em;
+}
+
+.pub-year-group { margin-bottom: 0.5em; }
+
+.pub-year-heading {
+  font-size: 1.3em;
+  font-weight: 700;
+  color: #333;
+  margin: 1.4em 0 0.6em;
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid #52adc8;
+  display: inline-block;
+}
+
+.pub-item {
+  padding: 0.7em 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+.pub-item:last-child { border-bottom: none; }
+
+.pub-type-badge {
+  display: inline-block;
+  font-size: 0.72em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding: 0.15em 0.6em;
+  border-radius: 3px;
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+
+.badge-journal {
+  background: #e8f4f8;
+  color: #2e7d9e;
+}
+
+.badge-conference {
+  background: #f0f0f0;
+  color: #666;
+}
+
+.pub-hidden { display: none; }
+
+.pub-no-results {
+  display: none;
+  color: #888;
+  font-style: italic;
+  padding: 1em 0;
+}
+</style>
+
+<div class="pub-filters">
+  <div class="filter-group">
+    <span class="filter-label">Type</span>
+    <button class="filter-btn active" data-filter-type="all">All</button>
+    <button class="filter-btn" data-filter-type="journal">Journals</button>
+    <button class="filter-btn" data-filter-type="conference">Conferences</button>
+  </div>
+  <div class="filter-group">
+    <span class="filter-label">Year</span>
+    <button class="filter-btn active" data-filter-year="all">All</button>
+    {% assign seen_years = "" %}
+    {% for post in all_pubs %}
+      {% assign yr = post.date | date: "%Y" %}
+      {% unless seen_years contains yr %}
+        <button class="filter-btn" data-filter-year="{{ yr }}">{{ yr }}</button>
+        {% assign seen_years = seen_years | append: yr | append: "," %}
+      {% endunless %}
+    {% endfor %}
+  </div>
+</div>
+
+<p class="pub-count"><span id="pub-visible-count">{{ all_pubs | size }}</span> publication(s) displayed</p>
+
+<p class="pub-no-results" id="pub-no-results">No publications match the selected filters.</p>
+
+{% assign seen_years2 = "" %}
+{% for post in all_pubs %}
+  {% assign yr = post.date | date: "%Y" %}
+  {% unless seen_years2 contains yr %}
+    <div class="pub-year-group" data-year-group="{{ yr }}">
+      <div class="pub-year-heading">{{ yr }}</div>
+  {% endunless %}
+  {% assign seen_years2 = seen_years2 | append: yr | append: "," %}
+
+  <div class="pub-item" data-type="{{ post.pubtype }}" data-year="{{ yr }}">
+    <span class="pub-type-badge {% if post.pubtype == 'journal' %}badge-journal{% else %}badge-conference{% endif %}">
+      {% if post.pubtype == 'journal' %}Journal{% else %}Conference{% endif %}
+    </span>
+    {% if post.citation %}{{ post.citation }}{% endif %}
+    &ldquo;{{ post.title }}&rdquo;
+    {% if post.venue %}<i>{{ post.venue }}</i>, {{ yr }}.{% endif %}
+    {% if post.paperurl %}DOI: <a href="{{ post.paperurl }}">{{ post.paperurl }}</a>{% endif %}
+  </div>
+
+  {% assign next_post = forloop.index %}
+  {% assign next_post_index = forloop.index %}
+  {% if forloop.last %}
+    </div>
+  {% else %}
+    {% assign next_item = all_pubs[forloop.index] %}
+    {% assign next_yr = next_item.date | date: "%Y" %}
+    {% if next_yr != yr %}
+      </div>
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+<script>
+(function () {
+  var activeType = 'all';
+  var activeYear = 'all';
+
+  function applyFilters() {
+    var items = document.querySelectorAll('.pub-item');
+    var groups = document.querySelectorAll('.pub-year-group');
+    var visible = 0;
+
+    items.forEach(function (item) {
+      var typeMatch = activeType === 'all' || item.dataset.type === activeType;
+      var yearMatch = activeYear === 'all' || item.dataset.year === activeYear;
+      if (typeMatch && yearMatch) {
+        item.classList.remove('pub-hidden');
+        visible++;
+      } else {
+        item.classList.add('pub-hidden');
+      }
+    });
+
+    // hide year group headings if all their items are hidden
+    groups.forEach(function (group) {
+      var yr = group.dataset.yearGroup;
+      var anyVisible = group.querySelectorAll('.pub-item:not(.pub-hidden)').length > 0;
+      group.style.display = anyVisible ? '' : 'none';
+    });
+
+    document.getElementById('pub-visible-count').textContent = visible;
+    document.getElementById('pub-no-results').style.display = visible === 0 ? 'block' : 'none';
+  }
+
+  document.querySelectorAll('[data-filter-type]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('[data-filter-type]').forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      activeType = btn.dataset.filterType;
+      applyFilters();
+    });
+  });
+
+  document.querySelectorAll('[data-filter-year]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('[data-filter-year]').forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      activeYear = btn.dataset.filterYear;
+      applyFilters();
+    });
+  });
+})();
+</script>
