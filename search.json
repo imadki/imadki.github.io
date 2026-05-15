@@ -1,0 +1,19 @@
+---
+layout: null
+---
+[
+{% assign all = "" | split: "" %}
+{% assign all = all | concat: site.pages %}
+{% assign all = all | concat: site.publications %}
+{% assign all = all | concat: site.talks %}
+{% assign all = all | concat: site.teaching %}
+{% assign all = all | concat: site.portfolio %}
+{% for item in all %}{% if item.title and item.title != "" and item.url %}
+  {
+    "title": {{ item.title | jsonify }},
+    "url": {{ item.url | prepend: site.baseurl | jsonify }},
+    "excerpt": {{ item.content | strip_html | normalize_whitespace | truncatewords: 40 | jsonify }},
+    "collection": {{ item.collection | default: "page" | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+{% endif %}{% endfor %}
+]

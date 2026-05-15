@@ -17,6 +17,61 @@
 .lang-btn-nav.active { color: #52adc8; }
 .lang-sep { color: #ddd; font-size: 0.75em; }
 
+.search-btn-nav {
+  background: none; border: none; cursor: pointer;
+  color: #aaa; padding: 0.25em 0.45em; border-radius: 3px;
+  font-size: 1em; line-height: 1; transition: color 0.15s;
+  display: flex; align-items: center;
+}
+.search-btn-nav:hover { color: #52adc8; }
+
+.search-overlay {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,0.55); z-index: 99999;
+  align-items: flex-start; justify-content: center;
+  padding: 6vh 1em 1em;
+}
+.search-overlay.open { display: flex; }
+.search-box {
+  background: #fff; border-radius: 10px;
+  width: 100%; max-width: 580px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.22);
+  overflow: hidden;
+}
+.search-input-wrap {
+  display: flex; align-items: center; gap: 0.6em;
+  padding: 0.75em 1em; border-bottom: 1px solid #eee;
+}
+.search-input-icon { color: #aaa; flex-shrink: 0; font-size: 1em; }
+.search-input {
+  flex: 1; border: none; outline: none;
+  font-size: 1em; font-family: inherit; color: #333;
+}
+.search-close {
+  background: none; border: none; cursor: pointer;
+  color: #bbb; font-size: 1.3em; line-height: 1; padding: 0.2em;
+}
+.search-close:hover { color: #555; }
+.search-results { max-height: 60vh; overflow-y: auto; }
+.search-result-item {
+  display: block; padding: 0.75em 1.1em;
+  border-bottom: 1px solid #f5f5f5;
+  text-decoration: none; color: #333;
+  transition: background 0.12s;
+}
+.search-result-item:hover { background: #f4fafc; }
+.search-result-item:last-child { border-bottom: none; }
+.search-result-title { font-weight: 700; font-size: 0.95em; color: #222; }
+.search-result-excerpt { font-size: 0.82em; color: #888; margin-top: 0.2em; line-height: 1.4; }
+.search-result-tag {
+  display: inline-block; font-size: 0.68em; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.05em;
+  padding: 0.1em 0.5em; border-radius: 3px;
+  background: #e8f4f8; color: #2e7d9e; margin-left: 0.4em;
+  vertical-align: middle;
+}
+.search-empty { padding: 1.5em 1.1em; color: #aaa; font-size: 0.9em; text-align: center; }
+
 /* Span-based bilingual system — using html element so CSS applies before body renders */
 .lang-fr { display: none !important; }
 html.lang-is-fr .lang-fr { display: inline !important; }
@@ -64,10 +119,24 @@ html.lang-is-fr .lang-en-block { display: none !important; }
       </nav>
     </div>
     <div class="lang-toggle-nav">
+      <button class="search-btn-nav" onclick="openSearch()" aria-label="Search">
+        <i class="fas fa-search"></i>
+      </button>
       <button class="lang-btn-nav" id="nav-btn-en" onclick="setLang('en')">EN</button>
       <span class="lang-sep">|</span>
       <button class="lang-btn-nav" id="nav-btn-fr" onclick="setLang('fr')">FR</button>
     </div>
+  </div>
+</div>
+
+<div class="search-overlay" id="search-overlay">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <span class="search-input-icon"><i class="fas fa-search"></i></span>
+      <input class="search-input" id="search-input" type="text" placeholder="Search…" autocomplete="off">
+      <button class="search-close" onclick="closeSearch()">&#x2715;</button>
+    </div>
+    <div class="search-results" id="search-results"></div>
   </div>
 </div>
 
@@ -85,5 +154,64 @@ document.addEventListener('DOMContentLoaded', function() {
     var saved = localStorage.getItem('site-lang') || 'en';
     setLang(saved);
   } catch(e) { setLang('en'); }
+});
+
+var searchIndex = null;
+
+function loadSearchIndex(cb) {
+  if (searchIndex) { cb(); return; }
+  fetch('{{ base_path }}/search.json')
+    .then(function(r) { return r.json(); })
+    .then(function(data) { searchIndex = data; cb(); })
+    .catch(function() { searchIndex = []; cb(); });
+}
+
+function openSearch() {
+  var overlay = document.getElementById('search-overlay');
+  overlay.classList.add('open');
+  var input = document.getElementById('search-input');
+  input.value = '';
+  document.getElementById('search-results').innerHTML = '';
+  loadSearchIndex(function() { input.focus(); });
+}
+
+function closeSearch() {
+  document.getElementById('search-overlay').classList.remove('open');
+}
+
+function runSearch(q) {
+  var results = document.getElementById('search-results');
+  if (!q || q.length < 2) { results.innerHTML = ''; return; }
+  var terms = q.toLowerCase().split(/\s+/).filter(Boolean);
+  var matches = (searchIndex || []).filter(function(item) {
+    var hay = ((item.title || '') + ' ' + (item.excerpt || '')).toLowerCase();
+    return terms.every(function(t) { return hay.indexOf(t) !== -1; });
+  }).slice(0, 8);
+
+  if (!matches.length) {
+    results.innerHTML = '<div class="search-empty">No results found.</div>';
+    return;
+  }
+  results.innerHTML = matches.map(function(item) {
+    var tag = item.collection !== 'page' ? '<span class="search-result-tag">' + item.collection + '</span>' : '';
+    return '<a class="search-result-item" href="' + item.url + '" onclick="closeSearch()">' +
+      '<div class="search-result-title">' + item.title + tag + '</div>' +
+      '<div class="search-result-excerpt">' + (item.excerpt || '') + '</div>' +
+      '</a>';
+  }).join('');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  var input = document.getElementById('search-input');
+  if (input) {
+    input.addEventListener('input', function() { runSearch(this.value.trim()); });
+  }
+  document.getElementById('search-overlay').addEventListener('click', function(e) {
+    if (e.target === this) { closeSearch(); }
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') { closeSearch(); }
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') { e.preventDefault(); openSearch(); }
+  });
 });
 </script>
