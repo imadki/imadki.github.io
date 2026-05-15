@@ -77,7 +77,7 @@ author_profile: true
     <span class="collab-badge badge-fr">France</span>
   </li>
   <li class="collab-row">
-    <span class="collab-name">Nicolas Greneche</span>
+    <span class="collab-name"><a href="https://sites.google.com/view/nicolas-greneche" target="_blank">Nicolas Greneche</a></span>
     <span class="collab-inst">Université Sorbonne Paris Nord (USPN)</span>
     <span class="collab-badge badge-fr">France</span>
   </li>
