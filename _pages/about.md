@@ -133,7 +133,7 @@ redirect_from:
   </div>
 </div>
 
-<p>In my research, I focus on the development and application of parallel numerical methods, with a strong emphasis on energy-efficient HPC. I develop parallel Finite Volume solvers on hybrid meshes — for shallow water, plasma, and Navier-Stokes equations for non-Newtonian fluids — design Physics-Informed Neural Networks and data-driven methods for CFD, and investigate DVFS and power-aware strategies on production systems such as Toubkal. I supervise PhD students at UM6P and actively promote HPC and AI capacity building across Africa.</p>
+<p>In my research, I focus on the development and application of parallel numerical methods, with a strong emphasis on energy-efficient HPC. I develop parallel Finite Volume solvers on hybrid meshes — for shallow water, plasma, and Navier-Stokes equations for non-Newtonian fluids — design Physics-Informed Neural Networks and data-driven methods for CFD, and investigate DVFS and power-aware strategies on production systems such as Toubkal. I supervise PhD students at UM6P and actively promote HPC capacity building across Africa.</p>
 
 <h2>Career</h2>
 <div class="career-timeline">
@@ -231,7 +231,7 @@ redirect_from:
   </div>
 </div>
 
-<p>Dans mes recherches, je me concentre sur le développement et l'application de méthodes numériques parallèles, avec un fort accent sur l'efficacité énergétique en HPC. Je développe des solveurs Volumes Finis parallèles sur maillages hybrides — pour les équations des eaux peu profondes, de la physique des plasmas et de Navier-Stokes pour fluides non-newtoniens — conçois des réseaux de neurones physiquement informés (PINNs) et des méthodes data-driven pour la CFD, et étudie les stratégies DVFS et de gestion de la puissance sur des systèmes de production tels que Toubkal. J'encadre des doctorants à l'UM6P et milite activement pour le développement des capacités HPC et IA en Afrique.</p>
+<p>Dans mes recherches, je me concentre sur le développement et l'application de méthodes numériques parallèles, avec un fort accent sur l'efficacité énergétique en HPC. Je développe des solveurs Volumes Finis parallèles sur maillages hybrides — pour les équations des eaux peu profondes, de la physique des plasmas et de Navier-Stokes pour fluides non-newtoniens — conçois des réseaux de neurones physiquement informés (PINNs) et des méthodes data-driven pour la CFD, et étudie les stratégies DVFS et de gestion de la puissance sur des systèmes de production tels que Toubkal. J'encadre des doctorants à l'UM6P et milite activement pour le développement des capacités HPC en Afrique.</p>
 
 <h2>Parcours</h2>
 <div class="career-timeline">
