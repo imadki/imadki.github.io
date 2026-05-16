@@ -179,6 +179,18 @@ html.dark-mode .profile-info-val code {
   color: #aaa;
 }
 
+/* Code pills */
+html.dark-mode .code-pill {
+  background: #1e1e2e;
+  border-color: #2d2d45;
+  color: #ccc;
+}
+html.dark-mode .code-pill:hover {
+  background: #1e2a38;
+  border-color: #52adc8;
+  color: #52adc8;
+}
+
 /* Highlight list (home page news) */
 html.dark-mode .highlight-item {
   border-bottom-color: #2d2d45;
