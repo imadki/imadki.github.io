@@ -429,6 +429,39 @@ html.dark-mode .search-empty {
   color: #666;
 }
 
+/* Research Group */
+html.dark-mode .phd-card,
+html.dark-mode .postdoc-card {
+  background: #1e2533;
+  border-left-color: #52adc8;
+}
+html.dark-mode .phd-card[data-status="defended"] {
+  border-left-color: #555;
+}
+html.dark-mode .phd-name {
+  color: #f0f0f0;
+}
+html.dark-mode .phd-period {
+  color: #888;
+}
+html.dark-mode .phd-meta {
+  color: #aaa;
+}
+html.dark-mode .phd-title {
+  color: #bbb;
+}
+html.dark-mode .phd-position {
+  color: #52adc8;
+}
+html.dark-mode .badge-ongoing {
+  background: #1e3040;
+  color: #7abfd4;
+}
+html.dark-mode .badge-defended {
+  background: #282828;
+  color: #888;
+}
+
 /* Back to top button */
 html.dark-mode #back-to-top {
   background: #52adc8;
