@@ -59,6 +59,43 @@ author_profile: true
 .badge-eu { background: #e8f4f8; color: #2e7d9e; }
 .badge-af { background: #d5f5e3; color: #145a32; }
 .badge-me { background: #fde0e0; color: #8b1a1a; }
+
+.collab-search-wrap {
+  position: relative; margin-bottom: 1.2em;
+}
+.collab-search {
+  width: 100%; padding: 0.5em 2.4em 0.5em 0.85em;
+  border: 1px solid #ccc; border-radius: 999px;
+  font-size: 0.9em; font-family: inherit; color: #333;
+  outline: none; transition: border-color 0.15s;
+  box-sizing: border-box;
+}
+.collab-search:focus { border-color: #52adc8; }
+.collab-search-icon {
+  position: absolute; right: 0.85em; top: 50%;
+  transform: translateY(-50%); color: #aaa; pointer-events: none;
+  font-size: 0.9em;
+}
+.collab-no-results {
+  display: none; font-size: 0.9em; color: #aaa;
+  padding: 1em 0; text-align: center;
+}
+
+@media (max-width: 600px) {
+  .collab-row {
+    flex-wrap: wrap;
+    gap: 0.2em 0.5em;
+  }
+  .collab-name {
+    white-space: normal;
+    min-width: unset;
+    width: 100%;
+  }
+  .collab-inst {
+    flex: none;
+    width: 100%;
+  }
+}
 </style>
 
 <div class="collab-sort">
