@@ -20,22 +20,6 @@ redirect_from:
 .role-badge-icon { font-size: 1em; flex-shrink: 0; }
 .role-badge strong { color: #1a4a6b; }
 
-.focus-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.7em;
-  margin: 1.2em 0 1em;
-}
-@media (max-width: 500px) { .focus-grid { grid-template-columns: 1fr; } }
-.focus-card {
-  background: #f4fafc;
-  border: 1px solid #d0e8f0;
-  border-radius: 8px;
-  padding: 0.85em 1em;
-}
-.focus-icon { font-size: 1.25em; display: block; margin-bottom: 0.3em; }
-.focus-card strong { display: block; font-size: 0.9em; color: #1a4a6b; margin-bottom: 0.2em; }
-.focus-card p { font-size: 0.8em; color: #666; margin: 0; line-height: 1.4; }
 
 .code-pills { display: flex; flex-wrap: wrap; gap: 0.5em; margin: 0.8em 0 1.4em; }
 .code-pill {
@@ -115,31 +99,6 @@ redirect_from:
 </div>
 
 <p>In my research, I focus on the development and application of parallel numerical methods, with a strong emphasis on energy-efficient HPC. I develop parallel Finite Volume solvers on hybrid meshes — for shallow water, plasma, and Navier-Stokes equations for non-Newtonian fluids — design Physics-Informed Neural Networks and data-driven methods for CFD, and investigate DVFS and power-aware strategies on production systems such as Toubkal. I supervise PhD students at UM6P and actively promote HPC and AI capacity building across Africa.</p>
-
-<h2>Research Areas</h2>
-
-<div class="focus-grid">
-  <div class="focus-card">
-    <span class="focus-icon">⚡</span>
-    <strong>HPC &amp; Parallel Computing</strong>
-    <p>MPI-based parallel algorithms, cluster architectures, performance optimization at scale</p>
-  </div>
-  <div class="focus-card">
-    <span class="focus-icon">🌊</span>
-    <strong>Computational Fluid Dynamics</strong>
-    <p>Finite Volume solvers on unstructured meshes — shallow water flows, plasma physics, Navier-Stokes</p>
-  </div>
-  <div class="focus-card">
-    <span class="focus-icon">🧠</span>
-    <strong>Scientific Machine Learning</strong>
-    <p>Physics-Informed Neural Networks (PINNs), PINOs, data-driven approaches for CFD</p>
-  </div>
-  <div class="focus-card">
-    <span class="focus-icon">🌱</span>
-    <strong>Energy-Aware HPC</strong>
-    <p>Energy optimization in HPC infrastructures &amp; development of HPC/AI capacities across Africa</p>
-  </div>
-</div>
 
 <h2>Open-Source Codes</h2>
 <div class="code-pills">
@@ -237,31 +196,6 @@ redirect_from:
 </div>
 
 <p>Dans mes recherches, je me concentre sur le développement et l'application de méthodes numériques parallèles, avec un fort accent sur l'efficacité énergétique en HPC. Je développe des solveurs Volumes Finis parallèles sur maillages hybrides — pour les équations des eaux peu profondes, de la physique des plasmas et de Navier-Stokes pour fluides non-newtoniens — conçois des réseaux de neurones physiquement informés (PINNs) et des méthodes data-driven pour la CFD, et étudie les stratégies DVFS et de gestion de la puissance sur des systèmes de production tels que Toubkal. J'encadre des doctorants à l'UM6P et milite activement pour le développement des capacités HPC et IA en Afrique.</p>
-
-<h2>Domaines de Recherche</h2>
-
-<div class="focus-grid">
-  <div class="focus-card">
-    <span class="focus-icon">⚡</span>
-    <strong>HPC &amp; Calcul Parallèle</strong>
-    <p>Algorithmes parallèles MPI, architectures cluster, optimisation des performances à grande échelle</p>
-  </div>
-  <div class="focus-card">
-    <span class="focus-icon">🌊</span>
-    <strong>Mécanique des Fluides Numérique</strong>
-    <p>Solveurs Volumes Finis sur maillages non-structurés — écoulements, plasmas, Navier-Stokes</p>
-  </div>
-  <div class="focus-card">
-    <span class="focus-icon">🧠</span>
-    <strong>Apprentissage Automatique Scientifique</strong>
-    <p>Réseaux de neurones physiquement informés (PINNs), PINOs, approches data-driven pour la CFD</p>
-  </div>
-  <div class="focus-card">
-    <span class="focus-icon">🌱</span>
-    <strong>HPC Éco-responsable</strong>
-    <p>Optimisation énergétique des infrastructures HPC &amp; développement des capacités HPC/IA en Afrique</p>
-  </div>
-</div>
 
 <h2>Codes Open-Source</h2>
 <div class="code-pills">
