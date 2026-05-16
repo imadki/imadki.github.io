@@ -316,12 +316,21 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a,
 
 
 /*
+   Language toggle — disable transitions to avoid glitch on EN/FR switch
+   ========================================================================== */
+
+.lang-en, .lang-fr, .lang-en-block, .lang-fr-block {
+  transition: none !important;
+}
+
+/*
    Justify body text
    ========================================================================== */
 
 .page__content p,
 .archive p,
 .talk-modal-content p,
-.course-modal-content p {
+.course-modal-content p,
+.grant-modal-desc {
   text-align: justify;
 }

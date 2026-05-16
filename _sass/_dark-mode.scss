@@ -305,37 +305,57 @@ html.dark-mode .training-link-btn:hover {
   color: #52adc8;
 }
 
+/* Grants */
+html.dark-mode .grant-card {
+  background: #1e2533;
+  border-left-color: #52adc8;
+}
+html.dark-mode .grant-title {
+  color: #f0f0f0;
+}
+html.dark-mode .grant-meta {
+  color: #aaa;
+}
+
 /* Modals */
+html.dark-mode .grant-modal,
 html.dark-mode .course-modal,
 html.dark-mode .talk-modal {
   background: #1e1e2e;
   color: #e4e4e4;
 }
+html.dark-mode .grant-modal-header,
 html.dark-mode .course-modal-header,
 html.dark-mode .talk-modal-header {
   border-bottom-color: #2d2d45;
 }
+html.dark-mode .grant-modal-title,
 html.dark-mode .course-modal-title,
 html.dark-mode .talk-modal-title {
   color: #f0f0f0;
 }
+html.dark-mode .grant-modal-meta,
 html.dark-mode .course-modal-meta,
 html.dark-mode .talk-modal-meta {
   color: #aaa;
   border-bottom-color: #2d2d45;
 }
+html.dark-mode .grant-modal-meta strong,
 html.dark-mode .course-modal-meta strong,
 html.dark-mode .talk-modal-meta strong {
   color: #ccc;
 }
+html.dark-mode .grant-modal-desc,
 html.dark-mode .course-modal-content,
 html.dark-mode .talk-modal-content {
   color: #d4d4d4;
 }
+html.dark-mode .grant-modal-close,
 html.dark-mode .course-modal-close,
 html.dark-mode .talk-modal-close {
   color: #666;
 }
+html.dark-mode .grant-modal-close:hover,
 html.dark-mode .course-modal-close:hover,
 html.dark-mode .talk-modal-close:hover {
   color: #ccc;
