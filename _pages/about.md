@@ -28,6 +28,10 @@ redirect_from:
 .profile-info-val a { color: #52adc8; }
 .profile-info-val a:hover { color: #3a8fa8; }
 .profile-sep { color: #ddd; margin: 0 0.4em; }
+.profile-pos-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.35em 1.5em;
+}
+@media (max-width: 600px) { .profile-pos-grid { grid-template-columns: 1fr; } }
 .profile-info-val code {
   font-family: 'SFMono-Regular', Consolas, monospace;
   font-size: 0.9em; background: #f3f3f3;
@@ -101,15 +105,15 @@ redirect_from:
   <div class="profile-info-row">
     <span class="profile-info-key">Positions</span>
     <span class="profile-info-val">
-      <strong>Head</strong>, Simlab Supercomputer
-      <span class="profile-sep">·</span>
-      <strong>Advisory Board</strong>, <a href="https://toubkal.um6p.ma/" target="_blank">Toubkal</a>
-      <span class="profile-sep">·</span>
-      <strong>NVIDIA DLI</strong> Certified Instructor &amp; University Ambassador
-      <span class="profile-sep">·</span>
-      <strong>Co-founder</strong>, <a href="https://www.linkedin.com/company/moroccohpc/" target="_blank">Morocco HPC</a>
-      <a href="https://www.linkedin.com/company/moroccohpc/" target="_blank" title="LinkedIn" style="color:#0a66c2;margin-left:0.5em;"><i class="fab fa-linkedin"></i></a>
-      <a href="https://www.youtube.com/@MoroccoHPC" target="_blank" title="YouTube" style="color:#ff0000;margin-left:0.3em;"><i class="fab fa-youtube"></i></a>
+      <div class="profile-pos-grid">
+        <span><strong>Head</strong>, Simlab Supercomputer</span>
+        <span><strong>Advisory Board</strong>, <a href="https://toubkal.um6p.ma/" target="_blank">Toubkal</a></span>
+        <span><strong>NVIDIA DLI</strong> Certified Instructor &amp; University Ambassador</span>
+        <span><strong>Co-founder</strong>, <a href="https://www.linkedin.com/company/moroccohpc/" target="_blank">Morocco HPC</a>
+          <a href="https://www.linkedin.com/company/moroccohpc/" target="_blank" title="LinkedIn" style="color:#0a66c2;margin-left:0.5em;"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.youtube.com/@MoroccoHPC" target="_blank" title="YouTube" style="color:#ff0000;margin-left:0.3em;"><i class="fab fa-youtube"></i></a>
+        </span>
+      </div>
     </span>
   </div>
   <div class="profile-info-row">
@@ -199,15 +203,15 @@ redirect_from:
   <div class="profile-info-row">
     <span class="profile-info-key">Postes</span>
     <span class="profile-info-val">
-      <strong>Responsable</strong>, Supercalculateur Simlab
-      <span class="profile-sep">·</span>
-      <strong>Conseil Consultatif</strong>, <a href="https://toubkal.um6p.ma/" target="_blank">Toubkal</a>
-      <span class="profile-sep">·</span>
-      <strong>Instructeur NVIDIA DLI</strong> Certifié &amp; Ambassadeur Universitaire
-      <span class="profile-sep">·</span>
-      <strong>Co-fondateur</strong>, <a href="https://www.linkedin.com/company/moroccohpc/" target="_blank">Morocco HPC</a>
-      <a href="https://www.linkedin.com/company/moroccohpc/" target="_blank" title="LinkedIn" style="color:#0a66c2;margin-left:0.5em;"><i class="fab fa-linkedin"></i></a>
-      <a href="https://www.youtube.com/@MoroccoHPC" target="_blank" title="YouTube" style="color:#ff0000;margin-left:0.3em;"><i class="fab fa-youtube"></i></a>
+      <div class="profile-pos-grid">
+        <span><strong>Responsable</strong>, Supercalculateur Simlab</span>
+        <span><strong>Conseil Consultatif</strong>, <a href="https://toubkal.um6p.ma/" target="_blank">Toubkal</a></span>
+        <span><strong>Instructeur NVIDIA DLI</strong> Certifié &amp; Ambassadeur Universitaire</span>
+        <span><strong>Co-fondateur</strong>, <a href="https://www.linkedin.com/company/moroccohpc/" target="_blank">Morocco HPC</a>
+          <a href="https://www.linkedin.com/company/moroccohpc/" target="_blank" title="LinkedIn" style="color:#0a66c2;margin-left:0.5em;"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.youtube.com/@MoroccoHPC" target="_blank" title="YouTube" style="color:#ff0000;margin-left:0.3em;"><i class="fab fa-youtube"></i></a>
+        </span>
+      </div>
     </span>
   </div>
   <div class="profile-info-row">
