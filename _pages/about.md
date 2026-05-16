@@ -157,7 +157,11 @@ redirect_from:
 <ul class="highlight-list">
   <li class="highlight-item">
     <span class="highlight-date">May 2026</span>
-    <span class="highlight-text"><span class="highlight-tag tag-keynote">Keynote</span>I2M4HydroSystems Workshop, Hammamet, Tunisia — <em>Enhancing CFD Solvers with Neural Networks</em>.</span>
+    <span class="highlight-text"><span class="highlight-tag tag-keynote">Keynote</span><a href="https://i2m4hydrosystem.sciencesconf.org/" target="_blank">I2M4HydroSystems Workshop</a>, Hammamet, Tunisia — <em>Enhancing CFD Solvers with Neural Networks</em>.</span>
+  </li>
+  <li class="highlight-item">
+    <span class="highlight-date">Dec 2025</span>
+    <span class="highlight-text"><span class="highlight-tag tag-keynote">Keynote</span><a href="https://chpcconf.co.za/speakers-2/" target="_blank">19th CHPC National Conference</a>, Cape Town, South Africa — <em>Building the Future: Morocco's High-Performance Computing Infrastructure</em>.</span>
   </li>
   <li class="highlight-item">
     <span class="highlight-date">Dec 2025</span>
@@ -242,7 +246,11 @@ redirect_from:
 <ul class="highlight-list">
   <li class="highlight-item">
     <span class="highlight-date">Mai 2026</span>
-    <span class="highlight-text"><span class="highlight-tag tag-keynote">Keynote</span>Workshop I2M4HydroSystems, Hammamet, Tunisie — <em>Améliorer les Solveurs CFD avec des Réseaux de Neurones</em>.</span>
+    <span class="highlight-text"><span class="highlight-tag tag-keynote">Keynote</span><a href="https://i2m4hydrosystem.sciencesconf.org/" target="_blank">Workshop I2M4HydroSystems</a>, Hammamet, Tunisie — <em>Améliorer les Solveurs CFD avec des Réseaux de Neurones</em>.</span>
+  </li>
+  <li class="highlight-item">
+    <span class="highlight-date">Déc 2025</span>
+    <span class="highlight-text"><span class="highlight-tag tag-keynote">Keynote</span><a href="https://chpcconf.co.za/speakers-2/" target="_blank">19e Conférence Nationale CHPC</a>, Le Cap, Afrique du Sud — <em>Construire l'Avenir : l'Infrastructure de Calcul Haute Performance du Maroc</em>.</span>
   </li>
   <li class="highlight-item">
     <span class="highlight-date">Déc 2025</span>
