@@ -10,27 +10,28 @@ redirect_from:
 
 <style>
 
-.role-badges { display: flex; flex-wrap: wrap; gap: 0.6em; margin: 0.9em 0 1.2em; }
-.role-badge {
-  display: flex; align-items: center; gap: 0.45em;
-  padding: 0.4em 0.85em; border: 1px solid #d0e8f0;
-  border-radius: 6px; background: #f4fafc;
-  font-size: 0.84em; color: #2a5070; line-height: 1.3;
+.profile-info { margin: 0.9em 0 1.5em; }
+.profile-info-row {
+  display: flex; gap: 1.2em;
+  padding: 0.5em 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.88em; align-items: baseline;
 }
-.role-badge-icon { font-size: 1em; flex-shrink: 0; }
-.role-badge strong { color: #1a4a6b; }
-
-
-.code-pills { display: flex; flex-wrap: wrap; gap: 0.5em; margin: 0.8em 0 1.4em; }
-.code-pill {
-  display: inline-flex; align-items: center; gap: 0.4em;
-  padding: 0.32em 0.85em;
-  background: #f0f0f0; border: 1px solid #ddd;
-  border-radius: 20px; font-size: 0.83em; font-weight: 600;
-  color: #333; text-decoration: none; transition: background 0.15s, border-color 0.15s;
+.profile-info-row:last-child { border-bottom: none; }
+.profile-info-key {
+  min-width: 88px; font-size: 0.75em; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  color: #bbb; flex-shrink: 0; padding-top: 0.18em;
 }
-.code-pill:hover { background: #e8f4f8; border-color: #b0d0e0; color: #2e7d9e; text-decoration: none; }
-.code-pill svg { width: 14px; height: 14px; fill: currentColor; flex-shrink: 0; }
+.profile-info-val { color: #333; line-height: 1.7; }
+.profile-info-val a { color: #52adc8; }
+.profile-info-val a:hover { color: #3a8fa8; }
+.profile-sep { color: #ddd; margin: 0 0.4em; }
+.profile-info-val code {
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.9em; background: #f3f3f3;
+  padding: 0.1em 0.45em; border-radius: 3px; color: #444;
+}
 
 .highlight-list { list-style: none; margin: 0.8em 0 0; padding: 0; }
 .highlight-item {
@@ -84,37 +85,32 @@ redirect_from:
 
 <p>I am an <strong>Assistant Professor</strong> at the <a href="https://www.um6p.ma">University Mohammed VI Polytechnic (UM6P)</a>, <a href="https://cc.um6p.ma/">College of Computing</a>, Ben Guerir, Morocco — working at the intersection of High Performance Computing, Computational Fluid Dynamics, and Scientific Machine Learning.</p>
 
-<div class="role-badges">
-  <div class="role-badge"><span class="role-badge-icon">🖥️</span><span><strong>Head</strong> — Simlab Supercomputer</span></div>
-  <div class="role-badge"><span class="role-badge-icon">📋</span><span><strong>Advisory Board Member</strong> — <a href="https://toubkal.um6p.ma/" target="_blank">Toubkal Supercomputer</a></span></div>
-  <div class="role-badge"><span class="role-badge-icon">🎓</span><span><strong>NVIDIA DLI Certified Instructor</strong> &amp; University Ambassador</span></div>
-  <div class="role-badge" style="flex-wrap:wrap;gap:0.5em;">
-    <span class="role-badge-icon">🚀</span>
-    <span><strong>Co-founder</strong> — Morocco HPC</span>
-    <span style="display:flex;gap:0.45em;align-items:center;margin-left:0.2em;">
-      <a href="https://www.linkedin.com/company/moroccohpc/" target="_blank" title="Join us on LinkedIn" style="color:#0a66c2;font-size:0.95em;"><i class="fab fa-linkedin"></i> <span style="font-size:0.78em;font-weight:700;vertical-align:middle;">Join us</span></a>
-      <a href="https://www.youtube.com/@MoroccoHPC" target="_blank" title="Webinars" style="color:#ff0000;font-size:0.95em;"><i class="fab fa-youtube"></i> <span style="font-size:0.78em;font-weight:700;vertical-align:middle;">Webinars</span></a>
+<div class="profile-info">
+  <div class="profile-info-row">
+    <span class="profile-info-key">Positions</span>
+    <span class="profile-info-val">
+      <strong>Head</strong>, Simlab Supercomputer
+      <span class="profile-sep">·</span>
+      <strong>Advisory Board</strong>, <a href="https://toubkal.um6p.ma/" target="_blank">Toubkal</a>
+      <span class="profile-sep">·</span>
+      <strong>NVIDIA DLI</strong> Certified Instructor &amp; University Ambassador
+      <span class="profile-sep">·</span>
+      <strong>Co-founder</strong>, <a href="https://www.linkedin.com/company/moroccohpc/" target="_blank">Morocco HPC</a>
+      <a href="https://www.linkedin.com/company/moroccohpc/" target="_blank" title="LinkedIn" style="color:#0a66c2;margin-left:0.5em;"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.youtube.com/@MoroccoHPC" target="_blank" title="YouTube" style="color:#ff0000;margin-left:0.3em;"><i class="fab fa-youtube"></i></a>
+    </span>
+  </div>
+  <div class="profile-info-row">
+    <span class="profile-info-key">Open source</span>
+    <span class="profile-info-val">
+      <a href="https://github.com/imadki/manapy" target="_blank"><code>manapy</code></a>
+      <span class="profile-sep">·</span>
+      <a href="https://github.com/imadki/mumps4py" target="_blank"><code>mumps4py</code></a>
     </span>
   </div>
 </div>
 
 <p>In my research, I focus on the development and application of parallel numerical methods, with a strong emphasis on energy-efficient HPC. I develop parallel Finite Volume solvers on hybrid meshes — for shallow water, plasma, and Navier-Stokes equations for non-Newtonian fluids — design Physics-Informed Neural Networks and data-driven methods for CFD, and investigate DVFS and power-aware strategies on production systems such as Toubkal. I supervise PhD students at UM6P and actively promote HPC and AI capacity building across Africa.</p>
-
-<h2>Open-Source Codes</h2>
-<div class="code-pills">
-  <a href="https://github.com/imadki/manapy" class="code-pill" target="_blank">
-    <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-    Manapy
-  </a>
-  <a href="https://github.com/imadki/mumps4py" class="code-pill" target="_blank">
-    <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-    Mumps4py
-  </a>
-  <a href="https://github.com/Mohammed-khlifi/NeuralPDE-Solver" class="code-pill" target="_blank">
-    <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-    NeuralPDE-Solver
-  </a>
-</div>
 
 <h2>Career</h2>
 <div class="career-timeline">
@@ -180,30 +176,32 @@ redirect_from:
 
 <p>Je suis <strong>Professeur Assistant</strong> à l'<a href="https://www.um6p.ma">Université Mohammed VI Polytechnique (UM6P)</a>, <a href="https://cc.um6p.ma/">Collège d'Informatique</a>, Ben Guerir, Maroc — à l'intersection du Calcul Haute Performance, de la Mécanique des Fluides Numérique et de l'Apprentissage Automatique Scientifique.</p>
 
-<div class="role-badges">
-  <div class="role-badge"><span class="role-badge-icon">🖥️</span><span><strong>Responsable</strong> — Supercalculateur Simlab</span></div>
-  <div class="role-badge"><span class="role-badge-icon">📋</span><span><strong>Membre du Conseil Consultatif</strong> — <a href="https://toubkal.um6p.ma/" target="_blank">Supercalculateur Toubkal</a></span></div>
-  <div class="role-badge"><span class="role-badge-icon">🎓</span><span><strong>Instructeur Certifié NVIDIA DLI</strong> &amp; Ambassadeur Universitaire</span></div>
-  <div class="role-badge"><span class="role-badge-icon">🚀</span><span><strong>Co-fondateur</strong> — <a href="https://www.linkedin.com/company/moroccohpc/" target="_blank">Morocco HPC</a></span></div>
+<div class="profile-info">
+  <div class="profile-info-row">
+    <span class="profile-info-key">Postes</span>
+    <span class="profile-info-val">
+      <strong>Responsable</strong>, Supercalculateur Simlab
+      <span class="profile-sep">·</span>
+      <strong>Conseil Consultatif</strong>, <a href="https://toubkal.um6p.ma/" target="_blank">Toubkal</a>
+      <span class="profile-sep">·</span>
+      <strong>Instructeur NVIDIA DLI</strong> Certifié &amp; Ambassadeur Universitaire
+      <span class="profile-sep">·</span>
+      <strong>Co-fondateur</strong>, <a href="https://www.linkedin.com/company/moroccohpc/" target="_blank">Morocco HPC</a>
+      <a href="https://www.linkedin.com/company/moroccohpc/" target="_blank" title="LinkedIn" style="color:#0a66c2;margin-left:0.5em;"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.youtube.com/@MoroccoHPC" target="_blank" title="YouTube" style="color:#ff0000;margin-left:0.3em;"><i class="fab fa-youtube"></i></a>
+    </span>
+  </div>
+  <div class="profile-info-row">
+    <span class="profile-info-key">Open source</span>
+    <span class="profile-info-val">
+      <a href="https://github.com/imadki/manapy" target="_blank"><code>manapy</code></a>
+      <span class="profile-sep">·</span>
+      <a href="https://github.com/imadki/mumps4py" target="_blank"><code>mumps4py</code></a>
+    </span>
+  </div>
 </div>
 
 <p>Dans mes recherches, je me concentre sur le développement et l'application de méthodes numériques parallèles, avec un fort accent sur l'efficacité énergétique en HPC. Je développe des solveurs Volumes Finis parallèles sur maillages hybrides — pour les équations des eaux peu profondes, de la physique des plasmas et de Navier-Stokes pour fluides non-newtoniens — conçois des réseaux de neurones physiquement informés (PINNs) et des méthodes data-driven pour la CFD, et étudie les stratégies DVFS et de gestion de la puissance sur des systèmes de production tels que Toubkal. J'encadre des doctorants à l'UM6P et milite activement pour le développement des capacités HPC et IA en Afrique.</p>
-
-<h2>Codes Open-Source</h2>
-<div class="code-pills">
-  <a href="https://github.com/imadki/manapy" class="code-pill" target="_blank">
-    <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-    Manapy
-  </a>
-  <a href="https://github.com/imadki/mumps4py" class="code-pill" target="_blank">
-    <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-    Mumps4py
-  </a>
-  <a href="https://github.com/Mohammed-khlifi/NeuralPDE-Solver" class="code-pill" target="_blank">
-    <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-    NeuralPDE-Solver
-  </a>
-</div>
 
 <h2>Parcours</h2>
 <div class="career-timeline">

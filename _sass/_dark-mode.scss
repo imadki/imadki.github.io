@@ -158,28 +158,25 @@ html.dark-mode pre {
 
 /* ---- Custom components ---- */
 
-/* Role badges */
-html.dark-mode .role-badge {
-  background: #1e2a38;
-  border-color: #2a4a5a;
+/* Profile info (roles + open source) */
+html.dark-mode .profile-info-row {
+  border-bottom-color: #2d2d45;
+}
+html.dark-mode .profile-info-key {
+  color: #666;
+}
+html.dark-mode .profile-info-val {
   color: #ccc;
 }
-html.dark-mode .role-badge strong {
-  color: #88c8e0;
+html.dark-mode .profile-info-val strong {
+  color: #e4e4e4;
 }
-
-/* Focus cards */
-
-/* Code pills */
-html.dark-mode .code-pill {
-  background: #1e1e2e;
-  border-color: #2d2d45;
-  color: #ccc;
+html.dark-mode .profile-sep {
+  color: #444;
 }
-html.dark-mode .code-pill:hover {
-  background: #1e2a38;
-  border-color: #52adc8;
-  color: #52adc8;
+html.dark-mode .profile-info-val code {
+  background: #252535;
+  color: #aaa;
 }
 
 /* Highlight list (home page news) */
