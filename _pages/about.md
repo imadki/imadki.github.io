@@ -1,4 +1,5 @@
 ---
+layout: archive
 permalink: /
 title: "Dr. Eng. Imad Kissami"
 excerpt: "About me"
