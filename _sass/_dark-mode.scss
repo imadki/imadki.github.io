@@ -81,11 +81,20 @@ html.dark-mode .author__urls {
   background: #1e1e2e;
   border-color: #2d2d45;
 }
+@media (min-width: 1200px) {
+  html.dark-mode .author__urls {
+    background: transparent !important;
+    border: none !important;
+  }
+}
 html.dark-mode .author__urls li a {
-  color: #bbb;
+  color: #ccc;
 }
 html.dark-mode .author__urls li a:hover {
   color: #52adc8;
+}
+html.dark-mode .author__urls li {
+  color: #ccc;
 }
 
 /* Page content */
