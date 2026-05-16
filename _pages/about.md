@@ -116,34 +116,6 @@ redirect_from:
   </a>
 </div>
 
-<h2>Highlights</h2>
-<ul class="highlight-list">
-  <li class="highlight-item">
-    <span class="highlight-date">Dec 2025</span>
-    <span class="highlight-text"><span class="highlight-tag tag-keynote">Keynote</span>19th CHPC National Conference, Cape Town, South Africa — <em>Building the Future: Morocco's High-Performance Computing Infrastructure</em>.</span>
-  </li>
-  <li class="highlight-item">
-    <span class="highlight-date">Dec 2025</span>
-    <span class="highlight-text"><span class="highlight-tag tag-event">Event</span>Organization of the <a href="https://toubkal.um6p.ma/supercomputingafrica" target="_blank"><strong>SupercomputingAfrica (SCAF)</strong></a> conference, Benguerir, Morocco.</span>
-  </li>
-  <li class="highlight-item">
-    <span class="highlight-date">Sep 2025</span>
-    <span class="highlight-text"><span class="highlight-tag tag-keynote">Keynote</span>Advanced School on HPC and Applied AI for High-Resolution Regional Climate Modeling, UM6P.</span>
-  </li>
-  <li class="highlight-item">
-    <span class="highlight-date">Sep 2025</span>
-    <span class="highlight-text"><span class="highlight-tag tag-phd">PhD</span>Launch of 3 new PhD theses — Imane Rhesri, Fatiha Barrade, Ayman Zahir.</span>
-  </li>
-  <li class="highlight-item">
-    <span class="highlight-date">Sep 2025</span>
-    <span class="highlight-text"><span class="highlight-tag tag-grant">Grant</span>New grant: <em>Coupling Physical Models and Data for Monitoring Soil Evolution</em> — €375K, Nutricrops–OCP.</span>
-  </li>
-  <li class="highlight-item">
-    <span class="highlight-date">Oct 2022</span>
-    <span class="highlight-text"><span class="highlight-tag tag-grant">Grant</span>Co-PI of the <strong>Multiphysics and HPC Chair</strong> — €6.3M, OCP, 5-year project.</span>
-  </li>
-</ul>
-
 <h2>Career</h2>
 <div class="career-timeline">
   <div class="career-item">
@@ -181,6 +153,34 @@ redirect_from:
   </div>
 </div>
 
+<h2>Highlights</h2>
+<ul class="highlight-list">
+  <li class="highlight-item">
+    <span class="highlight-date">Dec 2025</span>
+    <span class="highlight-text"><span class="highlight-tag tag-keynote">Keynote</span>19th CHPC National Conference, Cape Town, South Africa — <em>Building the Future: Morocco's High-Performance Computing Infrastructure</em>.</span>
+  </li>
+  <li class="highlight-item">
+    <span class="highlight-date">Dec 2025</span>
+    <span class="highlight-text"><span class="highlight-tag tag-event">Event</span>Organization of the <a href="https://toubkal.um6p.ma/supercomputingafrica" target="_blank"><strong>SupercomputingAfrica (SCAF)</strong></a> conference, Benguerir, Morocco.</span>
+  </li>
+  <li class="highlight-item">
+    <span class="highlight-date">Sep 2025</span>
+    <span class="highlight-text"><span class="highlight-tag tag-keynote">Keynote</span>Advanced School on HPC and Applied AI for High-Resolution Regional Climate Modeling, UM6P.</span>
+  </li>
+  <li class="highlight-item">
+    <span class="highlight-date">Sep 2025</span>
+    <span class="highlight-text"><span class="highlight-tag tag-phd">PhD</span>Launch of 3 new PhD theses — Imane Rhesri, Fatiha Barrade, Ayman Zahir.</span>
+  </li>
+  <li class="highlight-item">
+    <span class="highlight-date">Sep 2025</span>
+    <span class="highlight-text"><span class="highlight-tag tag-grant">Grant</span>New grant: <em>Coupling Physical Models and Data for Monitoring Soil Evolution</em> — €375K, Nutricrops–OCP.</span>
+  </li>
+  <li class="highlight-item">
+    <span class="highlight-date">Oct 2022</span>
+    <span class="highlight-text"><span class="highlight-tag tag-grant">Grant</span>Co-PI of the <strong>Multiphysics and HPC Chair</strong> — €6.3M, OCP, 5-year project.</span>
+  </li>
+</ul>
+
 </div><!-- end #content-en -->
 
 <!-- ==================== FRANÇAIS ==================== -->
@@ -212,34 +212,6 @@ redirect_from:
     NeuralPDE-Solver
   </a>
 </div>
-
-<h2>Actualités</h2>
-<ul class="highlight-list">
-  <li class="highlight-item">
-    <span class="highlight-date">Déc 2025</span>
-    <span class="highlight-text"><span class="highlight-tag tag-keynote">Keynote</span>19e Conférence Nationale CHPC, Le Cap, Afrique du Sud — <em>Construire l'Avenir : l'Infrastructure de Calcul Haute Performance du Maroc</em>.</span>
-  </li>
-  <li class="highlight-item">
-    <span class="highlight-date">Déc 2025</span>
-    <span class="highlight-text"><span class="highlight-tag tag-event">Événement</span>Organisation de la conférence <a href="https://toubkal.um6p.ma/supercomputingafrica" target="_blank"><strong>SupercomputingAfrica (SCAF)</strong></a>, Benguerir, Maroc.</span>
-  </li>
-  <li class="highlight-item">
-    <span class="highlight-date">Sep 2025</span>
-    <span class="highlight-text"><span class="highlight-tag tag-keynote">Keynote</span>École Avancée sur le HPC et l'IA Appliquée pour la Modélisation Climatique Régionale à Haute Résolution, UM6P.</span>
-  </li>
-  <li class="highlight-item">
-    <span class="highlight-date">Sep 2025</span>
-    <span class="highlight-text"><span class="highlight-tag tag-phd">Thèse</span>Lancement de 3 nouvelles thèses de doctorat — Imane Rhesri, Fatiha Barrade, Ayman Zahir.</span>
-  </li>
-  <li class="highlight-item">
-    <span class="highlight-date">Sep 2025</span>
-    <span class="highlight-text"><span class="highlight-tag tag-grant">Projet</span>Nouveau financement : <em>Couplage de Modèles Physiques et de Données pour le Suivi de l'Évolution des Sols</em> — 375K€, Nutricrops–OCP.</span>
-  </li>
-  <li class="highlight-item">
-    <span class="highlight-date">Oct 2022</span>
-    <span class="highlight-text"><span class="highlight-tag tag-grant">Projet</span>Co-PI de la <strong>Chaire Multiphysique et HPC</strong> — 6,3M€, OCP, projet sur 5 ans.</span>
-  </li>
-</ul>
 
 <h2>Parcours</h2>
 <div class="career-timeline">
@@ -277,5 +249,33 @@ redirect_from:
     <div class="career-inst">ENSAO, Oujda, Maroc</div>
   </div>
 </div>
+
+<h2>Actualités</h2>
+<ul class="highlight-list">
+  <li class="highlight-item">
+    <span class="highlight-date">Déc 2025</span>
+    <span class="highlight-text"><span class="highlight-tag tag-keynote">Keynote</span>19e Conférence Nationale CHPC, Le Cap, Afrique du Sud — <em>Construire l'Avenir : l'Infrastructure de Calcul Haute Performance du Maroc</em>.</span>
+  </li>
+  <li class="highlight-item">
+    <span class="highlight-date">Déc 2025</span>
+    <span class="highlight-text"><span class="highlight-tag tag-event">Événement</span>Organisation de la conférence <a href="https://toubkal.um6p.ma/supercomputingafrica" target="_blank"><strong>SupercomputingAfrica (SCAF)</strong></a>, Benguerir, Maroc.</span>
+  </li>
+  <li class="highlight-item">
+    <span class="highlight-date">Sep 2025</span>
+    <span class="highlight-text"><span class="highlight-tag tag-keynote">Keynote</span>École Avancée sur le HPC et l'IA Appliquée pour la Modélisation Climatique Régionale à Haute Résolution, UM6P.</span>
+  </li>
+  <li class="highlight-item">
+    <span class="highlight-date">Sep 2025</span>
+    <span class="highlight-text"><span class="highlight-tag tag-phd">Thèse</span>Lancement de 3 nouvelles thèses de doctorat — Imane Rhesri, Fatiha Barrade, Ayman Zahir.</span>
+  </li>
+  <li class="highlight-item">
+    <span class="highlight-date">Sep 2025</span>
+    <span class="highlight-text"><span class="highlight-tag tag-grant">Projet</span>Nouveau financement : <em>Couplage de Modèles Physiques et de Données pour le Suivi de l'Évolution des Sols</em> — 375K€, Nutricrops–OCP.</span>
+  </li>
+  <li class="highlight-item">
+    <span class="highlight-date">Oct 2022</span>
+    <span class="highlight-text"><span class="highlight-tag tag-grant">Projet</span>Co-PI de la <strong>Chaire Multiphysique et HPC</strong> — 6,3M€, OCP, projet sur 5 ans.</span>
+  </li>
+</ul>
 
 </div><!-- end #content-fr -->
