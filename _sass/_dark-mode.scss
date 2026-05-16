@@ -438,6 +438,12 @@ html.dark-mode .search-empty {
   color: #666;
 }
 
+/* Social icons — reset brand colors so they inherit from their parent link */
+html.dark-mode .social-icons .fa,
+html.dark-mode .social-icons [class*="fa-"] {
+  color: inherit;
+}
+
 /* Research Group */
 html.dark-mode .phd-card,
 html.dark-mode .postdoc-card {
