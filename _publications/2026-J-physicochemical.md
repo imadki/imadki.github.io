@@ -7,7 +7,7 @@ excerpt: 'Physicochemical and trace element assessment of surface and bottom wat
 date: 2026-12-08-01
 venue: 'Marine Pollution Bulletin'
 paperurl: 'https://doi.org/10.1016/j.marpolbul.2026.120161'
-citation: 'A. Bibot, <b>M. Tahri</b>, <b>I. Kissami</b>, <b>A. Laissaoui</b>, <b>N. Mejjad</b>, <b>B. Oujidi</b>, O. Abida'
+citation: 'A. Bibot, M. Tahri, <b>I. Kissami</b>, A. Laissaoui, N. Mejjad, B. Oujidi, O. Abida'
 selected: true
 ---
 A. Bibot, M. Tahri, **I. Kissami**, A. Laissaoui, N. Mejjad, B. Oujidi, O. Abida
