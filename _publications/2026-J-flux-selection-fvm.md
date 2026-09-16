@@ -8,6 +8,7 @@ date: 2026-04-14
 venue: 'Mathematics and Computers in Simulation'
 paperurl: 'https://doi.org/10.1016/j.matcom.2026.04.014'
 citation: '<b>I. Kissami</b>, M. Ziggaf, W. Aboussi, M. Boubekeur, F. Kalloubi.'
+selected: true
 ---
 
 **I. Kissami**, M. Ziggaf, W. Aboussi, M. Boubekeur, F. Kalloubi.
