@@ -7,9 +7,11 @@ excerpt: 'Machine learning-based dynamic CPU scaling for energy-aware optimizati
 date: 2025-06-01
 venue: 'PDCAT – 26th International Conference on Parallel and Distributed Computing: Applications and Technologies'
 conf: 'PDCAT'
+selected: true
+paperurl: 'https://doi.org/10.1007/978-981-95-9846-5_4'
 citation: '<b>I. Kissami</b>, F. Kalloubi.'
 ---
 
 **I. Kissami**, F. Kalloubi.
 
-*26th International Conference on Parallel and Distributed Computing: Applications and Technologies* (**PDCAT 2025**).
+*26th International Conference on Parallel and Distributed Computing: Applications and Technologies* (**PDCAT 2025**). DOI: [10.1007/978-981-95-9846-5_4](https://doi.org/10.1007/978-981-95-9846-5_4)
