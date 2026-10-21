@@ -8,6 +8,7 @@ date: 2025-01-01
 venue: 'Journal of Supercomputing'
 paperurl: 'https://doi.org/10.1007/s11227-025-07858-8'
 citation: '<b>I. Kissami</b>, R. Basmadjian, O. Chakir, M. R. Abid.'
+selected: true
 ---
 
 **I. Kissami**, R. Basmadjian, O. Chakir, M. R. Abid.

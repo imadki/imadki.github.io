@@ -7,6 +7,7 @@ excerpt: 'Presentation of Manapy, an MPI-based Python finite volume framework, a
 date: 2024-03-01
 venue: 'ICMSAO – 9th International Conference on Modeling, Simulation and Applied Optimization'
 conf: 'ICMSAO'
+selected: true
 paperurl: 'https://doi.org/10.1063/5.0194750'
 citation: '<b>I. Kissami</b>.'
 ---

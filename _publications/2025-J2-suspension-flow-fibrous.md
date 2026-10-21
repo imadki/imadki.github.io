@@ -8,6 +8,7 @@ date: 2025-01-02
 venue: 'Computer Physics Communications'
 paperurl: 'https://doi.org/10.1016/j.cpc.2025.109783'
 citation: 'H. Boullouz, <b>I. Kissami</b>, I. Elmahi, A. El Moumen, A. Saouab.'
+selected: true
 ---
 
 H. Boullouz, **I. Kissami**, I. Elmahi, A. El Moumen, A. Saouab.

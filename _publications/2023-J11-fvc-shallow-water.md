@@ -8,6 +8,7 @@ date: 2023-01-04
 venue: 'Advances in Applied Mathematics and Mechanics'
 paperurl: 'https://doi.org/10.4208/aamm.OA-2022-0113'
 citation: 'M. Ziggaf, <b>I. Kissami</b>, M. Boubekeur.'
+selected: true
 ---
 
 M. Ziggaf, **I. Kissami**, M. Boubekeur.

@@ -8,6 +8,7 @@ date: 2024-01-01
 venue: 'Computer Physics Communications'
 paperurl: 'https://doi.org/10.1016/j.cpc.2024.109328'
 citation: 'A. Cissé, I. Elmahi, <b>I. Kissami</b>, A. Ratnani.'
+selected: true
 ---
 
 A. Cissé, I. Elmahi, **I. Kissami**, A. Ratnani.

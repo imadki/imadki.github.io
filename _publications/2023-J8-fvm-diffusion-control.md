@@ -8,6 +8,7 @@ date: 2023-01-01
 venue: 'Mathematics and Computers in Simulation'
 paperurl: 'https://doi.org/10.1016/j.matcom.2023.05.023'
 citation: 'W. Aboussi, M. Ziggaf, <b>I. Kissami</b>, M. Boubekeur.'
+selected: true
 ---
 
 W. Aboussi, M. Ziggaf, **I. Kissami**, M. Boubekeur.

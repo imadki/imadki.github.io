@@ -140,7 +140,7 @@ author_profile: true
   <div class="pub-year-heading">{{ year_group.name }}</div>
   {% for post in year_group.items %}
   <div class="pub-item" data-pubtype="{{ post.pubtype }}" data-pubyear="{{ year_group.name }}" data-venue="{{ post.venue }}" data-conf="{{ post.conf }}"{% if selected_permalinks contains post.permalink %} data-selected="true"{% endif %}>
-    <span class="pub-type-badge {% if post.pubtype == 'journal' %}badge-journal{% else %}badge-conference{% endif %}">{% if post.pubtype == 'journal' %}<span class="lang-en">Journal</span><span class="lang-fr">Revue</span>{% else %}<span class="lang-en">Conference</span><span class="lang-fr">Conférence</span>{% endif %}</span>{% if post.citation %}{{ post.citation }}{% endif %} &ldquo;{{ post.title }}&rdquo;{% if post.venue %} <i>{{ post.venue }}</i>, {{ year_group.name }}.{% endif %}{% if post.paperurl %} DOI: <a href="{{ post.paperurl }}">{{ post.paperurl }}</a>{% endif %}
+    <span class="pub-type-badge {% if post.pubtype == 'journal' %}badge-journal{% else %}badge-conference{% endif %}">{% if post.pubtype == 'journal' %}<span class="lang-en">Journal</span><span class="lang-fr">Revue</span>{% else %}<span class="lang-en">Conference</span><span class="lang-fr">Conférence</span>{% endif %}</span>{% if post.citation %}{{ post.citation }}{% endif %} &ldquo;{{ post.title }}&rdquo;{% if post.venue %} <i>{{ post.venue }}</i>{% if post.volume %}, {{ post.volume }}{% endif %}{% if post.pages %}, {{ post.pages }}{% endif %}{% if post.article_number %}, {{ post.article_number }}{% endif %}, {{ year_group.name }}.{% endif %}{% if post.paperurl %} DOI: <a href="{{ post.paperurl }}">{{ post.paperurl }}</a>{% endif %}
   </div>
   {% endfor %}
 </div>
@@ -154,7 +154,7 @@ author_profile: true
   <div class="pub-venue-heading">{{ venue_group.name }}</div>
   {% for post in venue_group.items %}
   <div class="pub-item" data-pubtype="{{ post.pubtype }}" data-pubyear="{{ post.date | date: '%Y' }}">
-    <span class="pub-type-badge badge-journal"><span class="lang-en">Journal</span><span class="lang-fr">Revue</span></span>{% if post.citation %}{{ post.citation }}{% endif %} &ldquo;{{ post.title }}&rdquo; <i>{{ post.venue }}</i>, {{ post.date | date: '%Y' }}.{% if post.paperurl %} DOI: <a href="{{ post.paperurl }}">{{ post.paperurl }}</a>{% endif %}
+    <span class="pub-type-badge badge-journal"><span class="lang-en">Journal</span><span class="lang-fr">Revue</span></span>{% if post.citation %}{{ post.citation }}{% endif %} &ldquo;{{ post.title }}&rdquo; <i>{{ post.venue }}</i>{% if post.volume %}, {{ post.volume }}{% endif %}{% if post.pages %}, {{ post.pages }}{% endif %}{% if post.article_number %}, {{ post.article_number }}{% endif %}, {{ post.date | date: '%Y' }}.{% if post.paperurl %} DOI: <a href="{{ post.paperurl }}">{{ post.paperurl }}</a>{% endif %}
   </div>
   {% endfor %}
 </div>
@@ -168,7 +168,7 @@ author_profile: true
   <div class="pub-venue-heading">{{ venue_group.name }}</div>
   {% for post in venue_group.items %}
   <div class="pub-item" data-pubtype="{{ post.pubtype }}" data-pubyear="{{ post.date | date: '%Y' }}">
-    <span class="pub-type-badge badge-conference"><span class="lang-en">Conference</span><span class="lang-fr">Conférence</span></span>{% if post.citation %}{{ post.citation }}{% endif %} &ldquo;{{ post.title }}&rdquo; <i>{{ post.venue }}</i>, {{ post.date | date: '%Y' }}.{% if post.paperurl %} DOI: <a href="{{ post.paperurl }}">{{ post.paperurl }}</a>{% endif %}
+    <span class="pub-type-badge badge-conference"><span class="lang-en">Conference</span><span class="lang-fr">Conférence</span></span>{% if post.citation %}{{ post.citation }}{% endif %} &ldquo;{{ post.title }}&rdquo; <i>{{ post.venue }}</i>{% if post.volume %}, {{ post.volume }}{% endif %}{% if post.pages %}, {{ post.pages }}{% endif %}{% if post.article_number %}, {{ post.article_number }}{% endif %}, {{ post.date | date: '%Y' }}.{% if post.paperurl %} DOI: <a href="{{ post.paperurl }}">{{ post.paperurl }}</a>{% endif %}
   </div>
   {% endfor %}
 </div>

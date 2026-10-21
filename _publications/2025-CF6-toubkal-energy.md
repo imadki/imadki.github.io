@@ -7,6 +7,7 @@ excerpt: 'Energy efficiency evaluation of the Toubkal supercomputer in the conte
 date: 2025-06-15
 venue: 'E-Energy – 16th ACM International Conference on Future and Sustainable Energy Systems'
 conf: 'E-Energy'
+selected: true
 paperurl: 'https://doi.org/10.1145/3679240.3735103'
 citation: '<b>I. Kissami</b>, R. Basmadjian, A. Zahir.'
 ---
