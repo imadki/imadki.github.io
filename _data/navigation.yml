@@ -1,5 +1,9 @@
 # main links links
 main:
+  - title: "TORA"
+    title_fr: "TORA"
+    url: /tora/
+
   - title: "Publications"
     title_fr: "Publications"
     url: /publications/

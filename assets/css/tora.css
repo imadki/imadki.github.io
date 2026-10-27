@@ -1,0 +1,58 @@
+.tora-page {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  gap: 3rem;
+  align-items: center;
+}
+.tora-source { margin: 0 0 0.5rem; color: #52616b; font-weight: 600; }
+.tora-page h1 { margin: 0; font-size: clamp(3.5rem, 8vw, 5.5rem); letter-spacing: -0.04em; color: #226d83; }
+.tora-intro h2 { margin: 0.7rem 0 1.5rem; font-size: 1.5rem; line-height: 1.35; }
+.tora-intro p { line-height: 1.7; }
+.tora-page .tora-button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.7rem 1.1rem;
+  border-radius: 5px;
+  background: #226d83;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+.tora-page .tora-button:hover { background: #185266; }
+.tora-page a:focus-visible { outline: 3px solid #52adc8; outline-offset: 5px; }
+.tora-intro .tora-share { margin-top: 1.5rem; font-size: 0.9rem; color: #52616b; }
+.tora-qr {
+  margin: 0;
+  padding: 1.25rem;
+  background: #f4f8fa;
+  border: 1px solid #dbe5ea;
+  border-radius: 12px;
+  text-align: center;
+}
+.tora-qr > a { display: block; background: #fff; border-radius: 4px; }
+.tora-qr img { display: block; width: 100%; height: auto; background: #fff; }
+.tora-qr figcaption { margin: 1.25rem 0 0; font-family: inherit; color: inherit; }
+.tora-qr h2 { margin: 0; font-size: 1.1rem; line-height: 1.4; }
+.tora-qr p { margin: 0.75rem 0; font-size: 0.85rem; line-height: 1.6; }
+.tora-page .tora-download { display: inline-flex; align-items: center; min-height: 44px; color: #226d83; font-size: 0.85rem; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.tora-page .tora-download:hover { text-decoration-thickness: 2px; }
+html.dark-mode .tora-page h1 { color: #7abfd4; }
+html.dark-mode .tora-source, html.dark-mode .tora-share { color: #b4c3cc; }
+html.dark-mode .tora-qr { background: #1e2533; border-color: #364454; }
+html.dark-mode .tora-download { color: #7abfd4; }
+html.dark-mode .tora-button { color: #fff; }
+@media (max-width: 760px) {
+  .tora-page { grid-template-columns: minmax(0, 1fr); gap: 2rem; margin: 2rem auto; }
+  .tora-qr { width: 100%; max-width: 360px; justify-self: center; }
+}
+@media print {
+  .tora-page { display: block; margin: 0 auto; max-width: 680px; color: #000; }
+  .tora-page .tora-source, .tora-page .tora-share, .tora-page h1, .tora-page h2 { color: #000 !important; }
+  .tora-qr { max-width: 300px; margin: 1.5rem auto 0; break-inside: avoid; background: #fff !important; color: #000; }
+  .tora-page .tora-button { color: #000 !important; background: none; padding: 0; }
+  .tora-page .tora-download { display: none; }
+}
