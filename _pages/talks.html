@@ -1,11 +1,16 @@
 ---
 layout: archive
-title: "Talks & Presentations"
+title: "Talks & Events"
+title_fr: "Conférences & Événements"
 permalink: /talks/
 author_profile: true
+excerpt: "Invited talks, keynotes and scientific events, including organizing and scientific committee memberships."
 ---
 
 {% include base_path %}
+
+<link rel="stylesheet" href="{{ '/assets/css/events.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/talks-events.css' | relative_url }}">
 
 {% assign talks_sorted = site.talks | sort: "date" | reverse %}
 {% assign talks_by_year = talks_sorted | group_by_exp: "item", "item.date | date: '%Y'" %}
@@ -124,9 +129,13 @@ author_profile: true
 .talk-modal-close:hover { color: #555; background: #f0f0f0; }
 </style>
 
+<div class="talks-events-grid">
+<section class="talks-events-column" id="talks" aria-labelledby="talks-heading">
+  <h2 class="talks-events-heading" id="talks-heading"><span class="lang-en" lang="en">Talks</span><span class="lang-fr" lang="fr">Présentations</span></h2>
+
 {% for year_group in talks_by_year %}
 <div class="talk-year-section">
-  <div class="talk-year-heading">{{ year_group.name }}</div>
+  <h3 class="talk-year-heading">{{ year_group.name }}</h3>
   {% for post in year_group.items %}
   <div class="talk-card" data-modal="modal-{{ post.date | date: '%Y%m%d' }}-{{ forloop.index }}">
     <div class="talk-date-col">
@@ -164,6 +173,13 @@ author_profile: true
   {% endfor %}
 </div>
 {% endfor %}
+
+</section>
+<section class="talks-events-column" id="events" aria-labelledby="events-heading">
+  <h2 class="talks-events-heading" id="events-heading"><span class="lang-en" lang="en">Events</span><span class="lang-fr" lang="fr">Événements</span></h2>
+  {% include events-list.html heading_level=3 hide_intro=true %}
+</section>
+</div>
 
 <script>
 (function () {

@@ -1,7 +1,7 @@
 ---
 layout: archive
-title: "Organized events"
-title_fr: "Événements organisés"
+title: "Events"
+title_fr: "Événements"
 permalink: /events/
 author_profile: true
 excerpt: "Conferences, summer schools and scientific events organized by Imad Kissami, including organizing and scientific committee memberships."
@@ -9,53 +9,4 @@ excerpt: "Conferences, summer schools and scientific events organized by Imad Ki
 
 <link rel="stylesheet" href="{{ '/assets/css/events.css' | relative_url }}">
 
-<div class="events-page">
-  <p class="events-intro">
-    <span class="lang-en" lang="en">Conferences, schools and scientific meetings to which I contribute as a member of the organizing or scientific committee.</span>
-    <span class="lang-fr" lang="fr">Conférences, écoles et rencontres scientifiques auxquelles je contribue en tant que membre du comité d’organisation ou du comité scientifique.</span>
-  </p>
-
-  {% assign events_by_year = site.data.events | group_by: "year" | sort: "name" | reverse %}
-  {% for year in events_by_year %}
-  <section class="events-year" aria-labelledby="events-year-{{ year.name }}">
-    <h2 class="events-year-heading" id="events-year-{{ year.name }}">{{ year.name }}</h2>
-    <ul class="events-list">
-      {% for event in year.items %}
-      <li class="event-item">
-        <p class="event-date">
-          <span class="lang-en" lang="en">{{ event.date_en | escape }}</span>
-          <span class="lang-fr" lang="fr">{{ event.date_fr | escape }}</span>
-        </p>
-        <h3 class="event-title">
-          <span class="lang-en" lang="en">{{ event.title | escape }}</span>
-          <span class="lang-fr" lang="fr">{{ event.title_fr | default: event.title | escape }}</span>
-        </h3>
-        {% if event.name %}<p class="event-name">{{ event.name | escape }}</p>{% endif %}
-        <p class="event-role">
-          <span class="lang-en" lang="en">{{ event.role_en | escape }}</span>
-          <span class="lang-fr" lang="fr">{{ event.role_fr | escape }}</span>
-        </p>
-        {% if event.location_en %}
-        <p class="event-location">
-          <span class="lang-en" lang="en">{{ event.location_en | escape }}</span>
-          <span class="lang-fr" lang="fr">{{ event.location_fr | escape }}</span>
-        </p>
-        {% endif %}
-        {% if event.description_en %}
-        <p class="event-description">
-          <span class="lang-en" lang="en">{{ event.description_en | escape }}</span>
-          <span class="lang-fr" lang="fr">{{ event.description_fr | escape }}</span>
-        </p>
-        {% endif %}
-        {% if event.url %}
-        <a class="event-link" href="{{ event.url | escape }}" target="_blank" rel="noopener noreferrer">
-          <span class="lang-en" lang="en">{{ event.link_en | default: "Event website" | escape }}<span class="event-link-context"> — {{ event.title | escape }}</span></span>
-          <span class="lang-fr" lang="fr">{{ event.link_fr | default: "Site de l’événement" | escape }}<span class="event-link-context"> — {{ event.title_fr | default: event.title | escape }}</span></span>
-        </a>
-        {% endif %}
-      </li>
-      {% endfor %}
-    </ul>
-  </section>
-  {% endfor %}
-</div>
+{% include events-list.html %}
