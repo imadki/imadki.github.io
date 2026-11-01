@@ -1,81 +1,84 @@
-.talks-events-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 2.5em;
+.talks-events-tabs {
+  display: flex;
+  gap: 1.5em;
+  margin: 0 0 0.5em;
+  border-bottom: 1px solid #e8e8e8;
 }
 
-.talks-events-column {
+.talks-events-tab {
+  min-height: 44px;
+  margin: 0 0 -1px;
+  padding: 0.6em 0.25em;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: transparent;
+  color: #666;
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.talks-events-tab:hover,
+.talks-events-tab[aria-selected="true"] {
+  color: #226d87;
+  border-bottom-color: #52adc8;
+}
+
+.talks-events-tab:focus-visible,
+.talks-events-panel:focus-visible {
+  outline: 2px solid #226d87;
+  outline-offset: 4px;
+}
+
+.talks-events-panels {
+  max-width: 72ch;
+}
+
+.talks-events-panel {
   min-width: 0;
   scroll-margin-top: 1.5em;
 }
 
-.talks-events-heading {
-  margin: 0 0 0.65em;
-  padding-bottom: 0.5em;
-  border-bottom: 1px solid #e8e8e8;
-  font-size: 1.25em;
+.talks-events-panel[hidden] {
+  display: none;
 }
 
-.talks-events-column .talk-year-heading,
-.talks-events-column .events-year-heading {
-  margin: 1.6em 0 0.6em;
-  font-size: 1.1em;
-}
-
-.talks-events-column .talk-card {
-  display: block;
-  padding: 1.2em 0;
+.talks-events-panel .talk-card {
   overflow-wrap: anywhere;
 }
 
-.talks-events-column .talk-date-col {
-  display: flex;
-  align-items: baseline;
-  gap: 0.35em;
+.talks-events-panel .talk-body {
   min-width: 0;
-  margin-bottom: 0.5em;
-  padding: 0;
+}
+
+.talks-events-panel .talk-title,
+.talks-events-panel .talk-meta {
   text-align: left;
 }
 
-.talks-events-column .talk-date-day {
-  display: inline;
-  font-size: 1em;
-  font-weight: 400;
-  line-height: inherit;
-}
-
-.talks-events-column .talk-date-month {
-  text-transform: none;
-  letter-spacing: normal;
-}
-
-.talks-events-column .talk-title,
-.talks-events-column .talk-meta {
-  text-align: left;
-}
-
-html.dark-mode .talks-events-heading {
+html.dark-mode .talks-events-tabs,
+html.dark-mode .talks-events-panel .talk-card {
   border-bottom-color: #2d2d45;
 }
 
-html.dark-mode .talks-events-column .talk-meta,
-html.dark-mode .talks-events-column .talk-date-col,
-html.dark-mode .talks-events-column .talk-date-day {
+html.dark-mode .talks-events-tab,
+html.dark-mode .talks-events-panel .talk-meta,
+html.dark-mode .talks-events-panel .talk-date-col,
+html.dark-mode .talks-events-panel .talk-date-day {
   color: #b5b5b5;
 }
 
-html.dark-mode .talks-events-column .talk-title-text {
+html.dark-mode .talks-events-tab:hover,
+html.dark-mode .talks-events-tab[aria-selected="true"] {
+  color: #7abfd4;
+}
+
+html.dark-mode .talks-events-tab:focus-visible,
+html.dark-mode .talks-events-panel:focus-visible {
+  outline-color: #7abfd4;
+}
+
+html.dark-mode .talks-events-panel .talk-title-text {
   color: #e4e4e4;
-}
-
-html.dark-mode .talks-events-column .talk-card {
-  border-bottom-color: #2d2d45;
-}
-
-@media (min-width: 1100px) {
-  .talks-events-grid {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 2em;
-  }
 }

@@ -129,13 +129,17 @@ excerpt: "Invited talks, keynotes and scientific events, including organizing an
 .talk-modal-close:hover { color: #555; background: #f0f0f0; }
 </style>
 
-<div class="talks-events-grid">
-<section class="talks-events-column" id="talks" aria-labelledby="talks-heading">
-  <h2 class="talks-events-heading" id="talks-heading"><span class="lang-en" lang="en">Talks</span><span class="lang-fr" lang="fr">Présentations</span></h2>
+<div class="talks-events-tabs" role="tablist" aria-label="Talks & Events">
+  <button class="talks-events-tab" type="button" role="tab" id="tab-talks" aria-controls="talks" aria-selected="true" tabindex="0"><span class="lang-en" lang="en">Talks</span><span class="lang-fr" lang="fr">Présentations</span></button>
+  <button class="talks-events-tab" type="button" role="tab" id="tab-events" aria-controls="events" aria-selected="false" tabindex="-1"><span class="lang-en" lang="en">Events</span><span class="lang-fr" lang="fr">Événements</span></button>
+</div>
+
+<div class="talks-events-panels">
+<section class="talks-events-panel" id="talks" role="tabpanel" aria-labelledby="tab-talks" tabindex="0">
 
 {% for year_group in talks_by_year %}
 <div class="talk-year-section">
-  <h3 class="talk-year-heading">{{ year_group.name }}</h3>
+  <h2 class="talk-year-heading">{{ year_group.name }}</h2>
   {% for post in year_group.items %}
   <div class="talk-card" data-modal="modal-{{ post.date | date: '%Y%m%d' }}-{{ forloop.index }}">
     <div class="talk-date-col">
@@ -175,14 +179,50 @@ excerpt: "Invited talks, keynotes and scientific events, including organizing an
 {% endfor %}
 
 </section>
-<section class="talks-events-column" id="events" aria-labelledby="events-heading">
-  <h2 class="talks-events-heading" id="events-heading"><span class="lang-en" lang="en">Events</span><span class="lang-fr" lang="fr">Événements</span></h2>
-  {% include events-list.html heading_level=3 hide_intro=true %}
+<section class="talks-events-panel" id="events" role="tabpanel" aria-labelledby="tab-events" tabindex="0" hidden>
+  {% include events-list.html hide_intro=true %}
 </section>
 </div>
 
 <script>
 (function () {
+  var tabs = Array.from(document.querySelectorAll('.talks-events-tab'));
+
+  function selectTab(panelId, focus, updateUrl) {
+    tabs.forEach(function (tab) {
+      var selected = tab.getAttribute('aria-controls') === panelId;
+      tab.setAttribute('aria-selected', selected ? 'true' : 'false');
+      tab.tabIndex = selected ? 0 : -1;
+      document.getElementById(tab.getAttribute('aria-controls')).hidden = !selected;
+      if (selected && focus) { tab.focus(); }
+    });
+    if (updateUrl) {
+      try { window.history.replaceState(null, '', '#' + panelId); } catch (e) {}
+    }
+  }
+
+  tabs.forEach(function (tab, index) {
+    tab.addEventListener('click', function () {
+      selectTab(tab.getAttribute('aria-controls'), false, true);
+    });
+    tab.addEventListener('keydown', function (e) {
+      var next;
+      if (e.key === 'ArrowRight') { next = (index + 1) % tabs.length; }
+      else if (e.key === 'ArrowLeft') { next = (index + tabs.length - 1) % tabs.length; }
+      else if (e.key === 'Home') { next = 0; }
+      else if (e.key === 'End') { next = tabs.length - 1; }
+      else { return; }
+      e.preventDefault();
+      selectTab(tabs[next].getAttribute('aria-controls'), true, true);
+    });
+  });
+
+  function selectTabFromHash() {
+    selectTab(window.location.hash === '#events' ? 'events' : 'talks', false, false);
+  }
+  selectTabFromHash();
+  window.addEventListener('hashchange', selectTabFromHash);
+
   document.querySelectorAll('.talk-modal-overlay').forEach(function (overlay) {
     document.body.appendChild(overlay);
   });
