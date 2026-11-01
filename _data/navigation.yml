@@ -1,8 +1,8 @@
 # main links links
 main:
-  - title: "TORA"
-    title_fr: "TORA"
-    url: /tora/
+  - title: "Organized events"
+    title_fr: "Événements organisés"
+    url: /events/
 
   - title: "Publications"
     title_fr: "Publications"

@@ -1,0 +1,106 @@
+.events-page {
+  --events-text: #333;
+  --events-muted: #666;
+  --events-border: #e8e8e8;
+  --events-accent: #52adc8;
+  --events-link: #226d87;
+  color: var(--events-text);
+  max-width: 72ch;
+}
+
+.events-page p {
+  text-align: left;
+}
+
+.events-intro {
+  color: var(--events-muted);
+  line-height: 1.65;
+  margin: 0 0 1.6em;
+}
+
+.events-year-heading {
+  display: inline-block;
+  margin: 1.3em 0 0;
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid var(--events-accent);
+  font-size: 1.2em;
+}
+
+.events-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.event-item {
+  padding: 1.2em 0;
+  border-bottom: 1px solid var(--events-border);
+  overflow-wrap: anywhere;
+}
+
+.event-date {
+  margin: 0 0 0.35em;
+  color: var(--events-muted);
+  font-size: 0.85em;
+}
+
+.event-title {
+  margin: 0 0 0.35em;
+  color: var(--events-text);
+  font-size: 1.05em;
+  line-height: 1.4;
+}
+
+.event-name,
+.event-location,
+.event-description {
+  margin: 0.3em 0;
+  color: var(--events-muted);
+  font-size: 0.9em;
+  line-height: 1.55;
+}
+
+.event-role {
+  margin: 0.5em 0 0.3em;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.events-page .event-link,
+.events-page .event-link:visited {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--events-link);
+  font-size: 0.85em;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.event-link:hover {
+  text-decoration-thickness: 2px;
+}
+
+.event-link:focus-visible {
+  outline: 2px solid var(--events-link);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.event-link-context {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+html.dark-mode .events-page {
+  --events-text: #e4e4e4;
+  --events-muted: #b5b5b5;
+  --events-border: #2d2d45;
+  --events-link: #7abfd4;
+}
