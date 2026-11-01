@@ -1,9 +1,5 @@
 # main links links
 main:
-  - title: "Organized events"
-    title_fr: "Événements organisés"
-    url: /events/
-
   - title: "Publications"
     title_fr: "Publications"
     url: /publications/
@@ -27,6 +23,10 @@ main:
   - title: "Grants"
     title_fr: "Financements"
     url: /grants/
+
+  - title: "Organized events"
+    title_fr: "Événements organisés"
+    url: /events/
 
   - title: "Softwares"
     title_fr: "Logiciels"
