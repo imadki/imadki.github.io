@@ -175,6 +175,10 @@ redirect_from:
 <h2>Highlights</h2>
 <ul class="highlight-list">
   <li class="highlight-item">
+    <span class="highlight-date">Nov 19–20, 2026</span>
+    <span class="highlight-text"><span class="highlight-tag tag-keynote">Invited speaker</span><a href="{{ '/talks/2026-11-19-journees-phc-la-rochelle' | relative_url }}">Journées PHC</a>, La Rochelle, France — <em>Solving Partial Differential Equations with Physics-Informed Neural Networks</em>.</span>
+  </li>
+  <li class="highlight-item">
     <span class="highlight-date">May 2026</span>
     <span class="highlight-text"><span class="highlight-tag tag-keynote">Keynote</span><a href="https://i2m4hydrosystem.sciencesconf.org/" target="_blank">I2M4HydroSystems Workshop</a>, Hammamet, Tunisia — <em>Enhancing CFD Solvers with Neural Networks</em>.</span>
   </li>
@@ -272,6 +276,10 @@ redirect_from:
 
 <h2>Actualités</h2>
 <ul class="highlight-list">
+  <li class="highlight-item">
+    <span class="highlight-date">19–20 nov. 2026</span>
+    <span class="highlight-text"><span class="highlight-tag tag-keynote">Conférencier invité</span><a href="{{ '/talks/2026-11-19-journees-phc-la-rochelle' | relative_url }}">Journées PHC</a>, La Rochelle, France — <em>Résolution d’équations aux dérivées partielles par des réseaux de neurones informés par la physique</em>.</span>
+  </li>
   <li class="highlight-item">
     <span class="highlight-date">Mai 2026</span>
     <span class="highlight-text"><span class="highlight-tag tag-keynote">Keynote</span><a href="https://i2m4hydrosystem.sciencesconf.org/" target="_blank">Workshop I2M4HydroSystems</a>, Hammamet, Tunisie — <em>Améliorer les Solveurs CFD avec des Réseaux de Neurones</em>.</span>

@@ -141,9 +141,11 @@ excerpt: "Invited talks, keynotes and scientific events, including organizing an
 <div class="talk-year-section">
   <h2 class="talk-year-heading">{{ year_group.name }}</h2>
   {% for post in year_group.items %}
+  {% assign talk_day = post.date | date: "%d" %}
+  {% assign talk_days = post.day_range | default: talk_day %}
   <div class="talk-card" data-modal="modal-{{ post.date | date: '%Y%m%d' }}-{{ forloop.index }}">
     <div class="talk-date-col">
-      <span class="talk-date-day">{{ post.date | date: "%d" }}</span>
+      <span class="talk-date-day">{{ talk_days }}</span>
       <span class="talk-date-month">{{ post.date | date: "%b" }}</span>
     </div>
     <div class="talk-body">
@@ -161,7 +163,7 @@ excerpt: "Invited talks, keynotes and scientific events, including organizing an
       <div class="talk-modal-header">
         <div class="talk-modal-badge-row">
           <span class="talk-type-badge {% if post.type == 'Keynote' %}badge-keynote{% else %}badge-invited{% endif %}">{% if post.type == 'Keynote' %}<span class="lang-en">Keynote</span><span class="lang-fr">Conférence invitée</span>{% else %}<span class="lang-en">Invited</span><span class="lang-fr">Invité</span>{% endif %}</span>
-          <span class="talk-modal-date-badge">{{ post.date | date: "%B %d, %Y" }}</span>
+          <span class="talk-modal-date-badge">{{ post.date | date: "%B" }} {{ talk_days }}, {{ post.date | date: "%Y" }}</span>
         </div>
         <p class="talk-modal-title">{{ post.title }}</p>
       </div>
